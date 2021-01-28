@@ -1,12 +1,16 @@
-import { Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { getAllPosts, getPost } from "../../server/ghost";
 
 const PostPage = ({ post }) => {
+  console.log(post);
   return (
-    <div>
+    <Flex direction="column" justifyContent="center" alignItems="center" padding="30px">
       <Heading>{post.title}</Heading>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-    </div>
+      <Text>{`Reading time: ${post.reading_time} ${
+        post.reading_time > 1 ? "minutes" : "minute"
+      }`}</Text>
+      <Box dangerouslySetInnerHTML={{ __html: post.html }}></Box>
+    </Flex>
   );
 };
 
