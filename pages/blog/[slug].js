@@ -1,40 +1,37 @@
-import { Avatar, Box, Flex, Heading, Text } from "@chakra-ui/react";
-import { format, parseISO } from "date-fns";
-import { getAllPosts, getPost } from "../../server/ghost";
+import { Avatar } from '@windmill/react-ui';
+import { format, parseISO } from 'date-fns';
+import { getAllPosts, getPost } from '../../server/ghost';
 
 const PostPage = ({ post }) => {
   return (
-    <Flex
-      as="main"
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
-      padding="30px"
-      margin="0 auto"
-      maxWidth="720px"
-      w="100%">
-      <Heading>{post.title}</Heading>
-      <Box display="flex" justifyContent="space-between" w="100%">
-        <Flex px={8}>
-          <Text mr={8} fontSize="0.9rem">
-            David Neuman
-          </Text>
-          <Text fontSize="0.9rem">{format(parseISO(post.created_at), "MMMM do, yyyy")}</Text>
-        </Flex>
-        <Text fontSize="0.9rem">{`Reading time: ${post.reading_time} ${
-          post.reading_time > 1 ? "minutes" : "minute"
-        }`}</Text>
-      </Box>
-      <Box dangerouslySetInnerHTML={{ __html: post.html }}></Box>
-    </Flex>
+    <article className="flex flex-col justify-center max-w-2xl mx-auto w-full">
+      <h1>{post.title}</h1>
+      <div className="flex justify-between w-full">
+        <div className="flex p-4 items-center">
+          <Avatar
+            src="https://avatars.githubusercontent.com/u/42482170?v=4"
+            className="mr-2"
+          />
+          <div className="mr-4 text-sm">{`David Neuman | ${format(
+            parseISO(post.created_at),
+            'MMMM do, yyyy'
+          )}`}</div>
+        </div>
+        <div className="flex text-sm items-center">{`Reading time: ${
+          post.reading_time
+        } ${post.reading_time > 1 ? 'minutes' : 'minute'}`}</div>
+      </div>
+      <main
+        className="prose"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      ></main>
+    </article>
   );
 };
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
-
-  // Get the paths we want to create based on posts.
-  const paths = posts.map(post => ({
+  const paths = posts.map((post) => ({
     params: { slug: post.slug },
   }));
 

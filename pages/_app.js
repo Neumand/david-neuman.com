@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import 'tailwindcss/tailwind.css';
+import { Windmill } from '@windmill/react-ui';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function App({ Component, pageProps }) {
+  return (
+    <Windmill>
+      <Component {...pageProps} />
+    </Windmill>
+  );
 }
 
-export default MyApp
+export default App;

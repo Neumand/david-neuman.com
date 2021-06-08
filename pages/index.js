@@ -1,14 +1,22 @@
-import { Flex, Heading, Link } from "@chakra-ui/react";
-import { getAllPosts } from "../server/ghost";
+import Link from 'next/link';
+import { getAllPosts } from '../server/ghost';
+import Header from '../components/Header';
 
 const Home = ({ posts }) => {
-  return posts.map(post => (
-    <Flex justifyContent="center" alignItems="center">
-      <Link href={`/blog/${post.slug}`}>
-        <Heading key={post.id}>{post.title}</Heading>
-      </Link>
-    </Flex>
-  ));
+  return (
+    <>
+      <Header />
+      {posts.map((post) => (
+        <div key={post.id} className="flex justify-center items-center">
+          <Link href={`/blog/${post.slug}`}>
+            <a>
+              <h1>{post.title}</h1>
+            </a>
+          </Link>
+        </div>
+      ))}
+    </>
+  );
 };
 
 export async function getStaticProps(context) {
