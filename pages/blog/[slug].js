@@ -1,9 +1,13 @@
 import { Avatar } from '@windmill/react-ui';
 import { format, parseISO } from 'date-fns';
+
+import Header from "../../components/Header";
 import { getAllPosts, getPost } from '../../server/ghost';
 
 const PostPage = ({ post }) => {
   return (
+    <>
+    <Header />
     <article className="flex flex-col justify-center max-w-2xl mx-auto w-full">
       <h1>{post.title}</h1>
       <div className="flex justify-between w-full">
@@ -26,6 +30,7 @@ const PostPage = ({ post }) => {
         dangerouslySetInnerHTML={{ __html: post.html }}
       ></main>
     </article>
+    </>
   );
 };
 
