@@ -8,7 +8,7 @@ const api = new GhostContentAPI({
 
 export const getAllPosts = () => {
   try {
-    return api.posts.browse({ limit: "all" });
+    return api.posts.browse({ limit: "all", include: "tags" });
   } catch (error) {
     console.error(`Error getting all posts: ${error}`);
     return;
@@ -17,7 +17,7 @@ export const getAllPosts = () => {
 
 export const getPost = slug => {
   try {
-    return api.posts.read({ slug });
+    return api.posts.read({ slug }, { include: "tags" });
   } catch (error) {
     console.error(`Error fetching post: ${error}`);
     return;
