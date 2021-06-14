@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import prism from "prismjs";
+
 import { Avatar } from '@windmill/react-ui';
 import { format, parseISO } from 'date-fns';
 
@@ -5,11 +8,17 @@ import Header from '../../components/Header';
 import { getAllPosts, getPost } from '../../server/ghost';
 
 const PostPage = ({ post }) => {
+  useEffect(() => {
+    prism.highlightAll();
+  })
+
   return (
     <>
       <Header />
       <article className="flex flex-col justify-center max-w-2xl mx-auto w-full">
-        <h1 className="text-4xl font-bold text-center">{post.title}</h1>
+        <h1 className="text-3xl font-bold mb-2 text-center md:text-5xl sm:text-4xl">
+          {post.title}
+        </h1>
         <div className="flex justify-between w-full">
           <div className="flex p-4 items-center">
             <Avatar
@@ -25,7 +34,6 @@ const PostPage = ({ post }) => {
             post.reading_time
           } ${post.reading_time > 1 ? 'minutes' : 'minute'}`}</div>
         </div>
-        <hr className="mb-4 border-t-2 w-20 mx-auto" />
         <main
           className="prose md:prose-lg lg:prose-xl"
           dangerouslySetInnerHTML={{ __html: post.html }}
