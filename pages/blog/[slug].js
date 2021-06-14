@@ -1,35 +1,36 @@
 import { Avatar } from '@windmill/react-ui';
 import { format, parseISO } from 'date-fns';
 
-import Header from "../../components/Header";
+import Header from '../../components/Header';
 import { getAllPosts, getPost } from '../../server/ghost';
 
 const PostPage = ({ post }) => {
   return (
     <>
-    <Header />
-    <article className="flex flex-col justify-center max-w-2xl mx-auto w-full">
-      <h1>{post.title}</h1>
-      <div className="flex justify-between w-full">
-        <div className="flex p-4 items-center">
-          <Avatar
-            src="https://avatars.githubusercontent.com/u/42482170?v=4"
-            className="mr-2"
-          />
-          <div className="mr-4 text-sm">{`David Neuman | ${format(
-            parseISO(post.created_at),
-            'MMMM do, yyyy'
-          )}`}</div>
+      <Header />
+      <article className="flex flex-col justify-center max-w-2xl mx-auto w-full">
+        <h1 className="text-4xl font-bold text-center">{post.title}</h1>
+        <div className="flex justify-between w-full">
+          <div className="flex p-4 items-center">
+            <Avatar
+              src="https://avatars.githubusercontent.com/u/42482170?v=4"
+              className="mr-2"
+            />
+            <div className="mr-4 text-sm">{`David Neuman // ${format(
+              parseISO(post.created_at),
+              'MMMM do, yyyy'
+            )}`}</div>
+          </div>
+          <div className="flex text-sm items-center">{`Reading time: ${
+            post.reading_time
+          } ${post.reading_time > 1 ? 'minutes' : 'minute'}`}</div>
         </div>
-        <div className="flex text-sm items-center">{`Reading time: ${
-          post.reading_time
-        } ${post.reading_time > 1 ? 'minutes' : 'minute'}`}</div>
-      </div>
-      <main
-        className="prose"
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      ></main>
-    </article>
+        <hr className="mb-4 border-t-2 w-20 mx-auto" />
+        <main
+          className="prose md:prose-lg lg:prose-xl"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        ></main>
+      </article>
     </>
   );
 };
