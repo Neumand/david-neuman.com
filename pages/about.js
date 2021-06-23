@@ -1,10 +1,5 @@
-import Header from '../components/Header';
+import Layout from 'layouts/Layout';
 
 export default function About() {
-  return (
-    <>
-      <Header />
-      <h1>About</h1>
-    </>
-  );
+  return <Layout header="About" />;
 }

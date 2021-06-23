@@ -1,28 +1,42 @@
-import Link from 'next/link';
-import { getAllPosts } from '../server/ghost';
-import Header from '../components/Header';
-import Posts from '../components/Posts';
+import Image from 'next/image';
 
-const Home = ({ posts }) => {
+import Layout from 'layouts/Layout';
+import Tags from 'components/Tags';
+import { getFeaturedPosts } from 'server/ghost';
+
+const Home = ({ featuredPosts }) => {
   return (
-    <>
-      <Header />
-      <Posts posts={posts} />
-    </>
+    <Layout
+      header="David Neuman"
+      subHeader="Full-stack software developer, musician, and writer."
+    >
+      <h2 className="text-xl uppercase font-semibold">Featured Posts</h2>
+      {featuredPosts.map((post) => (
+        <div key={post.id}>
+          <h3 className="text-3xl mb-4 font-semibold">{post.title}</h3>
+          <Image
+            className="rounded"
+            src={post.feature_image}
+            width={700}
+            height={400}
+          />
+          <div>{post.excerpt}</div>
+          <Tags tags={post.tags} />
+        </div>
+      ))}
+    </Layout>
   );
 };
 
-export async function getStaticProps(context) {
-  const posts = await getAllPosts();
+export async function getStaticProps() {
+  const featuredPosts = await getFeaturedPosts();
 
-  if (!posts) {
-    return {
-      notFound: true,
-    };
+  if (!featuredPosts) {
+    return;
   }
 
   return {
-    props: { posts },
+    props: { featuredPosts },
   };
 }
 

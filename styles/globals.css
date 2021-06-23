@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply min-h-screen;
+  }
+
   @font-face {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: 400;
     src: url("../public/fonts/inter-var-latin.woff2") format("woff2");
+  }
+
+  svg {
+    @apply fill-current h-5;
   }
 }
 

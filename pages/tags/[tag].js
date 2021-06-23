@@ -1,14 +1,14 @@
-import Header from "../../components/Header";
-import Posts from "../../components/Posts";
-import { getAllTags, getPostsForTag, getTag } from "../../server/ghost"
+import Layout from 'layouts/Layout';
+import Navigation from '../../components/Navigation/Navigation';
+import Posts from '../../components/Posts';
+import { getAllTags, getPostsForTag, getTag } from '../../server/ghost';
 
 export default function Tag({ tag, posts }) {
   return (
-    <>
-      <Header />
+    <Layout>
       <h1 className="text-3xl font-semibold text-center">{`Tag: ${tag.name}`}</h1>
       <Posts posts={posts} />
-    </>
+    </Layout>
   );
 }
 
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
     params: { tag: tag.slug },
   }));
 
-  return { paths, fallback: false }
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps(context) {
@@ -28,7 +28,7 @@ export async function getStaticProps(context) {
   if (!tag) {
     return {
       notFound: true,
-    }
+    };
   }
 
   return {

@@ -1,20 +1,18 @@
 import { useEffect } from 'react';
-import prism from "prismjs";
-
+import prism from 'prismjs';
 import { Avatar } from '@windmill/react-ui';
 import { format, parseISO } from 'date-fns';
 
-import Header from '../../components/Header';
-import { getAllPosts, getPost } from '../../server/ghost';
+import Layout from 'layouts/Layout';
+import { getAllPosts, getPost } from 'server/ghost';
 
 const PostPage = ({ post }) => {
   useEffect(() => {
     prism.highlightAll();
-  })
+  });
 
   return (
-    <>
-      <Header />
+    <Layout>
       <article className="flex flex-col justify-center max-w-2xl mx-auto w-full">
         <h1 className="text-3xl font-bold mb-2 text-center md:text-5xl sm:text-4xl">
           {post.title}
@@ -39,7 +37,7 @@ const PostPage = ({ post }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         ></main>
       </article>
-    </>
+    </Layout>
   );
 };
 

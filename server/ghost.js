@@ -15,6 +15,14 @@ export const getAllPosts = () => {
   }
 };
 
+export const getFeaturedPosts = () => {
+  try {
+    return api.posts.browse({ filter: 'featured:true', include: "tags" });
+  } catch (error) {
+    console.error(`Error getting featured post(s): ${error}`);
+  }
+};
+
 export const getPostsForTag = (tag) => {
   try {
     return api.posts.browse({
@@ -26,7 +34,7 @@ export const getPostsForTag = (tag) => {
     console.error(`Error getting posts for given tag: ${error}`);
     return;
   }
-}
+};
 
 export const getAllTags = () => {
   try {
@@ -39,7 +47,7 @@ export const getAllTags = () => {
 
 export const getTag = (slug) => {
   try {
-    return api.tags.read({ slug }, { include: "count.posts" });
+    return api.tags.read({ slug }, { include: 'count.posts' });
   } catch (error) {
     console.error(`Error getting tag: ${error}`);
     return;

@@ -1,20 +1,18 @@
-import Header from '../components/Header';
+import Layout from 'layouts/Layout';
 import Posts from '../components/Posts';
 
 import { getAllPosts, getAllTags } from '../server/ghost';
 
-const Blog = ({ posts, tags }) => {
+const Blog = ({ posts }) => {
   return (
-    <>
-      <Header tags={tags} />
+    <Layout header="Blog">
       <Posts posts={posts} />
-    </>
+    </Layout>
   );
 };
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
-  const tags = await getAllTags();
 
   if (!posts) {
     return {
@@ -23,7 +21,7 @@ export async function getStaticProps() {
   }
 
   return {
-    props: { posts, tags },
+    props: { posts },
   };
 }
 
