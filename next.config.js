@@ -9,6 +9,6 @@ module.exports = {
   },
 
   images: {
-    domains: ['images.unsplash.com', 'david-neuman.com']
-  }
+    domains: ['images.unsplash.com', 'david-neuman.com'],
+  },
 };
