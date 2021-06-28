@@ -1,23 +1,17 @@
 import Navigation from 'components/Navigation/Navigation';
 import SocialIcon from 'components/SocialIcon';
 
-import Twitter from 'public/static/twitter.svg';
-import LinkedIn from 'public/static/linkedin.svg';
-import GitHub from 'public/static/github.svg';
-import HackerNews from 'public/static/hacker-news.svg';
-import Mail from 'public/static/mail.svg';
+import Twitter from 'public/static/svg/twitter.svg';
+import LinkedIn from 'public/static/svg/linkedin.svg';
+import GitHub from 'public/static/svg/github.svg';
+import HackerNews from 'public/static/svg/hacker-news.svg';
+import Mail from 'public/static/svg/mail.svg';
 
-export default function Layout({ children, header, subHeader }) {
+export default function Layout({ children }) {
   return (
     <div>
       <Navigation />
-      <main className="m-auto max-w-7xl p-8">
-        <section className="mb-12 space-y-2">
-          <h1 className="text-6xl font-bold">{header}</h1>
-          <h2 className="text-3xl">{subHeader}</h2>
-        </section>
-        {children}
-      </main>
+      {children}
       <footer className="flex justify-between p-8">
         <span>{`David Neuman © ${new Date().getFullYear()}`}</span>
         <div className="flex justify-center space-x-1">

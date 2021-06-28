@@ -17,6 +17,10 @@
   svg {
     @apply fill-current h-5;
   }
+
+  .hero {
+    @apply bg-gray-200;
+  }
 }
 
 *,

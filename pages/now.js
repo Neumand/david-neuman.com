@@ -1,5 +1,12 @@
+import Header from 'components/Header';
 import Layout from 'layouts/Layout';
 
 export default function Now() {
-  return <Layout header="Now"></Layout>;
+  return (
+    <Layout>
+      <Header>
+        <h1 className="text-6xl font-bold">Now</h1>
+      </Header>
+    </Layout>
+  );
 }

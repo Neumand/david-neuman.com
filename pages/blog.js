@@ -1,3 +1,4 @@
+import Header from 'components/Header';
 import Layout from 'layouts/Layout';
 import Posts from '../components/Posts';
 
@@ -5,7 +6,10 @@ import { getAllPosts, getAllTags } from '../server/ghost';
 
 const Blog = ({ posts }) => {
   return (
-    <Layout header="Blog">
+    <Layout>
+      <Header>
+        <h1 className="text-6xl font-bold">Blog</h1>
+      </Header>
       <Posts posts={posts} />
     </Layout>
   );
