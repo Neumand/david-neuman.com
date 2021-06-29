@@ -8,11 +8,16 @@
   }
 
   @font-face {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-weight: 400;
-    src: url("../public/fonts/inter-var-latin.woff2") format("woff2");
+    font-family: 'Alliance 1';
+    src: url("/fonts/AllianceNo1-Regular.woff2") format("woff2");
   }
+  
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url("/fonts/inter-var-latin.woff2") format("woff2");
+  }
+
 
   svg {
     @apply fill-current h-5;
