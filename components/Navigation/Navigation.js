@@ -1,10 +1,14 @@
 import { Button } from '@windmill/react-ui';
 import { GiMoon } from 'react-icons/gi';
+import { useTheme } from 'next-themes';
+
 import NavItem from './NavItem';
 
 export default function Navigation() {
+  const { theme, setTheme } = useTheme();
+
   return (
-    <nav className="flex items-center justify-between w-full p-8 sticky-nav bg-white shadow-md">
+    <nav className="flex items-center justify-between w-full p-8 sticky-nav bg-white shadow-md transition-colors transform ease-linear dark:bg-gray-900">
       <ul className="flex space-x-2">
         <NavItem href="/">
           <span className="text-3xl font-bold">David Neuman</span>
@@ -19,7 +23,12 @@ export default function Navigation() {
         <NavItem href="https://brain-food.vercel.app/" popOut>
           Brain Food
         </NavItem>
-        <Button icon={GiMoon} layout="outline" aria-label="Dark mode"></Button>
+        <Button
+          icon={GiMoon}
+          layout="outline"
+          aria-label="Toggle Dark Mode"
+          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        ></Button>
       </ul>
     </nav>
   );

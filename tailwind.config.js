@@ -4,7 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = windmill({
   mode: 'jit',
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
     fontFamily: {
       sans: ['"Alliance 1"', ...defaultTheme.fontFamily.sans],
@@ -307,7 +307,7 @@ module.exports = windmill({
     },
   },
   variants: {
-    extend: {},
+    typography: ['dark'],
   },
   plugins: [require('@tailwindcss/typography')],
 });
