@@ -1,13 +1,12 @@
-const windmill = require('@windmill/react-ui/config');
-const defaultTheme = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
-module.exports = windmill({
+module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
   darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: ['"Alliance 1"', ...defaultTheme.fontFamily.sans],
+      sans: ['"Alliance 1"', ...fontFamily.sans],
     },
     extend: {
       colors: {
@@ -310,4 +309,4 @@ module.exports = windmill({
     typography: ['dark'],
   },
   plugins: [require('@tailwindcss/typography')],
-});
+};
