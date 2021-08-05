@@ -12,6 +12,9 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            a: {
+              'text-decoration': 'underline',
+            },
             code: {
               'background-color': theme('colors.gray.100'),
               'border-radius': '3px',
