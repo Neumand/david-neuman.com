@@ -9,6 +9,51 @@ module.exports = {
       sans: ['"Alliance 1"', ...fontFamily.sans],
     },
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            code: {
+              'background-color': theme('colors.gray.100'),
+              'border-radius': '3px',
+              padding: '3px',
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
+            },
+          },
+        },
+        dark: {
+          css: {
+            color: theme('colors.gray.200'),
+            a: {
+              color: theme('colors.blue.500'),
+            },
+            'h2,h3,h4': {
+              color: theme('colors.gray.200'),
+            },
+            strong: {
+              color: theme('colors.gray.200'),
+            },
+            code: {
+              color: theme('colors.gray.200'),
+              'background-color': theme('colors.cool-gray.800'),
+            },
+            pre: {
+              code: {
+                'background-color': 'inherit',
+                color: 'inherit',
+              },
+            },
+          },
+        },
+      }),
+      backgroundImage: (theme) => ({
+        'hero-image': "url('/static/images/lighthouse-sunset.png')",
+        'hero-image-dark': "url('/static/images/lighthouse-night.png')",
+      }),
       colors: {
         red: {
           50: '#ffebee',

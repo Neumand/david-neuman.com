@@ -6,7 +6,7 @@ export default function Tags({ tags }) {
       {tags.map((tag) => (
         <div
           key={tag.id}
-          className="w-max text-xs rounded-full bg-blue-100 px-3 py-1 uppercase font-semibold transition-all transform ease-in-out hover:bg-blue-300 dark:bg-cool-gray-700 dark:hover:bg-cool-gray-800"
+          className="w-max text-xs rounded-full bg-blue-50 px-3 py-1 uppercase font-semibold transition-all transform ease-in-out hover:bg-blue-100 dark:bg-cool-gray-800 dark:hover:bg-cool-gray-700"
         >
           <Link href={`/tags/${tag.slug}`}>
             <a>{`${tag.name}`}</a>

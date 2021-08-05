@@ -10,7 +10,6 @@ import { getFeaturedPosts } from 'server/ghost';
 const Home = ({ featuredPosts }) => {
   const typedEl = useRef(null);
   const typed = useRef(null);
-  const lottiePlayerRef = useRef(null);
 
   useEffect(() => {
     typed.current = new Typed(typedEl.current, {
@@ -24,13 +23,9 @@ const Home = ({ featuredPosts }) => {
     return () => typed.current.destroy();
   });
 
-  useEffect(() => {
-    import('@lottiefiles/lottie-player');
-  });
-
   return (
     <Layout>
-      <section className="bg-gray-200 flex flex-col justify-evenly items-center mb-8 w-full md:flex-row dark:bg-cool-gray-900">
+      <section className="p-12 bg-gray-200 flex flex-col justify-center items-center mb-8 w-full md:flex-row dark:bg-cool-gray-800">
         <Header textAlign="left">
           <div className="max-w-xl">
             <h1 className="text-6xl font-bold">David Neuman</h1>
@@ -39,24 +34,13 @@ const Home = ({ featuredPosts }) => {
               ref={typedEl}
             ></span>
             <p className="text-lg mt-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              I'm a full stack developer, musician, and writer based in
+              Montreal, QC. Thanks for reading!
             </p>
           </div>
         </Header>
-        <lottie-player
-          ref={lottiePlayerRef}
-          src="https://assets4.lottiefiles.com/packages/lf20_1qgHjN.json"
-          background="transparent"
-          speed="1"
-          style={{ width: '500px', height: '500px' }}
-          loop
-          autoplay
-        ></lottie-player>
       </section>
-      <main className="m-auto max-w-7xl p-8">
+      <main className="flex flex-col justify-center items-center m-auto max-w-7xl p-8">
         <h2 className="text-xl uppercase font-semibold">Featured Posts</h2>
         {featuredPosts.map((post) => (
           <div key={post.id}>
