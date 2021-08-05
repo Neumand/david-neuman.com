@@ -1,13 +1,14 @@
+import { ThemeProvider } from 'next-themes';
+
 import 'styles/globals.css';
 import 'tailwindcss/tailwind.css';
 import 'styles/prism.css';
-import { Windmill } from '@windmill/react-ui';
 
 function App({ Component, pageProps }) {
   return (
-    <Windmill>
+    <ThemeProvider attribute="class">
       <Component {...pageProps} />
-    </Windmill>
+    </ThemeProvider>
   );
 }
 

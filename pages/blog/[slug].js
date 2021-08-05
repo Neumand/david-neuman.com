@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import prism from 'prismjs';
-import { Avatar } from '@windmill/react-ui';
 import { format, parseISO } from 'date-fns';
 
 import Layout from 'layouts/Layout';
@@ -19,9 +18,9 @@ const PostPage = ({ post }) => {
         </h1>
         <div className="flex justify-between w-full">
           <div className="flex p-4 items-center">
-            <Avatar
+            <img
+              className="rounded-full inline-block h-8 w-8 mr-2"
               src="https://avatars.githubusercontent.com/u/42482170?v=4"
-              className="mr-2"
             />
             <div className="mr-4 text-sm">{`David Neuman // ${format(
               parseISO(post.created_at),
@@ -33,7 +32,7 @@ const PostPage = ({ post }) => {
           } ${post.reading_time > 1 ? 'minutes' : 'minute'}`}</div>
         </div>
         <main
-          className="prose md:prose-lg lg:prose-xl"
+          className="prose md:prose-lg lg:prose-xl dark:prose-dark md:dark:prose-dark lg:dark:prose-dark"
           dangerouslySetInnerHTML={{ __html: post.html }}
         ></main>
       </article>
