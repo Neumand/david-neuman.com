@@ -14,18 +14,17 @@ export default function About() {
       <Header>
         <h1 className="text-6xl font-bold lead">About Me</h1>
       </Header>
-      <main className="flex flex-col max-w-4xl mx-auto space-y-4">
+      <main className="flex flex-col max-w-2xl mx-auto space-y-4 leading-7">
         <Image
           className="max-w-full"
+          placeholder="blur"
           src={theme === 'light' ? LighthouseDay : LighthouseNight}
           alt="Lighthouse"
         />
-        <h2 className="text-4xl text-center">Hey there! I'm Dave</h2>
+        <h2 className="text-4xl text-center">Hey there! I'm Dave.</h2>
         <p className="text-left">
-          I've been a software developer since graduating from Lighthouse Labs'
-          Web Development Bootcamp in 2019. I left finance to pursue . While I
-          have experience as a full-stack developer, my passion lies in creating
-          beautiful user interfaces. I work at Stingray on the web team.
+          I'm a software developer and Lighthouse Labs alumni, where I completed a
+          Web Development Bootcamp in 2019. I work at Stingray on the web team.
         </p>
         <p className="text-left">
           I believe that teaching is the best way to learn.
