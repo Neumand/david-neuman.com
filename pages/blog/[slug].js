@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Image from 'next/image';
 import prism from 'prismjs';
 import { format, parseISO } from 'date-fns';
 
@@ -31,6 +32,14 @@ const PostPage = ({ post }) => {
             post.reading_time
           } ${post.reading_time > 1 ? 'minutes' : 'minute'}`}</div>
         </div>
+        <Image
+          src={post.feature_image}
+          alt=""
+          width={1920}
+          height={1080}
+          placeholder="blur"
+          blurDataURL={post.feature_image}
+        />
         <main
           className="prose md:prose-lg lg:prose-xl dark:prose-dark md:dark:prose-dark lg:dark:prose-dark"
           dangerouslySetInnerHTML={{ __html: post.html }}
