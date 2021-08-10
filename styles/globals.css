@@ -9,15 +9,14 @@
 
   @font-face {
     font-family: 'Alliance 1';
-    src: url("/fonts/AllianceNo1-Regular.woff2") format("woff2");
+    src: url('/fonts/AllianceNo1-Regular.woff2') format('woff2');
   }
-  
+
   @font-face {
     font-family: 'Inter';
     font-weight: 400;
-    src: url("/fonts/inter-var-latin.woff2") format("woff2");
+    src: url('/fonts/inter-var-latin.woff2') format('woff2');
   }
-
 
   svg {
     @apply fill-current h-5;
@@ -40,4 +39,8 @@
   z-index: 10;
   top: 0;
   transition: background-color 0.1 ease-in-out;
+}
+
+.prose a strong {
+  @apply text-blue-800 dark:text-blue-500;
 }
