@@ -13,7 +13,9 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              'text-decoration': 'underline',
+              'text-decoration': 'none',
+              color: theme('colors.blue.800'),
+              'background-color': 'rgba(227, 242, 253, 0.3)',
             },
             code: {
               'background-color': theme('colors.gray.100'),
@@ -33,6 +35,7 @@ module.exports = {
             color: theme('colors.gray.200'),
             a: {
               color: theme('colors.blue.500'),
+              'background-color': theme('colors.cool-gray.900'),
             },
             'h2,h3,h4': {
               color: theme('colors.gray.200'),
