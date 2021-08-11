@@ -10,6 +10,7 @@ module.exports = {
       sans: ['"Alliance 1"', ...fontFamily.sans],
     },
     extend: {
+      colors: themeColors,
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -57,11 +58,6 @@ module.exports = {
           },
         },
       }),
-      backgroundImage: (theme) => ({
-        'hero-image': "url('/static/images/lighthouse-sunset.png')",
-        'hero-image-dark': "url('/static/images/lighthouse-night.png')",
-      }),
-      colors: themeColors,
     },
   },
   variants: {
