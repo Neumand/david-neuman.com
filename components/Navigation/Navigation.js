@@ -1,26 +1,61 @@
 import { useTheme } from 'next-themes';
+import { Menu } from '@headlessui/react';
+import { MenuIcon } from '@heroicons/react/outline';
 
 import NavItem from './NavItem';
 
 export default function Navigation() {
   const { theme, setTheme } = useTheme();
 
+  const navItems = [
+    { name: 'Blog', href: '/blog', popOut: false },
+    { name: 'Newsletter', href: '/newsletter', popOut: false },
+    { name: 'Books', href: '/books', popOut: false },
+    { name: 'Now', href: '/now', popOut: false },
+    { name: 'About', href: '/about', popOut: false },
+    {
+      name: 'Brain Food',
+      href: 'https://brain-food.vercel.app/',
+      popOut: true,
+    },
+  ];
+
   return (
     <nav className="flex items-center justify-between w-full p-8 sticky-nav bg-white shadow-md transition-colors transform ease-linear dark:bg-gray-900">
-      <ul className="flex space-x-2">
+      <div className="flex space-x-2">
         <NavItem href="/">
           <span className="text-3xl font-bold">David Neuman</span>
         </NavItem>
-      </ul>
-      <ul className="flex space-x-4 items-center">
-        <NavItem href="/blog">Blog</NavItem>
-        <NavItem href="/newsletter">Newsletter</NavItem>
-        <NavItem href="/books">Books</NavItem>
-        <NavItem href="/now">Now</NavItem>
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="https://brain-food.vercel.app/" popOut>
-          Brain Food
-        </NavItem>
+      </div>
+      <div className="flex space-x-4">
+        <div className="hidden space-x-4 items-center md:flex">
+          {navItems.map(({ name, href, popOut }) => (
+            <NavItem key={name} href={href} popOut={popOut}>
+              {name}
+            </NavItem>
+          ))}
+        </div>
+        <Menu>
+          <Menu.Button className="md:hidden py-2 px-2 rounded transition-colors ease-in-out bg-transparent dark:bg-cool-gray-900 dark:hover:bg-cool-gray-800">
+            <MenuIcon className="w-6 h-6" />
+          </Menu.Button>
+          <Menu.Items className="absolute right-8 top-20 w-40 bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            {navItems.map(({ name, href, popOut }) => (
+              <Menu.Item>
+                {({ active }) => (
+                  <NavItem
+                    className={`${active && 'bg-black'}`}
+                    key={name}
+                    href={href}
+                    popOut={popOut}
+                  >
+                    {name}
+                  </NavItem>
+                )}
+              </Menu.Item>
+            ))}
+          </Menu.Items>
+        </Menu>
         <button
           className="py-2 px-2 rounded transition-colors ease-in-out bg-gray-200 hover:bg-gray-300 dark:bg-cool-gray-900 dark:hover:bg-cool-gray-800"
           aria-label="Toggle Dark Mode"
@@ -50,7 +85,7 @@ export default function Navigation() {
             </svg>
           )}
         </button>
-      </ul>
+      </div>
     </nav>
   );
 }
