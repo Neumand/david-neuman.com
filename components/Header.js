@@ -1,6 +1,6 @@
 export default function Header({ children, textAlign = 'center' }) {
   return (
-    <header className={`text-${textAlign} mb-12`}>
+    <header className={`text-${textAlign}`}>
       {children}
     </header>
   );

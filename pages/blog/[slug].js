@@ -13,7 +13,7 @@ const PostPage = ({ post }) => {
 
   return (
     <Layout>
-      <article className="flex flex-col justify-center max-w-2xl mx-auto w-full mt-8">
+      <article className="flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8">
         <h1 className="text-3xl font-bold mb-2 text-center md:text-5xl sm:text-4xl">
           {post.title}
         </h1>
@@ -23,12 +23,12 @@ const PostPage = ({ post }) => {
               className="rounded-full inline-block h-8 w-8 mr-2"
               src="https://avatars.githubusercontent.com/u/42482170?v=4"
             />
-            <div className="mr-4 text-sm">{`David Neuman // ${format(
+            <div className="mr-4 text-xs md:text-base">{`David Neuman // ${format(
               parseISO(post.created_at),
               'MMMM do, yyyy'
             )}`}</div>
           </div>
-          <div className="flex text-sm items-center">{`Reading time: ${
+          <div className="flex text-xs items-center md:text-base">{`Reading time: ${
             post.reading_time
           } ${post.reading_time > 1 ? 'minutes' : 'minute'}`}</div>
         </div>
@@ -40,10 +40,9 @@ const PostPage = ({ post }) => {
           placeholder="blur"
           blurDataURL={post.feature_image}
         />
-        <main
-          className="prose md:prose-lg lg:prose-xl dark:prose-dark md:dark:prose-dark lg:dark:prose-dark"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        ></main>
+        <main className="prose md:prose-lg lg:prose-xl dark:prose-dark md:dark:prose-dark lg:dark:prose-dark">
+          <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        </main>
       </article>
     </Layout>
   );

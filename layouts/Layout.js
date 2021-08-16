@@ -12,9 +12,9 @@ export default function Layout({ children }) {
     <div className="bg-white transition-all transform ease-linear dark:bg-gray-900 dark:text-gray-100">
       <Navigation />
       {children}
-      <footer className="flex justify-between p-8">
-        <span>{`David Neuman © ${new Date().getFullYear()}`}</span>
-        <div className="flex justify-center space-x-1">
+      <footer className="flex flex-col-reverse items-center p-8 md:flex-row md:justify-between md:items-end">
+        <span className="text-sm md:text-base">{`David Neuman © ${new Date().getFullYear()}`}</span>
+        <div className="flex justify-center space-x-2">
           <SocialIcon url="https://twitter.com/DavidMNeuman">
             <Twitter />
           </SocialIcon>

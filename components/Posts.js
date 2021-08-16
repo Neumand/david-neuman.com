@@ -5,7 +5,7 @@ import Tags from './Tags';
 
 export default function Posts({ posts }) {
   return (
-    <div className="p-5 my-10 max-w-4xl mx-auto sm:grid md:grid-cols-2 md:gap-6 xl:grid-cols-3 xl:gap-8 xl:max-w-6xl">
+    <div className="px-5 max-w-4xl mx-auto sm:grid md:grid-cols-2 md:gap-6 xl:grid-cols-3 xl:gap-8 xl:max-w-6xl">
       {posts.map(({ id, title, excerpt, feature_image, slug, tags }) => (
         <div
           key={id}
