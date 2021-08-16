@@ -44,3 +44,8 @@
 .prose a strong {
   @apply text-blue-800 dark:text-blue-500;
 }
+
+.prose code[class*="language-"],
+.prose pre[class*="language-"] {
+  @apply text-sm md:text-base;
+}

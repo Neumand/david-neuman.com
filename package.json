@@ -9,7 +9,8 @@
     "env": "vercel env pull"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.1",
+    "@headlessui/react": "^1.4.0",
+    "@heroicons/react": "^1.0.3",
     "@lottiefiles/lottie-player": "^1.0.6",
     "@svgr/webpack": "^5.5.0",
     "@tailwindcss/typography": "^0.4.1",
