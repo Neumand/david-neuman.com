@@ -43,6 +43,9 @@ module.exports = {
             strong: {
               color: theme('colors.gray.200'),
             },
+            blockquote: {
+              color: theme('colors.gray.200'),
+            },
             code: {
               color: theme('colors.gray.200'),
               'background-color': theme('colors.cool-gray.800'),

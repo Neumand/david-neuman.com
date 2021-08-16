@@ -21,13 +21,13 @@ export default function Navigation() {
   ];
 
   return (
-    <Popover as="nav" className="sticky-nav">
+    <Popover as="nav" className="sticky-nav mb-4 md:mb-8">
       {({ open }) => (
         <>
           <div className="flex items-center justify-between w-full p-8 bg-white shadow-md transition-colors transform ease-linear dark:bg-gray-900">
             <div className="flex space-x-2">
               <NavItem href="/">
-                <span className="text-3xl font-bold">David Neuman</span>
+                <span className="text-xl font-bold md:text-3xl">David Neuman</span>
               </NavItem>
             </div>
             <div className="flex space-x-4">
@@ -84,8 +84,8 @@ export default function Navigation() {
             <Popover.Panel>
               <div className="absolute w-full flex flex-col justify-center items-center px-2 pt-2 pb-3 space-x-4 space-y-4 bg-white shadow-md dark:bg-gray-900">
                 {navItems.map(({ name, href, popOut }) => (
-                  <Popover.Button>
-                    <NavItem key={name} href={href} popOut={popOut}>
+                  <Popover.Button key={name}>
+                    <NavItem href={href} popOut={popOut}>
                       {name}
                     </NavItem>
                   </Popover.Button>
