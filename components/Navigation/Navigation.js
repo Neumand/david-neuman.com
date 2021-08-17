@@ -24,7 +24,7 @@ export default function Navigation() {
     <Popover as="nav" className="sticky-nav">
       {({ open }) => (
         <>
-          <div className="flex items-center justify-between w-full p-8 mb-4 bg-white shadow-md transition-colors transform ease-linear md:mb-8 dark:bg-gray-900">
+          <div className="flex items-center justify-between w-full p-8 bg-white shadow-md transition-colors transform ease-linear dark:bg-gray-900">
             <div className="flex space-x-2">
               <NavItem href="/">
                 <span className="text-xl font-bold md:text-3xl">David Neuman</span>
