@@ -21,6 +21,10 @@
   svg {
     @apply fill-current h-5;
   }
+
+  ::selection {
+    @apply bg-blue-50 dark:bg-cool-gray-900;
+  }
 }
 
 *,
@@ -29,16 +33,15 @@
   box-sizing: border-box;
 }
 
-::selection {
-  background-color: #1b2d46;
-  color: #fff;
-}
-
 .sticky-nav {
   position: sticky;
   z-index: 10;
   top: 0;
   transition: background-color 0.1 ease-in-out;
+}
+
+.link {
+  @apply bg-blue-50 bg-opacity-30 text-blue-900 dark:bg-cool-gray-900 dark:text-blue-500;
 }
 
 .prose a strong {
