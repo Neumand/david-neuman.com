@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
+import Image from 'next/image';
 import prism from 'prismjs';
-import { Avatar } from '@windmill/react-ui';
 import { format, parseISO } from 'date-fns';
 
 import Layout from 'layouts/Layout';
@@ -13,29 +13,36 @@ const PostPage = ({ post }) => {
 
   return (
     <Layout>
-      <article className="flex flex-col justify-center max-w-2xl mx-auto w-full mt-8">
+      <article className="flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8">
         <h1 className="text-3xl font-bold mb-2 text-center md:text-5xl sm:text-4xl">
           {post.title}
         </h1>
         <div className="flex justify-between w-full">
           <div className="flex p-4 items-center">
-            <Avatar
+            <img
+              className="rounded-full inline-block h-8 w-8 mr-2"
               src="https://avatars.githubusercontent.com/u/42482170?v=4"
-              className="mr-2"
             />
-            <div className="mr-4 text-sm">{`David Neuman // ${format(
+            <div className="mr-4 text-xs md:text-base">{`David Neuman // ${format(
               parseISO(post.created_at),
               'MMMM do, yyyy'
             )}`}</div>
           </div>
-          <div className="flex text-sm items-center">{`Reading time: ${
+          <div className="flex text-xs items-center md:text-base">{`Reading time: ${
             post.reading_time
           } ${post.reading_time > 1 ? 'minutes' : 'minute'}`}</div>
         </div>
-        <main
-          className="prose md:prose-lg lg:prose-xl"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        ></main>
+        <Image
+          src={post.feature_image}
+          alt=""
+          width={1920}
+          height={1080}
+          placeholder="blur"
+          blurDataURL={post.feature_image}
+        />
+        <main className="prose md:prose-lg lg:prose-xl dark:prose-dark md:dark:prose-dark lg:dark:prose-dark">
+          <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        </main>
       </article>
     </Layout>
   );
@@ -62,6 +69,7 @@ export async function getStaticProps(context) {
 
   return {
     props: { post },
+    revalidate: 1,
   };
 }
 

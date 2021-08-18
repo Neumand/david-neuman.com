@@ -8,7 +8,7 @@ const Blog = ({ posts }) => {
   return (
     <Layout>
       <Header>
-        <h1 className="text-6xl font-bold">Blog</h1>
+        <h1 className="text-4xl font-bold md:text-6xl">Blog</h1>
       </Header>
       <Posts posts={posts} />
     </Layout>
@@ -26,6 +26,7 @@ export async function getStaticProps() {
 
   return {
     props: { posts },
+    revalidate: 1,
   };
 }
 

@@ -1,15 +1,68 @@
-const windmill = require('@windmill/react-ui/config');
-const defaultTheme = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
-module.exports = windmill({
+module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: ['"Alliance 1"', ...defaultTheme.fontFamily.sans],
+      sans: ['"Alliance 1"', ...fontFamily.sans],
     },
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              'text-decoration': 'none',
+              color: theme('colors.blue.800'),
+              'background-color': 'rgba(227, 242, 253, 0.3)',
+            },
+            code: {
+              'background-color': theme('colors.gray.100'),
+              'border-radius': '3px',
+              padding: '3px',
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
+            },
+          },
+        },
+        dark: {
+          css: {
+            color: theme('colors.gray.200'),
+            a: {
+              color: theme('colors.blue.500'),
+              'background-color': theme('colors.cool-gray.900'),
+            },
+            'h2,h3,h4': {
+              color: theme('colors.gray.200'),
+            },
+            strong: {
+              color: theme('colors.gray.200'),
+            },
+            blockquote: {
+              color: theme('colors.gray.200'),
+            },
+            code: {
+              color: theme('colors.gray.200'),
+              'background-color': theme('colors.cool-gray.800'),
+            },
+            pre: {
+              code: {
+                'background-color': 'inherit',
+                color: 'inherit',
+              },
+            },
+          },
+        },
+      }),
+      backgroundImage: (theme) => ({
+        'hero-image': "url('/static/images/lighthouse-sunset.png')",
+        'hero-image-dark': "url('/static/images/lighthouse-night.png')",
+      }),
       colors: {
         red: {
           50: '#ffebee',
@@ -167,6 +220,18 @@ module.exports = windmill({
           800: '#424242',
           900: '#212121',
         },
+        'cool-gray': {
+          50: '#fbfdfe',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cfd8e3',
+          400: '#97a6ba',
+          500: '#64748b',
+          600: '#475569',
+          700: '#364152',
+          800: '#27303f',
+          900: '#1a202e',
+        },
         'blue-gray': {
           50: '#eceff1',
           100: '#cfd8dc',
@@ -307,7 +372,7 @@ module.exports = windmill({
     },
   },
   variants: {
-    extend: {},
+    typography: ['dark'],
   },
   plugins: [require('@tailwindcss/typography')],
-});
+};
