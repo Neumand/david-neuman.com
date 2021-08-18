@@ -13,7 +13,7 @@ export default function About() {
   return (
     <Layout>
       <Header>
-        <h1 className="text-4xl font-bold md:text-6xl">About Me</h1>
+        <h1>About Me</h1>
       </Header>
       <main className="flex flex-col max-w-2xl mx-auto space-y-4 leading-7 p-8">
         <Image

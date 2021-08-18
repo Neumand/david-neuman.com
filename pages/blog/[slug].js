@@ -13,8 +13,8 @@ const PostPage = ({ post }) => {
 
   return (
     <Layout>
-      <article className="flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8">
-        <h1 className="text-3xl font-bold mb-2 text-center md:text-5xl sm:text-4xl">
+      <article className="flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8 md:px-0">
+        <h1 className="text-3xl font-bold mb-2 text-center md:text-5xl">
           {post.title}
         </h1>
         <div className="flex justify-between w-full">

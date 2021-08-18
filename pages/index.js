@@ -28,7 +28,7 @@ const Home = ({ featuredPosts }) => {
       <section className="p-12 bg-gray-200 flex flex-col justify-center items-center mb-8 w-full md:flex-row dark:bg-cool-gray-800">
         <Header textAlign="left">
           <div className="max-w-xl">
-            <h1 className="text-4xl font-bold md:text-6xl">David Neuman</h1>
+            <h1>David Neuman</h1>
             <span
               className="text-xl font-semibold text-blue-800 md:text-4xl"
               ref={typedEl}

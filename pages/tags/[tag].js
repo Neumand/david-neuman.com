@@ -6,7 +6,7 @@ import { getAllTags, getPostsForTag, getTag } from '../../server/ghost';
 export default function Tag({ tag, posts }) {
   return (
     <Layout>
-      <h1 className="text-3xl font-semibold text-center">{`Tag: ${tag.name}`}</h1>
+      <h1 className="text-3xl font-semibold text-center md:text-5xl">{`Tag: ${tag.name}`}</h1>
       <Posts posts={posts} />
     </Layout>
   );
