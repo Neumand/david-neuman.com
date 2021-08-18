@@ -14,28 +14,21 @@ export default function Books({ books }) {
         <p>Some of my favourite books</p>
       </Header>
       <div className="container p-5 my-10 mx-auto">
-        <div className="grid gap-6 mb-8 mx-auto md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-4 mb-8 mx-auto md:grid-cols-2 md:gap-8 xl:grid-cols-3">
           {books.map((book) => (
             <div
               key={book.title}
-              className="flex justify-evenly space-x-4 p-4 max-h-72 max-w-xl bg-gray-50 border-2 rounded-lg shadow-sm dark:bg-cool-gray-900 dark:border-cool-gray-700"
+              className="flex p-4 max-h-72 max-w-xl bg-gray-50 border-2 rounded-lg shadow-sm transition-all transform ease-in-out md:hover:scale-105 md:hover:shadow-xl md:active:scale-105 md:active:shadow-xl dark:bg-cool-gray-900 dark:border-cool-gray-700"
             >
               <img
                 src={book.imageUrl}
                 alt={`Book cover for ${book.title} by ${book.author}`}
-                // className="object-contain w-1/2"
-                className="w-1/2 max-h-64 rounded-md shadow-md"
+                className="w-30 max-h-52 md:w-44 md:max-h-64 rounded-md shadow-md"
               />
-              <div className="flex flex-col text-center">
-                <div className="space-y-2">
+              <div className="flex flex-col max-w-[150px] m-auto text-center space-y-2 md:space-y-4 md:max-w-[200px]">
                   <h3 className="text-base md:text-xl font-bold">{book.title}</h3>
-                  <div className="text-sm font-semibold">{book.author}</div>
-                  <p className="text-xs">
-                    Some description here about if I've read the book or not and
-                    yada yada
-                  </p>
-                </div>
-                <div className="mt-auto">{book.genre}</div>
+                  <div className="text-sm">{book.author}</div>
+                <div className="text-xs mt-auto font-semibold uppercase text-blue-900 dark:text-blue-500">{book.genre}</div>
               </div>
             </div>
           ))}

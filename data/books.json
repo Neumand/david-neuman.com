@@ -33,5 +33,33 @@
     "genre": "Personal Development",
     "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/817xk9KvJbL.jpg",
     "hasReview": false
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "genre": "Personal Development",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/713mzPe9SwS.jpg",
+    "hasReview": false
+  },
+  {
+    "title": "The Shadow of What Was Lost",
+    "author": "James Islington",
+    "genre": "Sci-Fi/Fantasy",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51oul60C3fL.jpg",
+    "hasReview": false
+  },
+  {
+    "title": "An Echo of Things to Come",
+    "author": "James Islington",
+    "genre": "Sci-Fi/Fantasy",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51od8X9o3YL.jpg",
+    "hasReview": false
+  },
+  {
+    "title": "The Light of All That Falls",
+    "author": "James Islington",
+    "genre": "Sci-Fi/Fantasy",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/41xYSAqpUSL.jpg",
+    "hasReview": false
   }
 ]
