@@ -1,12 +1,18 @@
+import Header from 'components/Header';
 import Layout from 'layouts/Layout';
-import Navigation from '../../components/Navigation/Navigation';
 import Posts from '../../components/Posts';
 import { getAllTags, getPostsForTag, getTag } from '../../server/ghost';
 
 export default function Tag({ tag, posts }) {
+  console.log(tag);
   return (
     <Layout>
-      <h1 className="text-3xl font-semibold text-center md:text-5xl">{`Tag: ${tag.name}`}</h1>
+      <Header>
+        <h1 className="text-3xl font-semibold text-center md:text-5xl">
+          {tag.name}
+        </h1>
+        <p>{tag.description}</p>
+      </Header>
       <Posts posts={posts} />
     </Layout>
   );
