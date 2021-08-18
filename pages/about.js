@@ -12,19 +12,17 @@ export default function About() {
 
   return (
     <Layout>
-      <Header>
-        <h1>About Me</h1>
-      </Header>
-      <main className="flex flex-col max-w-2xl mx-auto space-y-4 leading-7 p-8">
+      <div className="mx-auto max-w-sm mt-4 sm:max-w-md md:mt-8 md:max-w-3xl">
         <Image
-          className="max-w-full"
           placeholder="blur"
           src={theme === 'light' ? LighthouseDay : LighthouseNight}
           alt="Lighthouse"
         />
-        <h2 className="text-2xl text-center md:text-4xl">
-          Hey there! I'm Dave.
-        </h2>
+      </div>
+      <main className="flex flex-col max-w-2xl mx-auto space-y-4 px-8 md:space-y-8">
+        <Header>
+          <h1>About Me</h1>
+        </Header>
         <p>
           I'm a software developer and Lighthouse Labs alumni, where I completed
           a Web Development Bootcamp in 2019. I work at Stingray on the web
@@ -62,7 +60,19 @@ export default function About() {
           </Link>{' '}
           for some of my favourites ---
         </p>
-        <p>I've got an addictive personality. Thankfully, my addictive</p>
+        <p>Here are some of the that I'm interesting in:</p>
+        <h2>Productivity and Mindfulness</h2>
+        <p>
+          I love optimizing my time and trying to get more things done. At the
+          same time, I'm aware that we live in a distracted world. It's easy to
+          get lost in the busyness of modern life. I try to live purposefully
+          and in the moment, staying engaged and present with whatever I'm doing
+          or working on. I tend to stay off social media and I no longer play
+          video games unless it's with friends, since I'm prone to getting
+          addicted to quick dopamine hits.
+        </p>
+        <h2>Writing of All Kinds</h2>
+        <h2>Topic #3</h2>
       </main>
     </Layout>
   );
