@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import Layout from 'layouts/Layout';
 import Header from 'components/Header';
-import Construction from 'components/Construction';
 
 export default function Books({ books }) {
   return (
@@ -12,29 +11,24 @@ export default function Books({ books }) {
       <Header>
         <h1 className="text-6xl font-bold">Books</h1>
       </Header>
-      <div className="container p-5 my-10 mx-auto md:grid md:grid-cols-2">
-        {books.map((book, idx) => (
-          <div
-            key={idx}
-            class="p-6 mx-auto"
-          >
-            <div class="flex flex-col items-start justify-center py-2 rounded-lg lg:flex-row">
-              <div class="flex items-center justify-center w-full lg:justify-start lg:w-1/2 lg:h-1/2">
-                <img src={book.imageUrl} alt="placeholder" class="rounded-lg" />
-              </div>
-              <div class="flex flex-col w-full text-blueGray-500 lg:ml-4">
-                <h2 class="mt-4 mb-8 text-xs font-semibold tracking-widest text-black uppercase lg:mt-0 title-font">
-                  {book.title}
-                </h2>
-                <p class="mb-3 text-base leading-relaxed text-blueGray-500">
-                  {book.author}
-                </p>
+      <div className="container p-5 my-10 mx-auto">
+        <div className="grid gap-6 mb-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
+          {books.map((book) => (
+            <div key={book.title} className="flex justify-evenly p-4 max-h-72 max-w-xl bg-gray-50 border-2 rounded-lg shadow-sm">
+              <img
+                src={book.imageUrl}
+                alt={`Book cover for ${book.title} by ${book.author}`}
+                className="object-contain w-1/2"
+              />
+              <div className="flex flex-col text-center space-y-2">
+                <h3 className="text-xl font-bold">{book.title}</h3>
+                <div className="font-semibold">{book.author}</div>
+                <p>Some description here about if I've read the book or not and yada yada</p>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      {/* <Construction /> */}
     </Layout>
   );
 }
