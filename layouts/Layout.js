@@ -9,7 +9,7 @@ import Mail from 'public/static/svg/mail.svg';
 
 export default function Layout({ children }) {
   return (
-    <div className="bg-white transition-all transform ease-linear dark:bg-gray-900 dark:text-gray-100">
+    <div className="min-h-screen bg-white transition-all transform ease-linear dark:bg-gray-900 dark:text-gray-100">
       <Navigation />
       {children}
       <footer className="flex flex-col-reverse items-center p-8 md:flex-row md:justify-between md:items-end">
