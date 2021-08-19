@@ -1,7 +1,7 @@
 import Header from 'components/Header';
 import Layout from 'layouts/Layout';
-import Posts from '../../components/Posts';
-import { getAllTags, getPostsForTag, getTag } from '../../server/ghost';
+import Posts from 'components/Posts';
+import { getAllTags, getPostsForTag, getTag } from 'lib/ghost';
 
 export default function Tag({ tag, posts }) {
   console.log(tag);
