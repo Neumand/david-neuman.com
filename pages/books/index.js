@@ -21,11 +21,14 @@ export default function Books({ books }) {
                 alt={`Book cover for ${book.title} by ${book.author}`}
                 className="w-30 max-h-52 md:w-44 md:max-h-64 rounded-md shadow-md"
               />
-              <div className="flex flex-col max-w-[150px] m-auto text-center space-y-2 md:space-y-4 md:max-w-[200px]">
-                  <h3 className="text-base md:text-xl font-bold">{book.title}</h3>
-                  <div className="text-sm">{book.author}</div>
-                  <p className="text-left text-xs md:text-sm">{book.summary}</p>
-                <div className="text-xs mt-auto font-semibold uppercase text-blue-900 dark:text-blue-500">{book.genre}</div>
+              <div className="flex flex-col max-w-[150px] m-auto text-center space-y-2 md:max-w-[200px]">
+                <h3 className="text-base md:text-xl font-bold">{book.title}</h3>
+                <div className="text-sm">{book.author}</div>
+                {book.rating && <p className="text-xs md:text-sm">{book.rating}</p>}
+                <p className="text-left text-xs md:text-sm">{book.summary}</p>
+                <div className="text-xs mt-auto font-semibold uppercase text-blue-900 dark:text-blue-500">
+                  {book.genre}
+                </div>
               </div>
             </div>
           ))}
