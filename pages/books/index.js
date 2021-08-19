@@ -1,10 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import Image from 'next/image';
-
 import Layout from 'layouts/Layout';
 import Header from 'components/Header';
-import Pill from 'components/Pill/Pill';
+import { getBooks } from 'lib/notion';
 
 export default function Books({ books }) {
   return (
@@ -28,6 +24,7 @@ export default function Books({ books }) {
               <div className="flex flex-col max-w-[150px] m-auto text-center space-y-2 md:space-y-4 md:max-w-[200px]">
                   <h3 className="text-base md:text-xl font-bold">{book.title}</h3>
                   <div className="text-sm">{book.author}</div>
+                  <p className="text-left text-xs md:text-sm">{book.summary}</p>
                 <div className="text-xs mt-auto font-semibold uppercase text-blue-900 dark:text-blue-500">{book.genre}</div>
               </div>
             </div>
@@ -40,16 +37,16 @@ export default function Books({ books }) {
 
 export async function getStaticProps() {
   try {
-    const data = fs.readFileSync(path.join('data/books.json'));
-    const books = JSON.parse(data);
-    const filteredBooks = books.sort((a, b) => a.genre.localeCompare(b.genre));
+    const books = await getBooks();
     return {
       props: {
-        books: filteredBooks,
+        books,
       },
     };
   } catch (error) {
     console.error(`An error occured fetching books: ${error}`);
-    return;
+    return {
+      props: {},
+    };
   }
 }
