@@ -1,8 +1,8 @@
 import Header from 'components/Header';
 import Layout from 'layouts/Layout';
-import Posts from '../components/Posts';
+import Posts from 'components/Posts';
 
-import { getAllPosts, getAllTags } from '../server/ghost';
+import { getAllPosts } from 'lib/ghost';
 
 const Blog = ({ posts }) => {
   return (
