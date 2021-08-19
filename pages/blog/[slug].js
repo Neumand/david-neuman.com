@@ -4,7 +4,7 @@ import prism from 'prismjs';
 import { format, parseISO } from 'date-fns';
 
 import Layout from 'layouts/Layout';
-import { getAllPosts, getPost } from 'server/ghost';
+import { getAllPosts, getPost } from 'lib/ghost';
 
 const PostPage = ({ post }) => {
   useEffect(() => {
