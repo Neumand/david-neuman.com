@@ -61,6 +61,13 @@ export default function About() {
           for some of my favourites ---
         </p>
         <p>Here are some of the that I'm interesting in:</p>
+        <h2>Writing of All Kinds</h2>
+        <p>
+          Writing is, in essence, creating. At the moment I mostly write code
+          and words, on a screen or in a journal. But I used to write music and
+          will do so again one day. I write to build something from nothing, to
+          share what I've learned, to capture emotions. It's how I express my creativity.
+        </p>
         <h2>Productivity and Mindfulness</h2>
         <p>
           I love optimizing my time and trying to get more things done. At the
@@ -71,7 +78,6 @@ export default function About() {
           video games unless it's with friends, since I'm prone to getting
           addicted to quick dopamine hits.
         </p>
-        <h2>Writing of All Kinds</h2>
         <h2>Topic #3</h2>
       </main>
     </Layout>
