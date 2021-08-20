@@ -32,7 +32,7 @@
   }
 
   ::selection {
-    @apply bg-blue-50 dark:bg-cool-gray-900;
+    @apply bg-blue-50 dark:bg-blue-800;
   }
   
   @font-face {

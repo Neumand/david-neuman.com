@@ -4,6 +4,7 @@ import prism from 'prismjs';
 import { format, parseISO } from 'date-fns';
 
 import Layout from 'layouts/Layout';
+import Tags from 'components/Tags';
 import { getAllPosts, getPost } from 'lib/ghost';
 
 const PostPage = ({ post }) => {
@@ -43,6 +44,9 @@ const PostPage = ({ post }) => {
         <main className="prose md:prose-lg lg:prose-xl dark:prose-dark md:dark:prose-dark lg:dark:prose-dark">
           <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
         </main>
+        <div className="flex justify-center md:block">
+          <Tags tags={post.tags} />
+        </div>
       </article>
     </Layout>
   );
