@@ -1,4 +1,4 @@
-# [david-neuman.com](https://david-neuman.com)
+# [david-neuman.com](https://david-neuman.vercel.app) (WIP @ temp domain)
 
 My personal website built with Next.js and using Ghost as a headless CMS. A home for my blog, newsletter, favourite books, and anything else I want to share publicly.
 
