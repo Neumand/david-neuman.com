@@ -23,6 +23,10 @@
     @apply md:text-lg
   }
 
+  ol {
+    counter-reset: list-item;
+  }
+
   svg {
     @apply fill-current h-5;
   }
