@@ -8,12 +8,14 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['"Alliance 1"', ...fontFamily.sans],
+      mono: ['"Fira Code"', ...fontFamily.mono],
     },
     extend: {
       colors: themeColors,
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            color: theme('colors.gray.900'),
             a: {
               'text-decoration': 'none',
               color: theme('colors.blue.800'),
@@ -23,12 +25,17 @@ module.exports = {
               'background-color': theme('colors.gray.100'),
               'border-radius': '3px',
               padding: '3px',
+              'font-weight': 600,
             },
             'code::before': {
               content: '""',
             },
             'code::after': {
               content: '""',
+            },
+            'figure figcaption': {
+              color: theme('colors.gray.700'),
+              'text-align': 'center',
             },
           },
         },

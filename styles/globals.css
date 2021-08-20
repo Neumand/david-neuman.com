@@ -37,6 +37,7 @@
   
   @font-face {
     font-family: 'Alliance 1';
+    font-weight: 400;
     src: url('/fonts/AllianceNo1-Regular.woff2') format('woff2');
   }
 
@@ -44,6 +45,12 @@
     font-family: 'Inter';
     font-weight: 400;
     src: url('/fonts/inter-var-latin.woff2') format('woff2');
+  }
+
+  @font-face{
+    font-family: 'Fira Code';
+    font-weight: 400;
+    src: url('/fonts/FiraCode-Medium.woff2') format('woff2');
   }
 }
 
@@ -70,5 +77,5 @@
 
 .prose code[class*="language-"],
 .prose pre[class*="language-"] {
-  @apply text-sm md:text-base;
+  @apply text-xs md:text-base;
 }

@@ -39,7 +39,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #2d2d2d;
+	background: #00012a;
 }
 
 /* Inline code */
@@ -69,13 +69,13 @@ pre[class*="language-"] {
 }
 
 .token.function-name {
-	color: #6196cc;
+	color: #87AFF4;
 }
 
 .token.boolean,
 .token.number,
 .token.function {
-	color: #f08d49;
+	color: #87AFF4;
 }
 
 .token.property,
@@ -90,7 +90,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.keyword,
 .token.builtin {
-	color: #CC99CD;
+	color: #00BFF9;
 }
 
 .token.string,
