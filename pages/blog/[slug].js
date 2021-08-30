@@ -6,6 +6,7 @@ import { format, parseISO } from 'date-fns';
 import Layout from 'layouts/Layout';
 import Tags from 'components/Tags';
 import { getAllPosts, getPost } from 'lib/ghost';
+import { SEO } from 'components/SEO';
 
 const PostPage = ({ post }) => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const PostPage = ({ post }) => {
 
   return (
     <Layout>
+      <SEO post={post} />
       <article className="flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8 md:px-0">
         <h1 className="text-3xl font-bold mb-2 text-center md:text-5xl">
           {post.title}
