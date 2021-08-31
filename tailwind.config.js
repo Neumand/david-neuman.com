@@ -15,6 +15,9 @@ module.exports = {
         header: "'Open Sans', sans-serif",
       },
       colors: themeColors,
+      boxShadow: {
+        blue: '0px 9px 30px 0px rgba(227, 242, 253, 0.7)',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -49,7 +52,7 @@ module.exports = {
               color: theme('colors.blue.500'),
               'background-color': theme('colors.cool-gray.900'),
             },
-            'h2,h3,h4': {
+            'h1,h2,h3,h4': {
               color: theme('colors.gray.200'),
             },
             strong: {

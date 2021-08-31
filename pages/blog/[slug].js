@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import prism from 'prismjs';
-import { format, parseISO } from 'date-fns';
 
 import Layout from 'layouts/Layout';
 import Tags from 'components/Tags';
 import { getAllPosts, getPost } from 'lib/ghost';
+import { formatDate, formatReadingTime } from 'util/formatter';
 
 const PostPage = ({ post }) => {
   useEffect(() => {
@@ -24,14 +24,13 @@ const PostPage = ({ post }) => {
               className="rounded-full inline-block h-8 w-8 mr-2"
               src="https://avatars.githubusercontent.com/u/42482170?v=4"
             />
-            <div className="mr-4 text-xs md:text-base">{`David Neuman // ${format(
-              parseISO(post.created_at),
-              'MMMM do, yyyy'
+            <div className="mr-4 text-xs md:text-base">{`David Neuman // ${formatDate(
+              post.created_at
             )}`}</div>
           </div>
-          <div className="flex text-xs items-center md:text-base">{`Reading time: ${
-            post.reading_time
-          } ${post.reading_time > 1 ? 'minutes' : 'minute'}`}</div>
+          <div className="flex text-xs items-center md:text-base">
+            {formatReadingTime(post.reading_time)}
+          </div>
         </div>
         <Image
           src={post.feature_image}
