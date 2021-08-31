@@ -7,10 +7,13 @@ module.exports = {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: ['"Alliance 1"', ...fontFamily.sans],
+      sans: ['Inter', ...fontFamily.sans],
       mono: ['"Fira Code"', ...fontFamily.mono],
     },
     extend: {
+      fontFamily: {
+        header: "'Open Sans', sans-serif",
+      },
       colors: themeColors,
       typography: (theme) => ({
         DEFAULT: {
