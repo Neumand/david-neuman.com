@@ -4,19 +4,19 @@
 
 @layer base {
   body {
-    @apply min-h-screen;
+    @apply text-cool-gray-900 min-h-screen dark:text-cool-gray-200;
   }
 
   body h1 {
-    @apply text-4xl font-bold md:text-6xl;
+    @apply font-header text-4xl font-bold md:text-6xl;
   }
 
   body h2 {
-    @apply text-2xl font-bold md:text-4xl;
+    @apply font-header text-2xl font-bold md:text-4xl;
   }
 
   body h3 {
-    @apply text-xl font-bold md:text-2xl;
+    @apply font-header text-xl font-bold md:text-2xl;
   }
 
   body p {
@@ -33,18 +33,6 @@
 
   ::selection {
     @apply bg-blue-50 dark:bg-blue-800;
-  }
-  
-  @font-face {
-    font-family: 'Alliance 1';
-    font-weight: 400;
-    src: url('/fonts/AllianceNo1-Regular.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Inter';
-    font-weight: 400;
-    src: url('/fonts/inter-var-latin.woff2') format('woff2');
   }
 
   @font-face{
