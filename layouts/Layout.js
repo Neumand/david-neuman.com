@@ -9,10 +9,10 @@ import Mail from 'public/static/svg/mail.svg';
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-white transition-all transform ease-linear dark:bg-gray-900 dark:text-gray-100">
+    <div className="flex flex-col min-h-screen bg-white transition-all transform ease-linear dark:bg-gray-900 dark:text-gray-100">
       <Navigation />
       {children}
-      <footer className="flex flex-col-reverse items-center p-8 md:flex-row md:justify-between md:items-end">
+      <footer className="flex flex-col-reverse flex-grow items-center p-8 md:flex-row md:justify-between md:items-end">
         <span className="text-sm md:text-base">{`David Neuman © ${new Date().getFullYear()}`}</span>
         <div className="flex justify-center space-x-2">
           <SocialIcon url="https://twitter.com/DavidMNeuman">
