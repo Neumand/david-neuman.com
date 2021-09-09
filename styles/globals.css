@@ -48,6 +48,10 @@
   box-sizing: border-box;
 }
 
+.input {
+  @apply p-2 border border-blue-100 outline-none rounded-sm dark:bg-cool-gray-900 dark:border-gray-900;
+}
+
 .sticky-nav {
   position: sticky;
   z-index: 10;
