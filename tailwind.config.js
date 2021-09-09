@@ -63,7 +63,7 @@ module.exports = {
             },
             code: {
               color: theme('colors.gray.200'),
-              'background-color': theme('colors.cool-gray.800'),
+              'background-color': theme('colors.cool-gray.700'),
             },
             pre: {
               code: {
