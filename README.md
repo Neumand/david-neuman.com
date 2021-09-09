@@ -18,3 +18,4 @@ Art is meant to be [stolen responsibly](https://austinkleon.com/steal/). In prom
 * [Julian Shapiro](https://www.julian.com/)
 * [Maggie Appleton](https://maggieappleton.com/)
 * [Ali Abdaal](https://aliabdaal.com/)
+* [CT Nicholas](https://www.ctnicholas.dev/)
