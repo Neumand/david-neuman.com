@@ -20,7 +20,18 @@
   }
 
   body p {
-    @apply md:text-lg
+    @apply md:text-lg;
+  }
+
+  body::-webkit-scrollbar {
+    @apply w-4;
+  }
+  body::-webkit-scrollbar-track {
+    @apply shadow-md bg-gray-200 dark:bg-gray-800;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-gray-500 rounded-full dark:bg-cool-gray-800;
   }
 
   ol {
@@ -35,7 +46,7 @@
     @apply bg-blue-50 dark:bg-blue-800;
   }
 
-  @font-face{
+  @font-face {
     font-family: 'Fira Code';
     font-weight: 400;
     src: url('/fonts/FiraCode-Medium.woff2') format('woff2');
@@ -67,7 +78,7 @@
   @apply text-blue-800 dark:text-blue-500;
 }
 
-.prose code[class*="language-"],
-.prose pre[class*="language-"] {
+.prose code[class*='language-'],
+.prose pre[class*='language-'] {
   @apply text-xs md:text-base;
 }
