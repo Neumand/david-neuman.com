@@ -8,12 +8,12 @@ export default function NavItem({ children, href = null, popOut }) {
   return (
     <div>
       {popOut ? (
-        <a className="text-sm md:text-base" href={href} target="_blank">
+        <a className="nav-item" href={href} target="_blank">
           {children}
         </a>
       ) : (
         <Link href={href}>
-          <a className="text-sm md:text-base">{children}</a>
+          <a className="nav-item">{children}</a>
         </Link>
       )}
     </div>

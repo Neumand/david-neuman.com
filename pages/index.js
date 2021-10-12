@@ -40,8 +40,8 @@ const Home = ({ featuredPosts }) => {
           </div>
         </Header>
       </section>
-      <main className="flex flex-col justify-center items-center m-auto max-w-7xl p-12 md:p8">
-        <h2 className="text-xl uppercase font-semibold">Featured Posts</h2>
+      <main className="flex flex-col m-auto text-left max-w-7xl p-12 md:p8">
+        <h2 className="text-xl opacity-50 uppercase font-sans">Featured</h2>
         {featuredPosts.map((post) => (
           <div key={post.id}>
             <h3 className="text-3xl mb-4 font-semibold">{post.title}</h3>

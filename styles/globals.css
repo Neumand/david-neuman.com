@@ -70,6 +70,30 @@
   transition: background-color 0.1 ease-in-out;
 }
 
+.nav-item {
+  @apply relative z-10 px-0.5;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  background-color: rgba(227, 242, 253);
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+  @apply dark:bg-blue-900;
+}
+
+.nav-item:hover::before {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
+
 .link {
   @apply bg-blue-50 bg-opacity-30 text-blue-900 dark:bg-cool-gray-900 dark:text-blue-500;
 }
