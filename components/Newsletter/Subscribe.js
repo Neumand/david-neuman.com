@@ -3,7 +3,6 @@ import Link from 'next/link';
 import LoadingSpinner from 'components/LoadingSpinner';
 
 const Subscribe = () => {
-  console.log('component rendered');
   const nameInputRef = useRef(null);
   const emailInputRef = useRef(null);
 
