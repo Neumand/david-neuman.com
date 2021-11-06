@@ -59,8 +59,7 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
   }));
 
-  // Posts not found should return a 404.
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 }
 
 export async function getStaticProps(context) {

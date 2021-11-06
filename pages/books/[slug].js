@@ -18,8 +18,7 @@ export async function getStaticPaths() {
       params: { slug: book.slug },
     }));
 
-  // Books not found should return a 404.
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 }
 
 export async function getStaticProps(context) {
