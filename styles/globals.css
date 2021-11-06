@@ -59,8 +59,12 @@
   box-sizing: border-box;
 }
 
-.input {
+.input, .textarea {
   @apply p-2 border border-blue-100 outline-none rounded-sm dark:bg-cool-gray-900 dark:border-gray-900;
+}
+
+.textarea {
+  @apply px-4 border-2;
 }
 
 .sticky-nav {

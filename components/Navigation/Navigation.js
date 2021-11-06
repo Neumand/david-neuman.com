@@ -13,11 +13,7 @@ export default function Navigation() {
     { name: 'Books', href: '/books', popOut: false },
     { name: 'Now', href: '/now', popOut: false },
     { name: 'About', href: '/about', popOut: false },
-    {
-      name: 'Brain Food',
-      href: 'https://brain-food.vercel.app/',
-      popOut: true,
-    },
+    { name: 'Guestbook', href: '/guestbook', popOut: false },
   ];
 
   return (
