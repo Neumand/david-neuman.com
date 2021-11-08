@@ -5,29 +5,32 @@ pragma solidity ^0.8.0;
 import 'hardhat/console.sol';
 
 contract Guestbook {
-  uint256 totalSigns;
-  string[] messages;
+  uint256 totalSignCount;
+  struct Sign {
+    address signer;
+    string message;
+    uint256 timestamp;
+  }
+  Sign[] signs;
+
+  event SignGuestbook(address indexed from, uint256 timestamp, string message);
 
   constructor() {
     console.log('Initializing the guestbook!');
   }
 
-  function sign(string memory message) public {
-    totalSigns += 1;
-    messages.push(message);
+  function sign(string memory _message) public {
     console.log('%s has signed the guestbook!', msg.sender);
+    totalSignCount += 1;
+    signs.push(Sign(msg.sender, _message, block.timestamp));
+    emit SignGuestbook(msg.sender, block.timestamp, _message);
   }
 
-  function getTotalSigns() public view returns (uint256) {
-    console.log('%d people signed the guestbook!', totalSigns);
-    return totalSigns;
+  function getTotalSignCount() public view returns (uint256) {
+    return totalSignCount;
   }
 
-  function getAllMessages() public view returns (string [] memory) {
-    console.log('All messages:');
-    for (uint256 i = 0; i < messages.length; i++) {
-      console.log(messages[i]);
-    }
-    return messages;
+  function getAllSigns() public view returns (Sign[] memory) {
+    return signs;
   }
 }

@@ -2,5 +2,6 @@
   "tabWidth": 2,
   "useTabs": false,
   "singleQuote": true,
-  "prettier.jsxBracketSameLine": true
+  "prettier.jsxBracketSameLine": true,
+  "arrowParens": "avoid"
 }

@@ -64,7 +64,7 @@
 }
 
 .textarea {
-  @apply px-4 border-2;
+  @apply px-4 border;
 }
 
 .sticky-nav {

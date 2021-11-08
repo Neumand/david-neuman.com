@@ -12,18 +12,19 @@ async function main() {
   console.log('Contract deployed by:', owner.address);
 
   let signCount;
-  signCount = await guestbookContract.getTotalSigns();
+  signCount = await guestbookContract.getTotalSignCount();
 
   let signTxn = await guestbookContract.sign('I signed the guestbook!');
   await signTxn.wait();
-  signCount = await guestbookContract.getTotalSigns();
+  signCount = await guestbookContract.getTotalSignCount();
 
   signTxn = await guestbookContract
     .connect(randomPerson)
     .sign('I also signed!');
   await signTxn.wait();
-  signCount = await guestbookContract.getTotalSigns();
-  return await guestbookContract.getAllMessages();
+  signCount = await guestbookContract.getTotalSignCount();
+  const allSigns = await guestbookContract.getAllSigns();
+  console.log(allSigns);
 }
 
 const runmain = async () => {
