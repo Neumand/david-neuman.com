@@ -7,11 +7,13 @@ async function main() {
   console.log('Deploying contracts with account:', deployer.address);
   console.log('Account balance:', accountBalance.toString());
 
-  const Token = await hre.ethers.getContractFactory('Guestbook');
-  const portal = await Token.deploy();
-  await portal.deployed();
+  const guestbookContractFactory = await hre.ethers.getContractFactory('Guestbook');
+  const guestbookContract = await guestbookContractFactory.deploy({
+    value: hre.ethers.utils.parseEther('0.0001'),
+  });
+  await guestbookContract.deployed();
 
-  console.log('Guestbook address:', portal.address);
+  console.log('Guestbook address:', guestbookContract.address);
 }
 
 const runmain = async () => {
