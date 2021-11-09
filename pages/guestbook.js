@@ -5,7 +5,7 @@ import useMetamask from 'hooks/useMetamask';
 import Header from 'components/Header';
 import Layout from 'layouts/Layout';
 import { ethers } from 'ethers';
-import GuestbookContract from '../hardhat/artifacts/contracts/Guestbook.sol/Guestbook.json';
+import GuestbookContract from 'hardhat/artifacts/contracts/Guestbook.sol/Guestbook.json';
 import LoadingSpinner from 'components/LoadingSpinner';
 import { format } from 'date-fns';
 
