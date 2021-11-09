@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import toast from 'react-hot-toast';
 
 import useMetamask from 'hooks/useMetamask';
 import Header from 'components/Header';
@@ -27,14 +28,58 @@ export default function Guestbook() {
       );
 
       const signs = await guestbookContract.getAllSigns();
-      setSigns(signs);
+      const sortedSigns = signs
+        .map(sign => ({
+          signer: sign.signer,
+          timestamp: sign.timestamp,
+          message: sign.message,
+        }))
+        .sort((a, b) =>
+          a.timestamp > b.timestamp ? (a.timestamp < b.timestamp ? 0 : -1) : 1
+        );
+      setSigns(sortedSigns);
     }
   }, []);
 
+  useEffect(() => {
+    let guestbookContract;
+    const handleNewSign = (from, timestamp, message) => {
+      setSigns(oldSigns => [
+        {
+          signer: from,
+          timestamp,
+          message,
+        },
+        ...oldSigns,
+      ]);
+    };
+
+    if (window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      guestbookContract = new ethers.Contract(
+        guestbookAddress,
+        GuestbookContract.abi,
+        signer
+      );
+      guestbookContract.on('SignGuestbook', handleNewSign);
+    }
+
+    return () => {
+      if (guestbookContract) {
+        guestbookContract.off('SignGuestbook', handleNewSign);
+      }
+    };
+  }, []);
+
   const sign = async e => {
-    setLoading(true);
     e.preventDefault();
     const message = messageRef.current.value;
+    if (!message) {
+      toast.error('Please write something! :)');
+      return;
+    }
+    setLoading(true);
     try {
       if (window.ethereum) {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -45,27 +90,38 @@ export default function Guestbook() {
           signer
         );
 
-        const signTxn = await guestbookContract.sign(message);
-        console.log('Mining...', signTxn.hash);
-        await signTxn.wait();
-        console.log('Minted:', signTxn.hash);
+        const signTxn = await guestbookContract.sign(message, {
+          gasLimit: 300000,
+        });
 
-        let count = await guestbookContract.getTotalSignCount();
-        let messages = await guestbookContract.getAllSigns();
-        console.log(count);
-        console.log(messages);
+        const waitPromise = signTxn.wait();
+        toast.promise(
+          waitPromise,
+          {
+            loading: 'Mining... 👷‍♂️',
+            success: 'Minted! Thanks for signing!',
+          },
+          {
+            success: {
+              icon: '✅',
+            },
+          }
+        );
+        await waitPromise;
         messageRef.current.value = '';
         setLoading(false);
       }
     } catch (error) {
-      console.error(error);
+      toast.error('Oops, something went wrong trying to sign!');
+      setLoading(false);
+      console.error(error.message);
     }
   };
 
   return (
     <Layout>
       <Header>
-        <div className="p-5 flex flex-col items-center max-w-4xl m-auto space-y-8">
+        <div className="p-5 flex flex-col items-center max-w-4xl m-auto space-y-4">
           <h1>Guestbook</h1>
           <p>
             Inspired by{' '}
@@ -109,12 +165,22 @@ export default function Guestbook() {
           {signs.map(({ message, signer, timestamp }, idx) => (
             <div
               key={idx}
-              className="bg-gray-100 p-4 rounded dark:bg-gray-800 dark:text-white"
+              className="flex flex-col text-sm items-start p-2 rounded w-full md:w-[500px] dark:text-white"
             >
-              <div>{message}</div>
-              <div className="flex justify-between">
-                <div className="text-xs">{signer}</div>
-                {/* <div>{format(new Date(timestamp.toString()), 'yyyyMMdd')}</div> */}
+              <div className="mb-2 md:text-left">{message}</div>
+              <div className="flex space-x-4">
+                <div className="mb-1 bg-gray-100 rounded-full px-1 text-sm text-gray-800 dark:text-gray-300 dark:bg-cool-gray-900">
+                  {`${signer.substring(0, 2)}...${signer.substring(
+                    signer.length - 4,
+                    signer.length
+                  )}`}
+                </div>
+                <div className="text-sm text-gray-700">
+                  {format(
+                    new Date(timestamp * 1000),
+                    "d MMM yyyy 'at' h:mm bb"
+                  )}
+                </div>
               </div>
             </div>
           ))}
