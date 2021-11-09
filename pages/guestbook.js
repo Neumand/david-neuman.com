@@ -10,7 +10,8 @@ import LoadingSpinner from 'components/LoadingSpinner';
 import { format } from 'date-fns';
 
 export default function Guestbook() {
-  const guestbookAddress = '0x62a046E02387A45c633eE0C6CC11B5DE224f95eC';
+  // const guestbookAddress = '0x62a046E02387A45c633eE0C6CC11B5DE224f95eC';
+  const guestbookAddress = '0x646708a71061a93f71f4EC369acad6eCA21b7A33';
 
   const [signs, setSigns] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -19,27 +20,31 @@ export default function Guestbook() {
 
   useEffect(async () => {
     if (window.ethereum) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const guestbookContract = new ethers.Contract(
-        guestbookAddress,
-        GuestbookContract.abi,
-        signer
-      );
-
-      const signs = await guestbookContract.getAllSigns();
-      const sortedSigns = signs
-        .map(sign => ({
-          signer: sign.signer,
-          timestamp: sign.timestamp,
-          message: sign.message,
-        }))
-        .sort((a, b) =>
-          a.timestamp > b.timestamp ? (a.timestamp < b.timestamp ? 0 : -1) : 1
+      try {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const guestbookContract = new ethers.Contract(
+          guestbookAddress,
+          GuestbookContract.abi,
+          signer
         );
-      setSigns(sortedSigns);
+
+        const signs = await guestbookContract.getAllSigns();
+        const sortedSigns = signs
+          .map(sign => ({
+            signer: sign.signer,
+            timestamp: sign.timestamp,
+            message: sign.message,
+          }))
+          .sort((a, b) =>
+            a.timestamp > b.timestamp ? (a.timestamp < b.timestamp ? 0 : -1) : 1
+          );
+        setSigns(sortedSigns);
+      } catch (error) {
+        console.error(error);
+      }
     }
-  }, []);
+  }, [account]);
 
   useEffect(() => {
     let guestbookContract;
@@ -131,7 +136,7 @@ export default function Guestbook() {
             but with a Web3 twist! Your comments will be stored on the Ethereum
             blockchain with a chance at winning ETH!
           </p>
-          {isWalletConnected ? (
+          {isWalletConnected && account ? (
             <p className="bg-green-50 text-green-900 py-1 px-2 rounded-lg font-semibold dark:bg-green-800 dark:text-green-50">
               Connected! ✅
             </p>
