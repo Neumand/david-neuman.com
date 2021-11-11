@@ -23,6 +23,10 @@
     @apply md:text-lg;
   }
 
+  body li {
+    @apply md:text-lg;
+  }
+
   body::-webkit-scrollbar {
     @apply w-4;
   }
