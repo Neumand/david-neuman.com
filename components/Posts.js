@@ -7,7 +7,7 @@ import { formatDate, formatReadingTime } from 'util/formatter';
 
 export default function Posts({ posts }) {
   return (
-    <div className="px-5 max-w-4xl mx-auto sm:grid md:grid-cols-2 md:gap-8 xl:gap-10 xl:max-w-6xl">
+    <div className="px-5 max-w-4xl mx-auto sm:grid sm:grid-cols-2 xl:grid-cols-3 md:gap-8 xl:gap-10 xl:max-w-6xl">
       {posts.map(
         ({
           id,
@@ -21,7 +21,7 @@ export default function Posts({ posts }) {
         }) => (
           <div
             key={id}
-            className="max-w-6xl mx-auto w-full overflow-hidden rounded-lg m-8 transition-all transform ease-in-out xl:max-h-xl md:hover:shadow-blue md:hover:scale-105 dark:hover:bg-gray-800 md:dark:hover:shadow-none"
+            className="mx-auto w-full overflow-hidden rounded-lg m-8 transition-all transform ease-in-out xl:max-h-xl md:hover:shadow-blue md:hover:scale-105 dark:hover:bg-gray-800 md:dark:hover:shadow-none"
           >
             <Link href={`/blog/${slug}`}>
               <a>
@@ -31,6 +31,8 @@ export default function Posts({ posts }) {
                   layout="responsive"
                   width={1920}
                   height={1080}
+                  placeholder="blur"
+                  blurDataURL={feature_image}
                 />
                 <div className="px-6 py-3 space-y-2">
                   <h3 className="text-lg font-semibold md:text-2xl">{title}</h3>
