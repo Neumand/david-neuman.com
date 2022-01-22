@@ -45,6 +45,7 @@ export async function getStaticProps() {
       props: {
         books,
       },
+      revalidate: 1,
     };
   } catch (error) {
     console.error(`An error occured fetching books: ${error}`);
