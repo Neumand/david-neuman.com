@@ -11,8 +11,9 @@ export default function Newsletter({ issues }) {
         <h1>Newsletter</h1>
       </Header>
       <div className="p-5 flex flex-col max-w-4xl m-auto mt-8 space-y-8">
-        <Issues issues={issues} />
         <Subscribe />
+        <h2>Read past issues of Dave's Dives</h2>
+        <Issues issues={issues} />
       </div>
     </Layout>
   );
