@@ -21,7 +21,7 @@ const NewsletterArchive = ({ issue }) => {
 export async function getStaticPaths() {
   const issues = await getAllIssues();
   const paths = issues.map((_, idx) => ({
-    params: { id: (idx + 1).toString() },
+    params: { id: (issues.length - idx).toString() },
   }));
 
   return { paths, fallback: false };
@@ -29,7 +29,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const issues = await getAllIssues();
-  const index = context.params.id - 1;
+  
+  // Issues are returns in reverse order.
+  const index = context.params.id - issues.length;
   const issue = issues[index];
 
   if (!issue) {
