@@ -2,8 +2,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 const themeColors = require('./theme');
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
+  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
   darkMode: 'class',
   theme: {
     fontFamily: {
