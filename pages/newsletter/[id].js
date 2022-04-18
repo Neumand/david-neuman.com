@@ -29,10 +29,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const issues = await getAllIssues();
-  
-  // Issues are returns in reverse order.
-  const index = context.params.id - issues.length;
-  const issue = issues[index];
+  const issueId = parseInt(context.params.id);
+  const issue = issues[issues.length - issueId];
 
   if (!issue) {
     return {

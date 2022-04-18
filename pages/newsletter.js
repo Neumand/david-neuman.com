@@ -1,8 +1,8 @@
 import Header from 'components/Header';
+import Issues from 'components/Newsletter/Issues';
 import Subscribe from 'components/Newsletter/Subscribe';
 import Layout from 'layouts/Layout';
 import { getAllIssues } from 'lib/revue';
-import Issues from 'components/Newsletter/Issues';
 
 export default function Newsletter({ issues }) {
   return (
