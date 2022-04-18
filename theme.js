@@ -291,6 +291,7 @@ const theme = {
     'accent-400': '#ff3d00',
     'accent-700': '#dd2c00',
   },
+  current: 'currentColor',
 };
 
 module.exports = theme;
