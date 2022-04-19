@@ -1,12 +1,17 @@
 import Header from 'components/Header';
-import Layout from 'layouts/Layout';
 import Posts from 'components/Posts';
-
+import Layout from 'layouts/Layout';
 import { getAllPosts } from 'lib/ghost';
+import { NextSeo } from 'next-seo';
+import SEO from 'next-seo.config';
 
 const Blog = ({ posts }) => {
   return (
     <Layout>
+      <NextSeo
+        title={`Blog - ${SEO.title}`}
+        description="David Neuman's personal blog"
+      />
       <Header>
         <h1>Blog</h1>
       </Header>

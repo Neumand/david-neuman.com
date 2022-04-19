@@ -1,13 +1,23 @@
-import Layout from 'layouts/Layout';
 import Header from 'components/Header';
+import Layout from 'layouts/Layout';
 import { getBooks } from 'lib/notion';
+import { NextSeo } from 'next-seo';
+import SEO from 'next-seo.config';
 
 export default function Books({ books }) {
   return (
     <Layout>
+      <NextSeo
+        title={`Books - ${SEO.title}`}
+        description="An ever-growing list of fiction and non-fiction classics as well as
+          those I've enjoyed more recently."
+      />
       <Header>
         <h1 className="text-6xl font-bold">Books</h1>
-        <p>Some of my favourite books</p>
+        <p>
+          An ever-growing list of fiction and non-fiction classics as well as
+          those I've enjoyed more recently.
+        </p>
       </Header>
       <div className="container p-5 my-10 mx-auto">
         <div className="grid gap-4 mb-8 mx-auto md:grid-cols-2 md:gap-8 xl:grid-cols-3">

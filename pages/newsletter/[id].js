@@ -1,10 +1,14 @@
 import Subscribe from 'components/Newsletter/Subscribe';
 import Layout from 'layouts/Layout';
 import { getAllIssues } from 'lib/revue';
+import { NextSeo } from 'next-seo';
+import SEO from 'next-seo.config';
 
 const NewsletterArchive = ({ issue }) => {
+  console.log(issue);
   return (
     <Layout>
+      <NextSeo title={`${issue.title} - ${SEO.title}`} />
       <article className="flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8 md:px-0">
         <h1 className="text-3xl font-bold mb-2 text-center md:text-5xl">
           {issue.title}

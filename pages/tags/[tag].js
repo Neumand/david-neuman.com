@@ -1,12 +1,14 @@
 import Header from 'components/Header';
-import Layout from 'layouts/Layout';
 import Posts from 'components/Posts';
+import Layout from 'layouts/Layout';
 import { getAllTags, getPostsForTag, getTag } from 'lib/ghost';
+import { NextSeo } from 'next-seo';
+import SEO from 'next-seo.config';
 
 export default function Tag({ tag, posts }) {
-  console.log(tag);
   return (
     <Layout>
+      <NextSeo title={`${tag.name} - ${SEO.title}`} />
       <Header>
         <h1 className="text-3xl font-semibold text-center md:text-5xl">
           {tag.name}

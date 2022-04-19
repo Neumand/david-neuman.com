@@ -1,11 +1,10 @@
-import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import Typed from 'typed.js';
-
-import Layout from 'layouts/Layout';
 import Header from 'components/Header';
 import Tags from 'components/Tags';
+import Layout from 'layouts/Layout';
 import { getFeaturedPosts } from 'lib/ghost';
+import Image from 'next/image';
+import { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 
 const Home = ({ featuredPosts }) => {
   const typedEl = useRef(null);

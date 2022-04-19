@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+import Subscribe from 'components/Newsletter/Subscribe';
+import Tags from 'components/Tags';
+import Layout from 'layouts/Layout';
+import { getAllPosts, getPost } from 'lib/ghost';
+import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import prism from 'prismjs';
-
-import Layout from 'layouts/Layout';
-import Tags from 'components/Tags';
-import Subscribe from 'components/Newsletter/Subscribe';
-import { getAllPosts, getPost } from 'lib/ghost';
+import { useEffect } from 'react';
 import { formatDate, formatReadingTime } from 'util/formatter';
 
 const PostPage = ({ post }) => {
@@ -15,6 +15,7 @@ const PostPage = ({ post }) => {
 
   return (
     <Layout>
+      <NextSeo title={post?.meta_title} description={post?.meta_description} />
       <article className="flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8 md:px-0">
         <h1 className="text-3xl font-bold mb-2 text-center md:text-5xl">
           {post.title}
@@ -59,7 +60,7 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
   }));
 
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps(context) {

@@ -3,10 +3,16 @@ import Issues from 'components/Newsletter/Issues';
 import Subscribe from 'components/Newsletter/Subscribe';
 import Layout from 'layouts/Layout';
 import { getAllIssues } from 'lib/revue';
+import { NextSeo } from 'next-seo';
+import SEO from 'next-seo.config';
 
 export default function Newsletter({ issues }) {
   return (
     <Layout>
+      <NextSeo
+        title={`Newsletter - ${SEO.title}`}
+        description="Sign up to receive curated articles on web development, creativity, productivity and self-development."
+      />
       <Header>
         <h1>Newsletter</h1>
       </Header>

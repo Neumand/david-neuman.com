@@ -1,17 +1,24 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { useTheme } from 'next-themes';
-
 import Header from 'components/Header';
 import Layout from 'layouts/Layout';
-import LighthouseDay from 'public/static/images/lighthouse-sunset.png';
+import { NextSeo } from 'next-seo';
+import SEO from 'next-seo.config';
+import { useTheme } from 'next-themes';
+import Image from 'next/image';
+import Link from 'next/link';
 import LighthouseNight from 'public/static/images/lighthouse-night.png';
+import LighthouseDay from 'public/static/images/lighthouse-sunset.png';
 
 export default function About() {
   const { theme } = useTheme();
 
   return (
     <Layout>
+      <NextSeo
+        title={`About - ${SEO.title}`}
+        description="I'm a software developer and Lighthouse Labs alumni, where I completed
+          a Web Development Bootcamp in 2019. I work at Life House as a full
+          stack developer."
+      />
       <div className="mx-auto max-w-sm mt-4 sm:max-w-md md:mt-8 md:max-w-3xl">
         <Image
           placeholder="blur"
@@ -25,8 +32,8 @@ export default function About() {
         </Header>
         <p>
           I'm a software developer and Lighthouse Labs alumni, where I completed
-          a Web Development Bootcamp in 2019. I work at Stingray on the web
-          team.
+          a Web Development Bootcamp in 2019. I work at Life House as a full
+          stack developer.
         </p>
         <p>
           I'm a creative at heart, so naturally I like to{' '}
@@ -66,7 +73,8 @@ export default function About() {
           Writing is, in essence, creating. At the moment I mostly write code
           and words, on a screen or in a journal. But I used to write music and
           will do so again one day. I write to build something from nothing, to
-          share what I've learned, to capture emotions. It's how I express my creativity.
+          share what I've learned, to capture emotions. It's how I express my
+          creativity.
         </p>
         <h2>Productivity and Mindfulness</h2>
         <p>
