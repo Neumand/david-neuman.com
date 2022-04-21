@@ -5,7 +5,6 @@ import { NextSeo } from 'next-seo';
 import SEO from 'next-seo.config';
 
 const NewsletterArchive = ({ issue }) => {
-  console.log(issue);
   return (
     <Layout>
       <NextSeo title={`${issue.title} - ${SEO.title}`} />
