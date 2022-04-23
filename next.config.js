@@ -10,8 +10,10 @@ module.exports = {
 
   images: {
     domains: [
-      'images.unsplash.com',
       'david-neuman.com',
+      'static.ghost.org',
+      'david-neuman-cms.herokuapp.com',
+      'images.unsplash.com',
       'images-na.ssl-images-amazon.com',
     ],
   },
