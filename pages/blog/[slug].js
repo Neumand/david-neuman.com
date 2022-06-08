@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import prism from 'prismjs';
+import fs, { readFileSync } from 'fs';
+import matter from 'gray-matter';
 
 import Layout from 'layouts/Layout';
 import Tags from 'components/Tags';
@@ -59,11 +61,21 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
   }));
 
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps(context) {
+  const files = fs.readdirSync('public/content/posts');
+  const posts = files.map((fileName) => {
+    const readFile = readFileSync(`public/content/posts/${fileName}`, 'utf-8');
+    const { data: frontmatter } = matter(readFile);
+    return { frontmatter };
+  });
+
+  console.log(posts[0]);
+
   const post = await getPost(context.params.slug);
+  console.log(post);
 
   if (!post) {
     return {

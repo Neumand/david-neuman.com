@@ -11,6 +11,7 @@ module.exports = {
   images: {
     domains: [
       'images.unsplash.com',
+      'david-neuman-cms.herokuapp.com',
       'david-neuman.com',
       'images-na.ssl-images-amazon.com',
     ],
