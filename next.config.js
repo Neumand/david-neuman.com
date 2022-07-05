@@ -1,4 +1,13 @@
-module.exports = {
+const withMdx = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
+
+module.exports = withMdx({
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -16,4 +25,4 @@ module.exports = {
       'images-na.ssl-images-amazon.com',
     ],
   },
-};
+});
