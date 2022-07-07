@@ -3,7 +3,8 @@ title: Software Tools That Keep Me Productive
 slug: software-tools-that-keep-me-productive
 date_published: 2022-01-22T15:42:36.000Z
 date_updated: 2022-01-22T15:42:36.000Z
-tags: Personal Development
+tags:
+  - Personal Development
 excerpt: Some software products have proven indispensable for me. Here are some software tools that I use every day.
 ---
 
