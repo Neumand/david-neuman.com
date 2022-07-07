@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import prism from 'prismjs';
-import fs, { readFileSync } from 'fs';
-import matter from 'gray-matter';
 
 import Layout from 'layouts/Layout';
 import Tags from 'components/Tags';
@@ -26,6 +24,7 @@ const PostPage = ({ post }) => {
             <img
               className="rounded-full inline-block h-8 w-8 mr-2"
               src="https://avatars.githubusercontent.com/u/42482170?v=4"
+              alt="An avatar of David Neuman"
             />
             <div className="mr-4 text-xs md:text-base">{`David Neuman // ${formatDate(
               post.created_at
@@ -65,17 +64,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const files = fs.readdirSync('public/content/posts');
-  const posts = files.map((fileName) => {
-    const readFile = readFileSync(`public/content/posts/${fileName}`, 'utf-8');
-    const { data: frontmatter } = matter(readFile);
-    return { frontmatter };
-  });
-
-  console.log(posts[0]);
+  // const markdownPost = getPost(context.params.slug);
 
   const post = await getPost(context.params.slug);
-  console.log(post);
 
   if (!post) {
     return {

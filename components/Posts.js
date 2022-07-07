@@ -33,11 +33,14 @@ export default function Posts({ posts }) {
                   height={1080}
                   placeholder="blur"
                   blurDataURL={feature_image}
+                  alt="Featured image"
                 />
                 <div className="px-6 py-3 space-y-2">
                   <h3 className="text-lg font-semibold md:text-2xl">{title}</h3>
                   <div className="flex space-x-2 items-center">
-                    <div className="text-sm text-gray-700 dark:text-gray-400">{formatDate(created_at)}</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-400">
+                      {formatDate(created_at)}
+                    </div>
                     <div className="flex space-x-1 items-center">
                       <ClockIcon className="w-4 h-4 text-gray-700 dark:text-gray-400" />
                       <p className="text-sm text-gray-700 dark:text-gray-400">
