@@ -25,11 +25,11 @@ As was the case last year, here are the four questions that I'll answer:
 3. What did I learn?
 4. What will I change next year?
 
-![A woman holding a balloon next to a design of 2022](/content/images/2022/01/undraw_New_year_2022_bxec--1-.png)
+![A woman holding a balloon next to a design of 2022](//public/static/images/ghost/2022/01/undraw_New_year_2022_bxec--1-.png)
 ## What went well this year?
 
 ### I'm going to be a father!
-![An ultrasound of my baby](/content/images/2022/01/IMG_3363--1--1.jpg)
+![An ultrasound of my baby](//public/static/images/ghost/2022/01/IMG_3363--1--1.jpg)
 The day that I found out that my fiancée and I were expecting was one of the best days of my life, let alone this year. We had decided in the summer to postpone wedding plans and start a family together. For us, having a child was the next logical step in our relationship. We both love each other dearly. While it will be amazing to celebrate our relationship with an eventual celebration, a child will bring us both so much joy and love.
 
 ### I went to therapy
@@ -57,7 +57,7 @@ In [last year's annual retrospective](/2020-annual-retrospective/), I stated tha
 2. **Make a practice of shipping creative work**. Shipping words on a screen definitely fits the bill of creative work. Crafting the newsletter takes time, and the vast majority of my current subscribers are friends and family. But I love writing each edition. I'd keep doing it with *no* subscribers. It would be great to grow the newsletter over time, but I do it principally for myself.
 
 ### I made significant progress on my new website
-![My new website](/content/images/2022/01/image-1.png)
+![My new website](//public/static/images/ghost/2022/01/image-1.png)
 I haven't shipped the new version of my website just yet. There are a couple of remaining tasks that I need to check off. But I'm almost there! I'm still proud of the work that I put into building the entire frontend from scratch instead of using a theme. I *am* a developer after all, right?
 
 The final obstacle is figuring out how to change the domain name of my Ghost website to something *other* than david-neuman.com. I'm planning to use this domain for my new site and fetch the content from the Ghost CMS. I should be able to get this done in the first half of this year. If I don't get it done before the baby comes, there's a strong chance that it won't get done for a while!
@@ -85,7 +85,7 @@ Part of me going to therapy this year was due to a feeling of sudden loneliness.
 This year, I do plan on putting more effort into my friendships. But more importantly, I plan on showing them more and more the real me.
 
 ### I continued to grapple with my relationship with gaming
-![An animated PlayStation controller](/content/images/2022/01/undraw_Gaming_re_cma2--1-.png)
+![An animated PlayStation controller](//public/static/images/ghost/2022/01/undraw_Gaming_re_cma2--1-.png)
 Gaming represents comfort for me. It's a hobby that I'd like to think I'm good at. As such, it often requires what feels like little mental effort for a large hit of dopamine. Playing games with friends is a great way to stay in touch, especially when social isolation is the new norm. But the appeal and allure of gaming often gets in the way of my other goals. And that's my problem.
 
 You could argue that I've been quite productive this year. I wrote fairly consistently on my blog, started a newsletter, mostly rebuilt my website and accomplished many of my goals. But gaming has often contributed to my absent-mindedness, where my brain checks out for an extended period of time. It's times like those that I need to be wary about and monitor.

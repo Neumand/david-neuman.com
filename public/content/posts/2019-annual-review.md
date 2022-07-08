@@ -29,7 +29,7 @@ I'd like to use these annual retrospectives to answer four common yet important 
 4. What will I change next year?
 
 Keeping last year's goals in mind, let's dive in.
-![](/content/images/2020/01/undraw_new_decade_n4qd.png)
+![](//public/static/images/ghost/2020/01/undraw_new_decade_n4qd.png)
 ## What went well this year?
 
 2019 was a big year for me. This is how I would define it in one word: **change**.
@@ -37,32 +37,32 @@ Keeping last year's goals in mind, let's dive in.
 ### I embarked on a career change.
 
 At the beginning of the year, I worked in a completely different industry. For the longest time I was unhappy and felt unfulfilled in my career. Now, I'm employed as a software developer working on applications to improve our client's operations. I couldn't be happier. I'll get around to writing a detailed blog post on how I managed to transition in such a short period of time, and what I learned.
-![](/content/images/2020/01/image-3.png)The team at Square Lab | **Credit**: Roshanag Rahmani
+![](//public/static/images/ghost/2020/01/image-3.png)The team at Square Lab | **Credit**: Roshanag Rahmani
 ### I developed a writing habit.
 
 I started writing 200 words every day for several months. The practice forced me to stop and think about *what* to write about in the first place. I learned that it's difficult because [writing is thinking](https://blog.stephsmith.io/learning-to-write-with-confidence/), and thinking is *hard*. I wrote every day to prepare myself for launching this very blog, and I believe that it's a testament to the hard work I put in over the past year.
-![](/content/images/2020/01/image-4.png)My 200 Words a Day profile when my writing was most consistent
+![](//public/static/images/ghost/2020/01/image-4.png)My 200 Words a Day profile when my writing was most consistent
 I went from writing in my journal sporadically to writing consistently each and every day. That's a win in my book.
 
 ### I built something with code that I am proud of.
 
 My final project for my coding bootcamp is a web app called [Clearmind](https://github.com/Neumand/clearmind). Given our time constraints, I think my colleague and I did a great job. I'd like to think that it was impressive enough to help land several interviews right after bootcamp was over. The codebase may be messy, but the project paved the way for my new career.
-![](/content/images/2020/01/image-5.png)Demo Day @ Lighthouse Labs | **Credit**: Alain Wong
+![](//public/static/images/ghost/2020/01/image-5.png)Demo Day @ Lighthouse Labs | **Credit**: Alain Wong
 ### I made the most out of experiences.
 
 I tried to be present and make the most out of the time I spent with my friends and family. Overall, I think it went well. Some highlights from said experiences:
 
-![](/content/images/2020/01/barbados.png)
+![](//public/static/images/ghost/2020/01/barbados.png)
 
-![](/content/images/2020/01/tremblant.png)
+![](//public/static/images/ghost/2020/01/tremblant.png)
 
-![](/content/images/2020/01/xmas-dinner.png)
+![](//public/static/images/ghost/2020/01/xmas-dinner.png)
 
-![](/content/images/2020/01/ottawa-canal.png)
+![](//public/static/images/ghost/2020/01/ottawa-canal.png)
 
-![](/content/images/2020/01/lake-placid.JPG)
+![](//public/static/images/ghost/2020/01/lake-placid.JPG)
 
-![](/content/images/2020/01/IMG_3523.jpg)
+![](//public/static/images/ghost/2020/01/IMG_3523.jpg)
 
 2019 was a good year
 ## What didn't go so well?
@@ -80,7 +80,7 @@ From what went well this year, you can probably tell that I focused mostly on my
 ### I continued to succumb to an old, familiar habit.
 
 I've been playing video games since my uncle handed me a SNES when I was a little kid. I'd be lying if I told you my passion for gaming would someday dwindle.
-![](/content/images/2020/01/image-9.png)Luna watching me play
+![](//public/static/images/ghost/2020/01/image-9.png)Luna watching me play
 Tim Ferriss recently [shared](https://tim.blog/2020/01/20/one-decision-that-removes-100-decisions/) that he tends to procrastinate by reading, a "socially acceptable form of avoiding things". As for gaming, it isn't bad in and of itself. Modern games are incredibly well-designed, with narratives that provide an experience similar to that of film and books. Yet there are days where I plan to get things done and video games get in the way. Sinking time into video games is how I avoid getting difficult things *done*.
 
 ## What did I learn?
@@ -94,7 +94,7 @@ Forming a habit becomes easier when you have someone that expects you to **show 
 ### It's never too late to change your career for the better.
 
 I used to think that I could go through life working in a field that I didn't love. I thought that I could work to pay the bills and fill my spare time with hobbies that I'm passionate about. That didn't work for me. In 2016, I experienced a minor bout of depression that stemmed from my dissatisfaction with my then job. A trip to Southeast Asia and two more jobs in finance made me realize that it wasn't just that job — it was the type of work that I was doing.
-![](/content/images/2020/01/backpack.png)
+![](//public/static/images/ghost/2020/01/backpack.png)
 Take the time to figure out what you like to do, and see if you can make a career out of it. While I loved writing and playing music in a band, I came to the conclusion that being a touring musician wasn't the right move for me. But to come to that kind of decision you need to experiment and take chances. Dabble with different skills until you get lost practicing or learning for hours without realizing how much time has passed. And when you experience that, pursue it relentlessly.
 
 ## What will I change for next year?
@@ -122,4 +122,4 @@ I'd also like to meet some strangers or potentially new friends. You might call 
 There's no better way to learn than to teach. One goal I have for this year is to return to Lighthouse Labs as a part-time mentor. It would be a great way for me to give back and help future cohorts win at bootcamp. The prospect of helping others succeed sounds fulfilling to me. Not to mention the fact that I would be able to expand my network and meet more incredible people from different backgrounds. 
 
 What are your goals for 2020?
-![](/content/images/2020/01/undraw_personal_goals_edgd.png)
+![](//public/static/images/ghost/2020/01/undraw_personal_goals_edgd.png)

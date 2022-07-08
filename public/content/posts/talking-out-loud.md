@@ -15,7 +15,7 @@ One personal system that I find useful is **talking to myself out loud**. Whethe
 I'd like to share some of the areas in which talking out loud can shape how you think. Some I use all the time. Some I'd like to practice more often. Hopefully you decide to try it out for yourself.
 
 ## Problem-Solving
-![Thinking about code](/content/images/2020/01/undraw_code_thinking_1jeh.png)How do I go about solving this problem?
+![Thinking about code](//public/static/images/ghost/2020/01/undraw_code_thinking_1jeh.png)How do I go about solving this problem?
 Getting stuck on a difficult problem is *frustrating*. There are several things you can do to get unstuck: writing, going for a walk, or asking someone for help. Talking through a problem out loud is another solution that I have found useful.
 
 What's one of the best pieces advice you can give someone for a technical coding interview? **Talk through your problem-solving out loud**. [Lighthouse Labs](https://www.lighthouselabs.ca/) made sure to drive this point home. Talking out loud makes it easier for your interviewer to understand where you're going with your solution. Plus, they can intervene to steer you back in the right direction if you go off track.
@@ -27,7 +27,7 @@ I have even taken this approach to the washroom at work. I was thinking about a 
 There's a reason [rubber duck debugging](https://rubberduckdebugging.com/) works. Talking through a problem out loud allows you to better understand the problem and identify possible solutions.
 
 ## Learning
-![](/content/images/2020/01/undraw_new_ideas_jdea.png)
+![](//public/static/images/ghost/2020/01/undraw_new_ideas_jdea.png)
 In the modern economy, becoming a life-long learner is incredibly important. Many industries are experiencing rapid change. In software development, for instance, new technologies, frameworks, and tooling - or updated versions - are released regularly. Many releases eventually change up a software developer's workflow. It's safe to say that when it comes to your career, [learning how to learn](https://www.coursera.org/learn/learning-how-to-learn) is a skill that goes a long way.
 
 When you teach or explain a concept to someone, you can quickly identify cracks in your knowledge. You can't skim over things you don't understand, unlike while you're reading, for example. And you reinforce your knowledge of the concept at the same time. On the flip side, when someone explains something to you it's good practice to summarize what you understood to make sure that you didn't miss anything.
@@ -54,7 +54,7 @@ Next time you're faced with an important decision or you want to better spend yo
 > - John Steinbeck
 
 Impostor syndrome. I know the feeling all too well, having shifted recently from a career in finance to software development. Like many coding bootcamp grads, I have little knowledge of computer science fundamentals. And while I am committed to [catching up](https://blog.usejournal.com/advice-from-a-hiring-manager-to-a-code-bootcamp-graduate-4d1036a7fa78) over the course of my career, it doesn't make up for the fact that self-doubt is a very real thing.
-![](/content/images/2020/01/eastwood-come-back-later-1.png)We've all been there | [Illustration by ouch.pics](https://icons8.com/ouch/illustration/eastwood-come-back-later)
+![](//public/static/images/ghost/2020/01/eastwood-come-back-later-1.png)We've all been there | [Illustration by ouch.pics](https://icons8.com/ouch/illustration/eastwood-come-back-later)
 In his new book, [Indistractable](https://www.amazon.ca/Indistractable-Control-Your-Attention-Choose/dp/194883653X/ref=sr_1_1?gclid=CjwKCAiA3uDwBRBFEiwA1VsajMnXnN7hJJsVRXAuiP30AthFyD_fvpgnRZIO7lc9D3QZ70G7QZ-4ABoCj24QAvD_BwE&amp;hvadid=324967745453&amp;hvdev=c&amp;hvlocphy=9000433&amp;hvnetw=g&amp;hvpos=1t1&amp;hvqmt=e&amp;hvrand=14648763479246539484&amp;hvtargid=aud-854044989296%3Akwd-734520245200&amp;hydadcr=3288_9643217&amp;keywords=indistractable&amp;qid=1578677188&amp;sr=8-1), Nir Eyal discusses the importance that what we say to ourselves matters and that practicing self-compassion helps build resilience. He writes, "instead of accepting what the voice [in your head] says or arguing with it, remind yourself that obstacles are part of the process of growth". But he also says that we can't get better without practicing.
 
 When I feel inadequate, incompetent, or inexperienced at work, I have found that I can practice self-compassion while talking through my self-doubt out loud. I can push through my thoughts with actual words, reminding myself that it's normal to feel what I'm feeling.
@@ -70,4 +70,4 @@ I think that there is a common theme to becoming a better problem-solver, learne
 It will probably seem strange at first. And there is definitely a stigma surrounding it. But I would argue that it goes a long way to improve the way you deal with mental and emotional adversity. Plus, you don't have to do it around other people at all. Whether you're going through a career change like I did, struggling at work, or finding it hard to motivate yourself, try talking to yourself out loud. Hopefully it helps you in the same ways it has helped me.
 
 Who knows? Maybe you'll learn to love the sound of your own voice. Eventually.
-![](/content/images/2020/01/speaker.png)
+![](//public/static/images/ghost/2020/01/speaker.png)

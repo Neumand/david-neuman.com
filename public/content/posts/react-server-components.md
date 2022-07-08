@@ -23,7 +23,7 @@ In a nutshell, React will let developers denote their components as either Clien
 - **Shared Components** are components that will require both interactivity and have data requirements — they are rendered on both the client *and* the server.
 
 ## What are the benefits?
-![Benefits](/content/images/2021/01/undraw_Checklist__re_2w7v.png)
+![Benefits](//public/static/images/ghost/2021/01/undraw_Checklist__re_2w7v.png)
 ### Server Components and their dependencies have no impact on the client-side bundle size.
 
     // ServerComponent.js - BEFORE SERVER COMPONENTS
@@ -66,7 +66,7 @@ It also delays when the app can start loading the selected component. This offse
 With Server Components, all imports of Client Components will be considered as possible places to code-split. No more need to specify which components to lazy-load; React will do the heavy lifting for us!
 
 ### Server Components can be refetched while preserving the client state inside of their tree.
-![React component tree](/content/images/2021/01/react-server-components-1.png)
+![React component tree](//public/static/images/ghost/2021/01/react-server-components-1.png)
 Server Components can pass Client Components as props to other Client Components. What's cool is that any computed values within that component are already rendered, so you're essentially passing the component rendered JSX.
 
 React is smart enough to understand that when we fetch data in a Server Component that we don't need re-render child Client Components. What this means is that **client-side state is always preserved**. This is fascinating and will lead to interesting use cases, the first of which the team showcases as a search feature.
@@ -97,7 +97,7 @@ Server Components will introduce new conventions for distinguishing between the 
 It may take a while for React developers to get used to determining which component is responsible for.
 
 ## Summary
-![Summary](/content/images/2021/01/undraw_result_5583.png)
+![Summary](//public/static/images/ghost/2021/01/undraw_result_5583.png)
 The main mental model to learn here is that **Server Components pass data from the backend to Client Components as props**. It might take React developers to get used to this paradigm, but I think it has the potential to reshape the way that we develop our applications.
 
 To summarize:

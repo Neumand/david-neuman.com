@@ -58,13 +58,13 @@ It's worth mentioning that TeuxDeux is cheap but not free. It cost me ~$24 for a
 Pocket helps me organize articles that I've read online and want to remember. It's a place for me to offload the mental burden of keeping track of content I know I'll need more time and space to digest. No longer do I need to keep 12 browser tabs with articles that "future me" wants to read but "now me" has no time for.
 
 Using Pocket is dead-simple. I use the "Save to Pocket" feature on my iPhone and the Chrome extension on PC. Add some tags and move on!
-![A list of some of my recently saved articles in Pocket](/content/images/2021/10/image-3.png)My recently saved articles
+![A list of some of my recently saved articles in Pocket](//public/static/images/ghost/2021/10/image-3.png)My recently saved articles
 There are a few things that I love about Pocket. The first is the aforementioned tagging system. It's simple to create or add existing tags to articles for grouping your saves. But the coolest feature is its integration with [Revue](https://www.getrevue.co/). As I'm writing a newsletter, I can quickly scan through any articles that I've saved. It makes it easy to share useful resources in my newsletter issues.
 
 It's worth noting that I don't pay for Pocket's premium version. I haven't used it enough to determine whether it would be worth it or not.
 
 ## Notion
-![Notion logo](/content/images/2022/01/image.png)
+![Notion logo](//public/static/images/ghost/2022/01/image.png)
 While I used Notion more in the past, I still make good use of it today. The most interesting new and useful feature in my opinion is the launch of their API. This makes it so that you can use Notion is a mini-database. I use the app to keep a list of the books that I'm reading. Then, by using the API, I can fetch and display these books on my new website.
 
 Obsidian and Notion are similar tools. I personally prefer the more barebone, simple Markdown approach of Obsidian. It's fast and flexible for my needs. However, Noti0n is an incredible tool not only for personal use but for product development teams.
