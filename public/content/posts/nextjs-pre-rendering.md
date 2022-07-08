@@ -3,7 +3,8 @@ title: Pre-Rendering in Next.js
 slug: nextjs-pre-rendering
 date_published: 2020-09-30T23:29:43.000Z
 date_updated: 2021-01-17T22:36:22.000Z
-tags: Software Development
+tags:
+  - Software Development
 excerpt: A brief overview of how Next.js renders the content for each page of a website or app.
 ---
 

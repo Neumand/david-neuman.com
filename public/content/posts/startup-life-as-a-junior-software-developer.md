@@ -3,7 +3,9 @@ title: Startup Life as a Junior Software Developer
 slug: startup-life-as-a-junior-software-developer
 date_published: 2020-03-20T12:00:00.000Z
 date_updated: 2020-09-30T23:30:10.000Z
-tags: Software Development, Career
+tags:
+  - Software Development
+  - Career
 excerpt: My experience working at a startup as a junior software developer.
 ---
 

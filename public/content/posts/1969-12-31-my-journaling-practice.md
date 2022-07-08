@@ -3,7 +3,9 @@ title: My Journaling Practice
 slug: my-journaling-practice
 date_published: 1970-01-01T00:00:00.000Z
 date_updated: 2021-09-28T20:32:29.000Z
-tags: Mindfulness, Personal Development
+tags:
+  - Mindfulness
+  - Personal Development
 draft: true
 ---
 

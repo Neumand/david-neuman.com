@@ -3,7 +3,8 @@ title: "OOP Fundamentals: Static Properties and Methods"
 slug: static-properties-and-methods
 date_published: 2021-03-24T13:13:36.000Z
 date_updated: 2021-04-09T15:34:33.000Z
-tags: Software Development
+tags:
+  - Software Development
 excerpt: A high-level overview of the static keyword in object-oriented programming.
 ---
 

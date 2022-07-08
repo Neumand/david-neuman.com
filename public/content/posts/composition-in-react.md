@@ -3,7 +3,9 @@ title: Composition in React
 slug: composition-in-react
 date_published: 2021-03-07T15:56:08.000Z
 date_updated: 2021-03-24T13:13:45.000Z
-tags: React, Software Development
+tags:
+  - React
+  - Software Development
 excerpt: A look at React's composition model and why we say we favor composition over inheritance.
 ---
 

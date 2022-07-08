@@ -3,7 +3,8 @@ title: The Magic of JavaScript Closures
 slug: the-magic-of-closures
 date_published: 2021-08-16T14:51:19.000Z
 date_updated: 2021-10-24T18:53:14.000Z
-tags: JavaScript
+tags:
+  - JavaScript
 excerpt: Closures are magical. And I'm a fantasy nerd. To see what closures are and how useful they can be, let's take a look at a little example.
 ---
 

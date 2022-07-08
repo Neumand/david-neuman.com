@@ -3,7 +3,8 @@ title: Focusing on the Breath
 slug: focusing-on-the-breath
 date_published: 1970-01-01T00:00:00.000Z
 date_updated: 2021-10-15T11:37:09.000Z
-tags: Mindfulness
+tags:
+  - Mindfulness
 draft: true
 ---
 

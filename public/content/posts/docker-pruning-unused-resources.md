@@ -3,7 +3,8 @@ title: "Docker: Pruning Unused Resources"
 slug: docker-pruning-unused-resources
 date_published: 2020-10-13T13:08:45.000Z
 date_updated: 2020-10-13T13:09:06.000Z
-tags: Software Development
+tags:
+  - Software Development
 excerpt: How to clear up unused disk space in Docker
 ---
 

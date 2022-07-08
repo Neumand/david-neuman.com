@@ -3,7 +3,8 @@ title: "Hello, World: A Welcome Message and My Fears of Launching a Blog"
 slug: hello-world
 date_published: 2020-01-03T23:30:00.000Z
 date_updated: 2020-01-11T21:22:29.000Z
-tags: Career
+tags:
+  - Career
 excerpt: On January 3, 2019 I began writing at 200 Words a Day. One year later, I am employed as a full stack web developer and I'm launching a blog.
 ---
 

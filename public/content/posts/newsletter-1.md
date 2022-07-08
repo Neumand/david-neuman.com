@@ -3,7 +3,8 @@ title: "Dave's Dives #1: An Experiment"
 slug: newsletter-1
 date_published: 2021-02-08T12:26:06.000Z
 date_updated: 2021-03-07T15:56:18.000Z
-tags: Newsletter
+tags:
+  - Newsletter
 excerpt: The first "edition" of a newsletter experiment.
 ---
 

@@ -3,7 +3,9 @@ title: "Synthetic Events: Handling State Updates Outside of React"
 slug: synthetic-events
 date_published: 2021-04-09T15:34:14.000Z
 date_updated: 2021-08-16T14:50:59.000Z
-tags: React, Software Development
+tags:
+  - React
+  - Software Development
 excerpt: How a JavaScript bundle can react to events occurring outside of its scope using synthetic events.
 ---
 

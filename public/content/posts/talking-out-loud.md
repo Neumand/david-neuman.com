@@ -3,7 +3,8 @@ title: "Talking to Yourself Out Loud: How Your Own Words Shape How You Think"
 slug: talking-out-loud
 date_published: 2020-01-11T21:24:53.000Z
 date_updated: 2020-01-25T15:05:52.000Z
-tags: Personal Development
+tags:
+  - Personal Development
 excerpt: Talking to myself has helped me to think with intention and clarity when it comes to problem-solving, learning, decision-making, and overcoming self-doubt.
 ---
 

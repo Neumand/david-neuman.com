@@ -3,7 +3,8 @@ title: "React Server Components: A Primer"
 slug: react-server-components
 date_published: 2021-01-17T22:35:57.000Z
 date_updated: 2021-02-08T12:26:43.000Z
-tags: React
+tags:
+  - React
 excerpt: A primer on Server Components, an upcoming feature coming to React in the near future.
 ---
 

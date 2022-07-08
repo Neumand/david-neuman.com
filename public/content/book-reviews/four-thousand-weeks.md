@@ -3,7 +3,6 @@ title: "Four Thousand Weeks: Time Management for Mortals (Oliver Burkeman)"
 slug: four-thousand-weeks
 date_published: 1970-01-01T00:00:00.000Z
 date_updated: 2022-02-24T16:22:43.000Z
-tags: Book Notes
 draft: true
 ---
 

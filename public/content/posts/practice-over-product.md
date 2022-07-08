@@ -3,7 +3,8 @@ title: Practice Over Product
 slug: practice-over-product
 date_published: 2021-11-11T14:29:07.000Z
 date_updated: 2022-01-29T20:50:55.000Z
-tags: Personal Development
+tags:
+  - Personal Development
 excerpt: The true joy of self-development comes from the practice - enjoying the learning journey for what it is.
 ---
 

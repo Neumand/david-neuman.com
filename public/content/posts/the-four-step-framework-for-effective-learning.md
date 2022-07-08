@@ -3,7 +3,8 @@ title: The Four-Step Framework for Effective Learning
 slug: the-four-step-framework-for-effective-learning
 date_published: 2021-10-24T18:53:03.000Z
 date_updated: 2021-11-11T14:29:45.000Z
-tags: Personal Development
+tags:
+  - Personal Development
 excerpt: My take and summary of Alex Lieberman's four-step framework to effective learning.
 ---
 

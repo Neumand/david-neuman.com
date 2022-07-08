@@ -3,7 +3,8 @@ title: 2019 Annual Retrospective
 slug: 2019-annual-review
 date_published: 2020-01-25T15:05:41.000Z
 date_updated: 2020-01-25T15:05:41.000Z
-tags: Personal Development
+tags:
+  - Personal Development
 excerpt: Looking back on 2019, and setting goals for the year to come.
 ---
 

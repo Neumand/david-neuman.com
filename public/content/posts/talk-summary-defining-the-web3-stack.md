@@ -3,7 +3,8 @@ title: "Talk Notes: Defining the Web3 Stack (Nader Dabit)"
 slug: talk-summary-defining-the-web3-stack
 date_published: 2021-10-26T19:21:48.000Z
 date_updated: 2021-10-26T19:23:21.000Z
-tags: Web3, Software Development
+tags: 
+  - Software Development
 excerpt: Notes taken during Nader Dabit's "Defining the Web3 Stack" during Next.js Conf.
 ---
 

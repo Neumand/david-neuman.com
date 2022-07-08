@@ -10,6 +10,6 @@ export const buildMarkdownPost = (frontmatter, content) => ({
   html: content,
   readingTime: calculateReadingTime(content),
   slug: frontmatter.slug,
-  tags: frontmatter.tags, // TODO: Convert all tags to array format + fix JSX component.
+  tags: frontmatter.tags ?? [], // TODO: Convert all tags to array format + fix JSX component.
   title: frontmatter.title,
 });
