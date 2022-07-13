@@ -6,6 +6,7 @@ date_updated: 2020-01-25T15:05:52.000Z
 tags:
   - Personal Development
 excerpt: Talking to myself has helped me to think with intention and clarity when it comes to problem-solving, learning, decision-making, and overcoming self-doubt.
+feature_image: https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ
 ---
 
 Seth Godin writes that [building better systems ](https://seths.blog/2018/11/quality-and-effort/)is more effective at avoiding errors than putting in additional effort. In Atomic Habits, James Clear [talks about systems](https://jamesclear.com/goals-systems). He explains that "you do not rise to the level of your goals", but rather "fall to the level of your systems".

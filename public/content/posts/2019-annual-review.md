@@ -6,6 +6,7 @@ date_updated: 2020-01-25T15:05:41.000Z
 tags:
   - Personal Development
 excerpt: Looking back on 2019, and setting goals for the year to come.
+feature_image: https://images.unsplash.com/photo-1544819679-57b273c027a3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ
 ---
 
 I've been loosely tracking my annual goals over the past two years. But I've never done an in-depth retrospective. Now that I'm writing here, I thought it would be a good idea to start.

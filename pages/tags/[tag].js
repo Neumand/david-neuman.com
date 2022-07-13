@@ -4,7 +4,6 @@ import Posts from 'components/Posts';
 import { getAllTags, getPostsForTag, getTag } from 'lib/ghost';
 
 export default function Tag({ tag, posts }) {
-  console.log(tag);
   return (
     <Layout>
       <Header>

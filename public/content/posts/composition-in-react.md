@@ -7,6 +7,7 @@ tags:
   - React
   - Software Development
 excerpt: A look at React's composition model and why we say we favor composition over inheritance.
+feature_image: https://images.unsplash.com/photo-1591025810539-a321000cda85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDN8fGNvbXBvc2V8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000
 ---
 
 *"What do we mean when we say that we favor composition over inheritance?"*

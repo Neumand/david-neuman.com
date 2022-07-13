@@ -6,6 +6,7 @@ date_updated: 2020-01-11T21:22:29.000Z
 tags:
   - Career
 excerpt: On January 3, 2019 I began writing at 200 Words a Day. One year later, I am employed as a full stack web developer and I'm launching a blog.
+feature_image: https://images.unsplash.com/photo-1535551951406-a19828b0a76b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ
 ---
 
 On January 3, 2019 I began writing at [200 Words a Day](https://200wordsaday.com/@davidneuman). Many of my early posts focused on my preparation for [Lighthouse Labs](https://www.lighthouselabs.ca/)' coding bootcamp. My goal was to become a better writer so that I could gain the confidence to launch my own blog.

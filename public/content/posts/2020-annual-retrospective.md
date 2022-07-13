@@ -4,6 +4,7 @@ slug: 2020-annual-retrospective
 date_published: 2021-02-02T12:05:18.000Z
 date_updated: 2021-02-02T12:05:18.000Z
 excerpt: My 2020 year in review.
+feature_image: https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDF8fHJldmlld3xlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000
 ---
 
 2020. What a year, to say the least. For many it was a difficult one. I'm lucky to say that things could have certainly gone worse for myself and my loved ones. Danielle and I caught COVID-19 in late August but we both had mild cases.

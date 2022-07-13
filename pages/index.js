@@ -4,8 +4,8 @@ import Typed from 'typed.js';
 
 import Layout from 'layouts/Layout';
 import Header from 'components/Header';
-import Tags from 'components/Tags';
 import { getFeaturedPosts } from 'lib/ghost';
+import { Tags } from 'components/tags.component';
 
 const Home = ({ featuredPosts }) => {
   const typedEl = useRef(null);

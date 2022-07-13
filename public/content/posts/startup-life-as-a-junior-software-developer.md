@@ -7,6 +7,7 @@ tags:
   - Software Development
   - Career
 excerpt: My experience working at a startup as a junior software developer.
+feature_image: https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ
 ---
 
 Entrepreneurship became more and more appealing to me after I decided to transition to a career in tech. I'm a frequent reader of Hacker News, and I listen to tons of podcasts about people sharing stories on scaling an early idea to a successful product or service. It helps that Montreal — the city where I currently reside — has a vibrant and growing startup ecosystem.

@@ -1,12 +1,9 @@
-import fs from 'fs';
-
 import Header from 'components/Header';
 import Layout from 'layouts/Layout';
 import Posts from 'components/Posts';
 
-import { getAllPosts } from 'lib/ghost';
-import matter from 'gray-matter';
-import { buildMarkdownPost } from 'util/buildMarkdownPost';
+import { getAllPosts } from 'lib/posts';
+import { getAllGhostPosts } from 'lib/ghost';
 
 const Blog = ({ posts }) => {
   return (
@@ -20,18 +17,18 @@ const Blog = ({ posts }) => {
 };
 
 export async function getStaticProps() {
-  // const markdownPosts = getAllPosts();
-  // return markdownPosts
-  //   .sort((a, b) => a.datePublished - b.datePublished)
-  //   .filter((post) => !post.draft);
-
-  const posts = await getAllPosts();
-
-  if (!posts) {
+  const ghostPosts = await getAllGhostPosts();
+  ghostPosts.forEach(p => console.log(p.feature_image));
+  const markdownPosts = getAllPosts();
+  if (!markdownPosts) {
     return {
       notFound: true,
     };
   }
+
+  const posts = markdownPosts
+    .sort((a, b) => new Date(b.datePublished) - new Date(a.datePublished))
+    .filter((post) => !post.draft);
 
   return {
     props: { posts },

@@ -6,6 +6,7 @@ date_updated: 2022-01-22T15:42:36.000Z
 tags:
   - Personal Development
 excerpt: Some software products have proven indispensable for me. Here are some software tools that I use every day.
+feature_image: https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxzb2Z0d2FyZXxlbnwwfHx8fDE2MzIyNTM1NDQ&ixlib=rb-1.2.1&q=80&w=2000
 ---
 
 Some software products have proven indispensable for me. I use them for curating content, organizing my knowledge or getting things done. Here are some software tools that I use every day.

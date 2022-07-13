@@ -6,6 +6,7 @@ date_updated: 2021-04-09T15:34:33.000Z
 tags:
   - Software Development
 excerpt: A high-level overview of the static keyword in object-oriented programming.
+feature_image: https://images.unsplash.com/photo-1454779132693-e5cd0a216ed3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGVsZWN0cmljaXR5fGVufDB8fHx8MTYxNjU5MTUyMQ&ixlib=rb-1.2.1&q=80&w=2000
 ---
 
 In an effort to brush up on my object-oriented programming (OOP) fundamentals and the Java language — which I sometimes need to dive into at work — I decided to enroll in some Coursera courses. Brandon Krakowsky's [Introduction to Java and Object-Oriented Programming](https://www.coursera.org/learn/java-object-oriented-programming) covers the basics and was a great refresher for me, but I did learn some new concepts. In particular what the `static` keyword is actually used for and why it's useful. Here's what I learned.

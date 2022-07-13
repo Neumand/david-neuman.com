@@ -6,6 +6,7 @@ date_updated: 2021-10-24T18:53:14.000Z
 tags:
   - JavaScript
 excerpt: Closures are magical. And I'm a fantasy nerd. To see what closures are and how useful they can be, let's take a look at a little example.
+feature_image: https://images.unsplash.com/photo-1551029506-0807df4e2031?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fG1hZ2ljfGVufDB8fHx8MTYyOTExODIwNA&ixlib=rb-1.2.1&q=80&w=2000
 ---
 
 > This is the most elegant feature in all of JavaScript. Elegant meaning, like, interesting, intriguing, and surprisingly kind of nicely crafted feature.

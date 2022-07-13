@@ -4,6 +4,7 @@ slug: blue-light-blues
 date_published: 2020-10-31T17:07:00.000Z
 date_updated: 2020-10-31T17:07:00.000Z
 excerpt: The power of blue light blocking glasses
+feature_image: https://images.unsplash.com/photo-1511109918392-06b364875b26?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ
 ---
 
 I sit in front of a screen most of my day as a developer. After work, I sit in front of a screen while taking an online course or playing video games with friends. Before bed, I lie down in front of a screen to watch YouTube or read articles.

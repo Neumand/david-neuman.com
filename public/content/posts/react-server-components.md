@@ -6,6 +6,7 @@ date_updated: 2021-02-08T12:26:43.000Z
 tags:
   - React
 excerpt: A primer on Server Components, an upcoming feature coming to React in the near future.
+feature_image: /static/images/ghost/2021/01/react-server-components@2x.png
 ---
 
 On December 21, 2020 the React team introduced [zero-bundle-size server components](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html). I'd highly recommend watching [Dan and Laura's talk](https://youtu.be/TQQPAU21ZUw) outlining the core idea and demo. If you're interested in a quick summary, you can find my notes [here](https://brain-food.vercel.app/docs/javascript/react/react-server-components).

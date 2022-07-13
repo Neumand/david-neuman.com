@@ -6,6 +6,7 @@ date_updated: 2022-01-29T20:50:55.000Z
 tags:
   - Personal Development
 excerpt: The true joy of self-development comes from the practice - enjoying the learning journey for what it is.
+feature_image: https://images.unsplash.com/photo-1445743432342-eac500ce72b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDU4fHxwcmFjdGljZXxlbnwwfHx8fDE2MzY2Mzc2NDI&ixlib=rb-1.2.1&q=80&w=2000
 ---
 
 When it comes to my own professional and personal development, there are a ton of areas where I would like to improve. The problem is that most of the time I look *forward* to when I have more skills. The true joy of self-development comes from the *practice *- enjoying the learning journey for what it is.

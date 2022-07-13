@@ -3,10 +3,10 @@ import Image from 'next/image';
 import prism from 'prismjs';
 
 import Layout from 'layouts/Layout';
-import Tags from 'components/Tags';
 import Subscribe from 'components/Newsletter/Subscribe';
 import { getAllPosts, getPost } from 'lib/ghost';
 import { formatDate, formatReadingTime } from 'util/formatter';
+import { Tags } from 'components/tags.component';
 
 const PostPage = ({ post }) => {
   useEffect(() => {
@@ -64,9 +64,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  // const markdownPost = getPost(context.params.slug);
+  const post = getPost(context.params.slug);
 
-  const post = await getPost(context.params.slug);
+  // const post = await getPost(context.params.slug);
 
   if (!post) {
     return {

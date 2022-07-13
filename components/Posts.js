@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ClockIcon } from '@heroicons/react/solid';
 
-import Tags from 'components/Tags';
 import { formatDate, formatReadingTime } from 'util/formatter';
+import { Tags } from './tags.component';
 
 export default function Posts({ posts }) {
   return (
@@ -13,11 +13,11 @@ export default function Posts({ posts }) {
           id,
           title,
           excerpt,
-          feature_image,
+          featureImage,
           slug,
           tags,
-          reading_time,
-          created_at,
+          readingTime,
+          datePublished,
         }) => (
           <div
             key={id}
@@ -27,24 +27,25 @@ export default function Posts({ posts }) {
               <a>
                 <Image
                   className="cursor-pointer"
-                  src={feature_image}
+                  src={featureImage}
                   layout="responsive"
                   width={1920}
                   height={1080}
                   placeholder="blur"
-                  blurDataURL={feature_image}
+                  blurDataURL={featureImage}
                   alt="Featured image"
                 />
+
                 <div className="px-6 py-3 space-y-2">
                   <h3 className="text-lg font-semibold md:text-2xl">{title}</h3>
                   <div className="flex space-x-2 items-center">
                     <div className="text-sm text-gray-700 dark:text-gray-400">
-                      {formatDate(created_at)}
+                      {formatDate(datePublished)}
                     </div>
                     <div className="flex space-x-1 items-center">
                       <ClockIcon className="w-4 h-4 text-gray-700 dark:text-gray-400" />
                       <p className="text-sm text-gray-700 dark:text-gray-400">
-                        {formatReadingTime(reading_time)}
+                        {formatReadingTime(readingTime)}
                       </p>
                     </div>
                   </div>

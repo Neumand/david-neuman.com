@@ -7,6 +7,7 @@ tags:
   - React
   - Software Development
 excerpt: How a JavaScript bundle can react to events occurring outside of its scope using synthetic events.
+feature_image: https://images.unsplash.com/photo-1555255707-c07966088b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDExfHxyb2JvdHxlbnwwfHx8fDE2MTc5ODEzMjI&ixlib=rb-1.2.1&q=80&w=2000
 ---
 
 You've probably seen a banner on the bottom of many websites asking you to either accept all cookies or to manage your cookie preferences. My current "shape" or cycle at work involves building something similar that we can integrate across websites and apps. It will be a simple React app bundled to be consumable in different ways (i.e. as a script tag or a React component).

@@ -6,6 +6,7 @@ date_updated: 2021-03-07T15:56:18.000Z
 tags:
   - Newsletter
 excerpt: The first "edition" of a newsletter experiment.
+feature_image: /static/images/ghost/2021/02/linkedin_banner_image_1.png
 ---
 
 One of my goal's this year is to start writing a newsletter. I'm an avid reader and subscriber to newsletters myself, so it's only natural that I'd want to contribute to the space myself.
@@ -67,4 +68,4 @@ If you're a fan of fantasy fiction, Brandon Sanderson is your guy. I also recent
 ## Watching
 
 - [**Your Honor**](https://www.sho.com/your-honor). Fan of Breaking Bad? You need to watch this.
-- [**Flack**](https://www.primevideo.com/detail/amzn1.dv.gti.3ebb6b2c-339a-ca66-04a5-ab896860f3f0?ref_=dvm_pds_tit_ca_dc_s_g|m_cMGCyrbmc_c490258183333). Recommended this to my fiancee on a newsletter tip but I ended up watching it as well. It's a show that explores the shocking world of public relations. We've already tore through season one.d
+- [**Flack**](https://www.primevideo.com/detail/amzn1.dv.gti.3ebb6b2c-339a-ca66-04a5-ab896860f3f0?ref_=dvm_pds_tit_ca_dc_s_g|m_cMGCyrbmc_c490258183333). Recommended this to my fiancee on a newsletter tip but I ended up watching it as well. It's a show that explores the shocking world of public relations. We've already tore through season one.

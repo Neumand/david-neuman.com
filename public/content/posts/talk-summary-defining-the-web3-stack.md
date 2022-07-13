@@ -6,6 +6,7 @@ date_updated: 2021-10-26T19:23:21.000Z
 tags: 
   - Software Development
 excerpt: Notes taken during Nader Dabit's "Defining the Web3 Stack" during Next.js Conf.
+feature_image: https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGV0aGVyZXVtfGVufDB8fHx8MTYzNTI3NTMyNg&ixlib=rb-1.2.1&q=80&w=2000
 ---
 
 Nader Dabit transitioned from a Web2 role at AWS to the Web3 world at Edge & Node. He recently gave a talk at Next.js Conf on the tech stack to build with Web3 technologies. Here are some notes that I took on the talk.
