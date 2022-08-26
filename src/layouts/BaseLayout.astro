@@ -1,0 +1,70 @@
+---
+import Navigation from '@components/Navigation/Navigation';
+import SocialIcon from '@components/Social/SocialIcon.astro';
+import Twitter from '@components/Social/Twitter.astro';
+import LinkedIn from '@components/Social/LinkedIn.astro';
+import GitHub from '@components/Social/GitHub.astro';
+import HackerNews from '@components/Social/HackerNews.astro';
+import Mail from '@components/Social/Mail.astro';
+
+export interface Props {
+  title: string | undefined;
+}
+
+const { title = '<David Neuman />' } = Astro.props as Props;
+---
+
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme');
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  })();
+
+  theme === 'light'
+    ? document.documentElement.classList.remove('dark')
+    : document.documentElement.classList.add('dark');
+  window.localStorage.setItem('theme', theme);
+</script>
+
+<meta charset='UTF-8' />
+<meta name='viewport' content='width=device-width' />
+<link rel='icon' type='image/x-icon' href='/favicon.ico' />
+<meta name='generator' content={Astro.generator} />
+<title>{title}</title>
+
+<div
+  class='flex flex-col min-h-screen bg-white transition-all transform ease-linear dark:bg-gray-900 dark:text-gray-100'
+>
+  <Navigation client:load />
+
+  <slot />
+  <footer
+    class='flex flex-col-reverse flex-grow items-center p-8 md:flex-row md:justify-between md:items-end'
+  >
+    <span class='text-sm md:text-base'
+      >{`David Neuman © ${new Date().getFullYear()}`}
+    </span>
+    <div class='flex justify-center space-x-2'>
+      <SocialIcon url='https://github.com/Neumand'>
+        <GitHub />
+      </SocialIcon>
+      <SocialIcon url='https://twitter.com/DavidMNeuman'>
+        <Twitter />
+      </SocialIcon>
+      <SocialIcon url='https://linkedin.com/in/Neumand'>
+        <LinkedIn />
+      </SocialIcon>
+      <SocialIcon url='https://news.ycombinator.com/user?id=dneuman'>
+        <HackerNews />
+      </SocialIcon>
+      <SocialIcon url='mailto:david.m.neuman@gmail.com'>
+        <Mail />
+      </SocialIcon>
+    </div>
+  </footer>
+</div>

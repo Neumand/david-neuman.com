@@ -1,0 +1,58 @@
+---
+import { formatDate } from '@util/formatter';
+import BaseLayout from './BaseLayout.astro';
+import { Image } from '@astrojs/image/components';
+import Tags from '@components/Tags.astro';
+import Subscribe from '@components/Newsletter/Subscribe.astro';
+import type { BlogFrontmatter } from '@pages/blog.astro';
+
+interface BlogPostLayoutProps {
+  frontmatter: BlogFrontmatter;
+}
+
+const { frontmatter } = Astro.props as BlogPostLayoutProps;
+---
+
+<BaseLayout title={frontmatter.title}>
+  <article
+    class='flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8 md:px-0'
+  >
+    <h1
+      class='text-3xl font-bold mb-2 text-center md:text-5xl md:leading-tight'
+    >
+      {frontmatter.title}
+    </h1>
+    <div class='flex justify-between w-full'>
+      <div class='flex p-4 items-center'>
+        <img
+          class='rounded-full inline-block h-8 w-8 mr-2'
+          src='https://avatars.githubusercontent.com/u/42482170?v=4'
+          alt='An avatar of David Neuman'
+        />
+        <div class='mr-4 text-xs md:text-base'>
+          {`David Neuman // ${formatDate(frontmatter.datePublished)}`}
+        </div>
+      </div>
+      <!-- <div class='flex text-xs items-center md:text-base'>
+        {formatReadingTime(post.reading_time)}
+      </div> -->
+    </div>
+    <Image
+      src={frontmatter.featureImage}
+      alt='Feature image'
+      class='mb-[1.2em]'
+      width={2200}
+      height={1080}
+    />
+    <main
+      class='prose md:prose-lg lg:prose-xl dark:prose-dark md:dark:prose-dark lg:dark:prose-dark'
+    >
+      <!-- Markdown content is inserted here. -->
+      <slot />
+    </main>
+    <div class='flex justify-center md:block mb-8'>
+      <Tags tags={frontmatter.tags} />
+    </div>
+    <Subscribe />
+  </article>
+</BaseLayout>

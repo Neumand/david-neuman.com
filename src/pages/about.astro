@@ -1,0 +1,33 @@
+---
+import Header from '@components/Header.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const about = await Astro.glob('../markdown/about.md');
+const aboutHtml = await about[0].compiledContent();
+---
+
+<BaseLayout title='About - <David Neuman />'>
+  <Header textAlign='center'>
+    <h1>About</h1>
+  </Header>
+  <div
+    class='flex flex-col justify-center items-center max-w-2xl mx-auto p-8 space-y-8'
+  >
+    <img class='dynamic-image' />
+    <main
+      class='prose md:prose-lg lg:prose-xl dark:prose-dark md:dark:prose-dark lg:dark:prose-dark'
+      set:html={aboutHtml}
+    >
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .dynamic-image {
+    content: url('images/lighthouse-sunset.png');
+  }
+
+  html.dark .dynamic-image {
+    content: url('images/lighthouse-night.png');
+  }
+</style>

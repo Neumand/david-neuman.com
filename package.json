@@ -1,35 +1,29 @@
 {
-  "name": "david-neuman.com",
-  "version": "0.1.0",
+  "name": "@example/basics",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "env": "vercel env pull"
-  },
-  "dependencies": {
-    "@headlessui/react": "^1.4.0",
-    "@heroicons/react": "^1.0.3",
-    "@lottiefiles/lottie-player": "^1.0.6",
-    "@notionhq/client": "^0.2.4",
-    "@svgr/webpack": "^5.5.0",
-    "@tailwindcss/typography": "^0.5.2",
-    "@tryghost/content-api": "^1.4.13",
-    "date-fns": "^2.16.1",
-    "form-data": "^4.0.0",
-    "next": "12",
-    "next-seo": "^5.4.0",
-    "next-themes": "^0.0.15",
-    "prismjs": "^1.23.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-icons": "^4.2.0",
-    "typed.js": "^2.0.12"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24"
+    "@astrojs/image": "^0.3.4",
+    "@astrojs/react": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@tailwindcss/typography": "^0.5.4",
+    "astro": "^1.0.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.6",
+    "@notionhq/client": "1.0.4",
+    "date-fns": "^2.29.1"
   }
 }

@@ -1,0 +1,11 @@
+---
+interface HeaderProps {
+  textAlign?: string | undefined;
+}
+
+const { textAlign } = Astro.props as HeaderProps;
+---
+
+<header class={`text-${textAlign} mt-4 md:mt-8`}>
+  <slot />
+</header>

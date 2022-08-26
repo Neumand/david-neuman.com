@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-cool-gray-900 min-h-screen dark:text-cool-gray-200;
+  }
+
+  body h1 {
+    @apply font-header text-4xl font-bold md:text-6xl;
+  }
+
+  body h2 {
+    @apply font-header text-2xl font-bold md:text-4xl;
+  }
+
+  body h3 {
+    @apply font-header text-xl font-bold md:text-2xl;
+  }
+
+  body p {
+    @apply md:text-lg;
+  }
+
+  body li {
+    @apply md:text-lg;
+  }
+
+  body::-webkit-scrollbar {
+    @apply w-4;
+  }
+  body::-webkit-scrollbar-track {
+    @apply shadow-md bg-gray-200 dark:bg-gray-800;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-gray-500 rounded-full dark:bg-cool-gray-800;
+  }
+
+  ol {
+    counter-reset: list-item;
+  }
+
+  svg {
+    @apply fill-current h-5;
+  }
+
+  ::selection {
+    @apply bg-blue-50 dark:bg-blue-800;
+  }
+
+  @font-face {
+    font-family: 'Dank Mono';
+    font-weight: 400;
+    src: url('/fonts/dank-mono-regular') format('otf');
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.hero {
+  @apply bg-gray-200;
+  background-image: none;
+}
+
+.dark .hero {
+  background-image: url(/src/images/space-background.png);
+}
+
+.input {
+  @apply p-2 border border-blue-100 outline-none rounded-sm dark:bg-cool-gray-900 dark:border-gray-900;
+}
+
+.sticky-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  transition: background-color 0.1 ease-in-out;
+}
+
+.nav-item {
+  @apply relative z-10 px-0.5;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  background-color: rgba(227, 242, 253);
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+  @apply dark:bg-blue-900;
+}
+
+.nav-item:hover::before {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
+
+.link {
+  @apply bg-blue-50 bg-opacity-30 text-blue-900 dark:bg-cool-gray-900 dark:text-blue-500;
+}
+
+.prose a strong {
+  @apply text-blue-800 dark:text-blue-500;
+}
+
+.prose code[class*='language-'],
+.prose pre[class*='language-'] {
+  @apply text-xs md:text-base;
+}
