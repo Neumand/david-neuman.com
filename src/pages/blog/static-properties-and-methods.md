@@ -65,7 +65,7 @@ I noticed that my colleagues at a former employer were using the `static` keywor
 - Static methods were officially introduced in ES6/ES2015 and have widespread support at this point
 - Static properties are a recent addition to the spec and aren't supported yet in Safari
 
-![Browser compatibility table from MDN documentation](//public/static/images/ghost/2021/03/image.png)Browser compatibility as per MDN
+![Browser compatibility table from MDN documentation](/images/ghost/2021/03/image.png)Browser compatibility as per MDN
 
 ## The "Shocking" Truth of Static
 

@@ -31,7 +31,11 @@ So, what am I still afraid of? Mostly receiving feedback and writing unoriginal 
 ### Receiving Feedback
 
 Here's what you would have seen if you visited my site prior to today:
-![](//public/static/images/ghost/2020/01/image.png)Sorry, no visitors allowed!
+
+![](/images/ghost-private.png)
+
+<figcaption>Sorry, no visitors allowed!</figcaption>
+
 My blog has been deployed to a Digital Ocean droplet and powered by Ghost for a couple of months now. Its design has been in development for even longer - originally I had a Gatsby site and was planning to deploy it to Netlify - and I may change it again in the future. The blogs of both [Gergely Orosz](https://blog.pragmaticengineer.com/) and [Steph Smith](https://blog.stephsmith.io/) served as inspirations for using Ghost as a CMS, as well as for the excellent content. I had written a few articles but I wasn't entirely satisfied with how they came out.
 
 The point is that **I was afraid to expose myself publicly**. If I don't launch my blog today, I will inevitably come up with a plethora of excuses for myself justifying additional work before it's ready. I may not have many posts lined up. The design may be subject to change. I might not even be satisfied with what I wrote for myself on my 'About' page.
@@ -42,15 +46,19 @@ And if no one reads my content? Who cares? William Zinsser, author of [On Writin
 
 > Better to write for yourself and have no public, than to write for the public and have no self.
 >
-> - Cyril Connolly
->   New Statesman, February 25, 1933
+> Cyril Connolly, New Statesman, February 25, 1933
 
 ### Unoriginal Content
 
 Will anything I write here be truly original? Probably not. But there's no way that I should let that become an impediment to writing.
 
-For several years I wrote most of the music for my old band. I was theoretically writing "original" songs, but to say that these songs were truly original would be a blatant lie. My songs were so heavily inspired by other artists that the pre-production name of a track was often a play on words of that artist's name.
-![](//public/static/images/ghost/2020/01/pablo-friendship.png)Illustration by [Ouch.pics](https://icons8.com)
+For several years I wrote most of the music for my old band. I was theoretically writing "original" songs, but to say that these songs were truly original would be a blatant lie. My songs were so heavily inspired by other artists that the pre-production name of a track was often a play on
+words of that artist's name.
+
+![](/images/ghost/2020/01/pablo-friendship.png)
+
+<figcaption>Illustration by <a href="https://icons8.com">Ouch.pics></a></figcaption>
+
 This is Austin Kleon's main takeaway in [Steal Like an Artist](https://www.amazon.ca/Steal-Like-Artist-Things-Creative/dp/0761169253). The best ideas are "stolen" from other places and combined together to make something of your own. I would listen to tracks from several bands and combine ideas from different sections into a new song. I can still go back to our old songs and tell you which parts were inspired by specific bands.
 
 [Alexey Guzey](https://guzey.com/personal/why-have-a-blog/) also explains that unoriginal writing is useful because it "helps in the process of discovery and in the process of supporting underappreciated ideas". See all of the links in this post? Someone might read this and discover one of them for the first time. Or they might have heard about one of the ideas before and this post finally convinced them that it's something worth remembering.
@@ -64,4 +72,5 @@ I'm grateful for the 200 Words a Day community - especially its creator, Baz - f
 I'd also like to thank Shawn Wang, Jonathan Borichevskiy, Steph Smith, Gergely Orosz, Alexey Guzey, and quite possibly many others that I'm forgetting about for inspiration.
 
 And thank you, the reader, for taking the time to read through my first post.
-![](//public/static/images/ghost/2020/01/happy.png)
+
+![](/images/happy.png)

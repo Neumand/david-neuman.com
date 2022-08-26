@@ -18,13 +18,13 @@ At [Stingray](https://www.stingray.com/) our websites are written in [Next.js](h
 This is where Next.js comes in. Next.js pre-renders content by generating HTML for each page in advance. Afterwards, the JavaScript code runs and makes the app fully interactive in a process called **hydration**. So instead of users seeing a blank page until all of the JavaScript has run, they will be able to view the page's content almost instantaneously and then be able to interact with more dynamic features once the hydration process has finished.
 
 The below images from the official Next.js documentation help explain these concepts and process.
-![](//public/static/images/ghost/2020/09/image-3.png)Sourced from the official [Next.js documentation](https://nextjs.org/learn/basics/data-fetching/pre-rendering)![](//public/static/images/ghost/2020/09/image-2.png)Sourced from the official [Next.js documentation](https://nextjs.org/learn/basics/data-fetching/pre-rendering)
+![](/images/ghost/2020/09/image-3.png)Sourced from the official [Next.js documentation](https://nextjs.org/learn/basics/data-fetching/pre-rendering)![](/images/ghost/2020/09/image-2.png)Sourced from the official [Next.js documentation](https://nextjs.org/learn/basics/data-fetching/pre-rendering)
 You can also choose _how_ to pre-render your content. This decision primarily affects _when_ the HTML is generated for each page.
 
 ## Static Generation vs. Server-Side Generation (SSG)
 
 Next.js provides the option to generate pages statically through a process commonly known as **static site generation **(SSG) or through **server-side rendering** (SSR).
-![](//public/static/images/ghost/2020/09/image-4.png)Static generation![](//public/static/images/ghost/2020/09/image-5.png)Server-side rendering
+![](/images/ghost/2020/09/image-4.png)Static generation![](/images/ghost/2020/09/image-5.png)Server-side rendering
 Pages generated through SSG are prepared at build time, meaning that every possible view of a site is generated ahead of a user making a request to that page.
 
 The resurgence in statically generated sites can be largely attributed to modern, improved tooling that makes it easy to build static websites. Other than Next.js, popular frameworks include [Gatsby](https://www.gatsbyjs.com/), which I've experimented with myself, and [Hugo](https://gohugo.io/).

@@ -26,7 +26,7 @@ In a nutshell, React will let developers denote their components as either Clien
 
 ## What are the benefits?
 
-![Benefits](//public/static/images/ghost/2021/01/undraw_Checklist__re_2w7v.png)
+![Benefits](/images/ghost/2021/01/undraw_Checklist__re_2w7v.png)
 
 ### Server Components and their dependencies have no impact on the client-side bundle size.
 
@@ -75,7 +75,7 @@ With Server Components, all imports of Client Components will be considered as p
 
 ### Server Components can be refetched while preserving the client state inside of their tree.
 
-![React component tree](//public/static/images/ghost/2021/01/react-server-components-1.png)
+![React component tree](/images/ghost/2021/01/react-server-components-1.png)
 Server Components can pass Client Components as props to other Client Components. What's cool is that any computed values within that component are already rendered, so you're essentially passing the component rendered JSX.
 
 React is smart enough to understand that when we fetch data in a Server Component that we don't need re-render child Client Components. What this means is that **client-side state is always preserved**. This is fascinating and will lead to interesting use cases, the first of which the team showcases as a search feature.
@@ -107,7 +107,7 @@ It may take a while for React developers to get used to determining which compon
 
 ## Summary
 
-![Summary](//public/static/images/ghost/2021/01/undraw_result_5583.png)
+![Summary](/images/ghost/2021/01/undraw_result_5583.png)
 The main mental model to learn here is that **Server Components pass data from the backend to Client Components as props**. It might take React developers to get used to this paradigm, but I think it has the potential to reshape the way that we develop our applications.
 
 To summarize:
