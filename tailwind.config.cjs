@@ -22,6 +22,9 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.gray.900'),
+            th: {
+              color: theme('colors.gray.900'),
+            },
             a: {
               'text-decoration': 'none',
               color: theme('colors.blue.800'),
@@ -43,11 +46,18 @@ module.exports = {
               color: theme('colors.gray.700'),
               'text-align': 'center',
             },
+            figcaption: {
+              color: theme('colors.gray.700'),
+              'text-align': 'center',
+            },
           },
         },
         dark: {
           css: {
             color: theme('colors.gray.200'),
+            th: {
+              color: theme('colors.gray.200'),
+            },
             a: {
               color: theme('colors.blue.500'),
               'background-color': theme('colors.cool-gray.900'),
@@ -70,6 +80,12 @@ module.exports = {
                 'background-color': 'inherit',
                 color: 'inherit',
               },
+            },
+            'figure figcaption': {
+              color: theme('colors.gray.500'),
+            },
+            figcaption: {
+              color: theme('colors.gray.500'),
             },
           },
         },
