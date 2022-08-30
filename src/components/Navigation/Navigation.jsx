@@ -58,7 +58,7 @@ export default function Navigation() {
                 {open ? <XIcon /> : <MenuIcon />}
               </Popover.Button>
               <button
-                className='py-2 px-2 rounded transition-colors ease-in-out bg-gray-200 hover:bg-gray-300 dark:bg-cool-gray-900 dark:hover:bg-cool-gray-800'
+                className='py-2 px-2 rounded transition-colors ease-in-out bg-gray-100 hover:bg-gray-200 dark:bg-cool-gray-900 dark:hover:bg-cool-gray-800'
                 aria-label='Toggle Dark Mode'
                 onClick={handleTheme}
               >
