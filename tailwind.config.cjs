@@ -11,6 +11,9 @@ module.exports = {
       mono: ['"Dank Mono"', ...fontFamily.mono],
     },
     extend: {
+      backgroundColor: {
+         'black-transparent': 'rgba(0, 0, 0, 0.5)'
+      },
       fontFamily: {
         header: "'Poppins', sans-serif",
       },
