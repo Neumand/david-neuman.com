@@ -7,7 +7,7 @@ dateUpdated: 2021-02-08T12:26:43.000Z
 tags:
   - React
 excerpt: A primer on Server Components, an upcoming feature coming to React in the near future.
-featureImage: /static/images/ghost/2021/01/react-server-components@2x.png
+featureImage: public/images/react-server-components.png
 ---
 
 On December 21, 2020 the React team introduced [zero-bundle-size server components](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html). I'd highly recommend watching [Dan and Laura's talk](https://youtu.be/TQQPAU21ZUw) outlining the core idea and demo. If you're interested in a quick summary, you can find my notes [here](https://brain-food.vercel.app/docs/javascript/react/react-server-components).
@@ -25,8 +25,6 @@ In a nutshell, React will let developers denote their components as either Clien
 - **Shared Components** are components that will require both interactivity and have data requirements — they are rendered on both the client _and_ the server.
 
 ## What are the benefits?
-
-![Benefits](/images/ghost/2021/01/undraw_Checklist__re_2w7v.png)
 
 ### Server Components and their dependencies have no impact on the client-side bundle size.
 
@@ -75,14 +73,12 @@ With Server Components, all imports of Client Components will be considered as p
 
 ### Server Components can be refetched while preserving the client state inside of their tree.
 
-![React component tree](/images/ghost/2021/01/react-server-components-1.png)
+![React component tree](/images/react-component-tree.png)
 Server Components can pass Client Components as props to other Client Components. What's cool is that any computed values within that component are already rendered, so you're essentially passing the component rendered JSX.
 
 React is smart enough to understand that when we fetch data in a Server Component that we don't need re-render child Client Components. What this means is that **client-side state is always preserved**. This is fascinating and will lead to interesting use cases, the first of which the team showcases as a search feature.
 
 ## Are there any drawbacks?
-
-The RFC mentions a few:
 
 ### New mental model to learn.
 
@@ -107,7 +103,6 @@ It may take a while for React developers to get used to determining which compon
 
 ## Summary
 
-![Summary](/images/ghost/2021/01/undraw_result_5583.png)
 The main mental model to learn here is that **Server Components pass data from the backend to Client Components as props**. It might take React developers to get used to this paradigm, but I think it has the potential to reshape the way that we develop our applications.
 
 To summarize:

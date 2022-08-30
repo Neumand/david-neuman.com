@@ -1,5 +1,5 @@
 import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { MenuIcon, XIcon } from '@heroicons/react/outline/index.js';
 import { useEffect, useState } from 'react';
 
 import NavItem from './NavItem';

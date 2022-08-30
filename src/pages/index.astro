@@ -8,16 +8,14 @@ import Tags from '@components/Tags.astro';
 import { formatDate } from '@util/formatter';
 import ReadingTime from '@components/ReadingTime.astro';
 
-const posts = await Astro.glob<BlogFrontmatter>('../pages/blog/*.md');
-const sortedPosts = posts
+const recentPosts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
   .sort(
     (p1, p2) =>
       new Date(p2.frontmatter.datePublished) -
       new Date(p1.frontmatter.datePublished),
   )
-  .filter((post) => !post.frontmatter.draft);
-
-const recentPosts = sortedPosts.slice(0, 4);
+  .filter((post) => !post.frontmatter.draft)
+  .slice(0, 4);
 ---
 
 <BaseLayout title='<David Neuman />'>

@@ -14,16 +14,8 @@ Some software products have proven indispensable for me. I use them for curating
 
 ## Stoop Inbox
 
-[
+[![Stoop Inbox](https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/6d/71/89/6d718982-b3b9-4076-76fd-9a0c4e1934e8/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png)](https://stoopinbox.com)
 
-‎Stoop Inbox
-
-Stoop is your subscription content inbox. Email newsletters and video channels are sent right to your Stoop without clogging your personal inbox, and away from the algorithm. Privacy Details: Stoop uses your email address for creating your account and occasionally communicating with you (we’ve sent…
-
-App StoreStoop
-
-![](https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/6d/71/89/6d718982-b3b9-4076-76fd-9a0c4e1934e8/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png)
-](https://itunes.apple.com/sa/app/stoop-inbox/id1438978466?mt&#x3D;8)
 Newsletters are my preferred medium for content curation. I subscribe to people whose writing, opinions or philosophy that I trust. In a traditional, cluttered inbox it can be difficult to keep track of such subscriptions. That's why I've opted to use a dedicated newsletter reader.
 
 Stoop is the app that I wish I had built myself. In fact, I had the idea of a dedicated newsletter reader for a while. By chance, I stumbled upon it when browsing the App Store a few years ago. The app is by no means perfect but it's one that I use every day without exception.
@@ -68,7 +60,8 @@ It's worth noting that I don't pay for Pocket's premium version. I haven't used 
 
 ## Notion
 
-![Notion logo](/images/ghost/2022/01/image.png)
+![Notion logo](https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png)
+
 While I used Notion more in the past, I still make good use of it today. The most interesting new and useful feature in my opinion is the launch of their API. This makes it so that you can use Notion is a mini-database. I use the app to keep a list of the books that I'm reading. Then, by using the API, I can fetch and display these books on my new website.
 
 Obsidian and Notion are similar tools. I personally prefer the more barebone, simple Markdown approach of Obsidian. It's fast and flexible for my needs. However, Noti0n is an incredible tool not only for personal use but for product development teams.

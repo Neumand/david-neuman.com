@@ -48,7 +48,7 @@ const { posts } = Astro.props as PostsProps;
           </div>
         </a>
         <div class='px-6 py-3'>
-          {frontmatter.tags?.length && <Tags tags={frontmatter.tags} />}
+          <Tags tags={frontmatter.tags} />
         </div>
       </div>
     ))

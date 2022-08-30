@@ -12,11 +12,15 @@ featureImage: https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib
 
 Docker doesn't explicitly perform garbage-collection on unused images, containers or volumes. Without specifically asking Docker to remove unused disk space you may eventually receive a similar error message:
 
-    ERROR: Service XXXX failed to build: Error processing tar file(exit status1): no space left on device
+```
+ERROR: Service XXXX failed to build: Error processing tar file(exit status1): no space left on device
+```
 
 Clearing up space is fairly simple.
 
-    // Prune all resources
-    docker image prune
-    docker container prune
-    docker volume prune
+```javascript
+// Prune all resources
+docker image prune
+docker container prune
+docker volume prune
+```

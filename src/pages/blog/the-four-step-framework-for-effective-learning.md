@@ -7,7 +7,7 @@ dateUpdated: 2021-11-11T14:29:45.000Z
 tags:
   - Personal Development
 excerpt: My take and summary of Alex Lieberman's four-step framework to effective learning.
-featureImage: /static/images/ghost/2021/10/morgan-housel-bY5OUwKx3XU-unsplash_o.jpg
+featureImage: public/images/morgan-housel-money-brain.jpg
 ---
 
 I'm a self-proclaimed productivity nerd. I love consuming content from books, podcasts and blog posts to learn about different topics from programming to self-development. But like many, I'm sure, I can get carried away with **consuming for the sake of consumption**. Oftentimes I read a blog post on a specific programming technique or best practice, only to forget it after a short period of time. The reason for this is that I'm not taking the correct steps to synthesize what I've learned. Passive learning can only get you so far; active, purposeful learning is the best way to retain knowledge.

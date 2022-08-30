@@ -16,8 +16,7 @@ export interface BlogFrontmatter {
   draft?: boolean;
 }
 
-const posts = await Astro.glob<BlogFrontmatter>('../pages/blog/*.md');
-const sortedPosts = posts
+const posts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
   .sort(
     (p1, p2) =>
       new Date(p2.frontmatter.datePublished) -
@@ -30,5 +29,5 @@ const sortedPosts = posts
   <Header textAlign='center'>
     <h1>Blog</h1>
   </Header>
-  <Posts posts={sortedPosts} />
+  <Posts posts={posts} />
 </BaseLayout>

@@ -3,10 +3,10 @@ import Pill from './Pill/Pill.astro';
 import { toKebabCase } from '@util/kebab-case';
 
 interface TagsProps {
-  tags: string[];
+  tags?: string[];
 }
 
-const { tags } = Astro.props as TagsProps;
+const { tags = [] } = Astro.props as TagsProps;
 ---
 
 <div class='flex mt-2 space-x-2'>

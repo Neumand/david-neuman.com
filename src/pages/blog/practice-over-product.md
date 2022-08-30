@@ -10,7 +10,7 @@ excerpt: The true joy of self-development comes from the practice - enjoying the
 featureImage: https://images.unsplash.com/photo-1445743432342-eac500ce72b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDU4fHxwcmFjdGljZXxlbnwwfHx8fDE2MzY2Mzc2NDI&ixlib=rb-1.2.1&q=80&w=2000
 ---
 
-When it comes to my own professional and personal development, there are a ton of areas where I would like to improve. The problem is that most of the time I look _forward_ to when I have more skills. The true joy of self-development comes from the _practice _- enjoying the learning journey for what it is.
+When it comes to my own professional and personal development, there are a ton of areas where I would like to improve. The problem is that most of the time I look _forward_ to when I have more skills. The true joy of self-development comes from the _practice_ - enjoying the learning journey for what it is.
 
 It's easy to look at successful people and say, "That person is so _talented_!". But there's an issue with this mindset: it focuses on the **end results**. More importantly, how did that person get to where they are? Well, lots and lots of **practice**.
 
@@ -18,9 +18,7 @@ It's easy to look at successful people and say, "That person is so _talented_!".
 
 The only way to consistently get to where you want to be is through work. Focused and dedicated practice. But if we only look forward to the results, the "end goal", actually doing the work becomes more difficult. How will you get yourself to sit down at your computer to actually *write *or _code_? How will you put on your workout clothes and hit the gym?
 
-> It's not the destination, it's the journey.
->
-> - Emerson
+> It's not the destination, it's the journey. - Emerson
 
 We need to embrace the practice. Discover the joy that comes from a hard day's work or focused effort over a long enough period of time.
 
@@ -33,7 +31,10 @@ In _[The Practicing Mind](https://www.amazon.ca/Practicing-Mind-Developing-Disci
 
 ## Product and Impostor Syndrome
 
-![A man starting at the ocean from a window sill in a dark room](https://images.unsplash.com/photo-1473830394358-91588751b241?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGFsb25lfGVufDB8fHx8MTYzNjYzOTkzNA&ixlib=rb-1.2.1&q=80&w=2000)Photo by [Noah Silliman](https://unsplash.com/@noahsilliman?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
+![A man starting at the ocean from a window sill in a dark room](https://images.unsplash.com/photo-1473830394358-91588751b241?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGFsb25lfGVufDB8fHx8MTYzNjYzOTkzNA&ixlib=rb-1.2.1&q=80&w=2000)
+
+<figcaption>Photo by <a href="https://unsplash.com/@noahsilliman?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit">Noah Silliman</a> / <a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit">Unsplash</a></figcaption>
+
 It's been difficult for me lately to keep the practice in mind. I'm at a stage in my career where I can't consider myself junior anymore. At the same time, there's a part of me that worries I'm not competent enough relative to my experience. Classic **impostor syndrome**.
 
 When feeling this way about myself, it leads me to think more product or end-goal minded. I think about my lack of expertise in certain areas and how I wish I was skilled or talented enough to not feel like an impostor. And it's a tough line of thinking to break.
@@ -51,4 +52,7 @@ It's not easy to focus on the journey for what it is. Most of the time people sh
 When we keep the practice at the forefront of our minds, we find joy in what we do. We put out great work. We learn a new hobby. We live in the present moment.
 
 Keep practicing.
-![Maya’s Drawing](https://images.unsplash.com/photo-1521999693742-4717d76f97cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fHByYWN0aWNlfGVufDB8fHx8MTYzNjYzNzYxNg&ixlib=rb-1.2.1&q=80&w=2000)Photo by [Daniel Chekalov](https://unsplash.com/@dchuck?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
+
+![Maya’s Drawing](https://images.unsplash.com/photo-1521999693742-4717d76f97cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fHByYWN0aWNlfGVufDB8fHx8MTYzNjYzNzYxNg&ixlib=rb-1.2.1&q=80&w=2000)
+
+<figcaption>Photo by <a href="https://unsplash.com/@dchuck?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit">Daniel Chekalov</a> / <a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit">Unsplash</a></figcaption>
