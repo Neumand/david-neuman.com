@@ -5,12 +5,15 @@ import { Image } from '@astrojs/image/components';
 import Tags from '@components/Tags.astro';
 import Subscribe from '@components/Newsletter/Subscribe.astro';
 import type { BlogFrontmatter } from '@pages/blog.astro';
+import ReadingTime from '@components/ReadingTime.astro';
 
 interface BlogPostLayoutProps {
   frontmatter: BlogFrontmatter;
+  rawContent: () => string;
 }
 
-const { frontmatter } = Astro.props as BlogPostLayoutProps;
+const { frontmatter, rawContent } = Astro.props as BlogPostLayoutProps;
+const hmtl = rawContent();
 ---
 
 <BaseLayout title={frontmatter.title}>
@@ -33,9 +36,7 @@ const { frontmatter } = Astro.props as BlogPostLayoutProps;
           {`David Neuman // ${formatDate(frontmatter.datePublished)}`}
         </div>
       </div>
-      <!-- <div class='flex text-xs items-center md:text-base'>
-        {formatReadingTime(post.reading_time)}
-      </div> -->
+      <ReadingTime html={hmtl} />
     </div>
     <Image
       src={frontmatter.featureImage}
