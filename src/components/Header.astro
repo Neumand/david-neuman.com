@@ -1,9 +1,9 @@
 ---
-interface HeaderProps {
+interface Props {
   textAlign?: string | undefined;
 }
 
-const { textAlign } = Astro.props as HeaderProps;
+const { textAlign } = Astro.props as Props;
 ---
 
 <header class={`text-${textAlign} mt-4 md:mt-8`}>

@@ -3,11 +3,11 @@ import ContentCard from '@components/ContentCard.astro';
 import type { Issue } from '@lib/revue';
 import { formatDate } from '@util/formatter';
 
-interface IssuesProps {
+interface Props {
   issues: Issue[];
 }
 
-const { issues } = Astro.props as IssuesProps;
+const { issues } = Astro.props as Props;
 ---
 
 {

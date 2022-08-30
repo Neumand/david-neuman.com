@@ -24,6 +24,7 @@
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
     "@notionhq/client": "1.0.4",
+    "astro-seo": "^0.6.0",
     "date-fns": "^2.29.1"
   }
 }

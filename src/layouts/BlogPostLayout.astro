@@ -7,16 +7,16 @@ import Subscribe from '@components/Newsletter/Subscribe.astro';
 import type { BlogFrontmatter } from '@pages/blog.astro';
 import ReadingTime from '@components/ReadingTime.astro';
 
-interface BlogPostLayoutProps {
+interface Props {
   frontmatter: BlogFrontmatter;
   rawContent: () => string;
 }
 
-const { frontmatter, rawContent } = Astro.props as BlogPostLayoutProps;
+const { frontmatter, rawContent } = Astro.props as Props;
 const hmtl = rawContent();
 ---
 
-<BaseLayout title={frontmatter.title}>
+<BaseLayout title={`${frontmatter.title} - <David Neuman />`}>
   <article
     class='flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8 md:px-0'
   >

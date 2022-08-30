@@ -11,11 +11,11 @@ import Tags from '@components/Tags.astro';
 import Clock from './Clock.astro';
 import ReadingTime from './ReadingTime.astro';
 
-interface PostsProps {
+interface Props {
   posts: MarkdownInstance<BlogFrontmatter>[];
 }
 
-const { posts } = Astro.props as PostsProps;
+const { posts } = Astro.props as Props;
 ---
 
 <div
