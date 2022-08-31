@@ -7,7 +7,7 @@ dateUpdated: 2022-01-29T20:50:41.000Z
 tags:
   - Personal Development
 excerpt: 2021 was a difficult year for many once again. But in a similar fashion as the last year, there were many bright spots in my personal life that made 2021 one to remember.
-featureImage: public/images/2021-retrospective.jpg
+featureImage: /images/2021-retrospective.jpg
 ---
 
 2021 was a difficult year for many once again. Covid's resiliency showed in the variants that emerged this year, from Delta to Omicron. But in similar fashion as the last year, there were many bright spots in my personal life that made 2021 one to remember.

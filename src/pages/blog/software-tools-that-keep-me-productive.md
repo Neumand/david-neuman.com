@@ -38,7 +38,7 @@ I might write a future post on how I use Obsidian after I've become more familia
 
 ## TeuxDeux
 
-[![TeuxDeux](https://assets.teuxdeux.com/2021093002/static/img/teuxdeux-opengraph.png)](https://teuxdeux.com)
+[![TeuxDeux](https://images.teuxdeux.com/2021093002/static/img/teuxdeux-opengraph.png)](https://teuxdeux.com)
 
 I discovered TeuxDeux through [Matt D'Avella's YouTube channel](https://www.youtube.com/c/MattDAvella). As the name implies, it's a todo app. What I like most about the app is it's simplistic, minimalistic design and the fact that it's cross-platform.
 
