@@ -20,23 +20,14 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
 
 <head>
   <script is:inline>
-    const theme = (() => {
-      if (
-        typeof localStorage !== 'undefined' &&
-        localStorage.getItem('theme')
-      ) {
-        return localStorage.getItem('theme');
-      }
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
-      }
-      return 'light';
-    })();
-
-    theme === 'light'
-      ? document.documentElement.classList.remove('dark')
-      : document.documentElement.classList.add('dark');
-    window.localStorage.setItem('theme', theme);
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      savedTheme === 'light'
+        ? document.documentElement.classList.remove('dark')
+        : document.documentElement.classList.add('dark');
+    } else {
+      localStorage.setItem('light');
+    }
   </script>
 </head>
 
