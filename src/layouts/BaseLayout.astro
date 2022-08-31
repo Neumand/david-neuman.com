@@ -18,22 +18,27 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
   Astro.props as Props;
 ---
 
-<script is:inline>
-  const theme = (() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme');
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
-  })();
+<head>
+  <script is:inline>
+    const theme = (() => {
+      if (
+        typeof localStorage !== 'undefined' &&
+        localStorage.getItem('theme')
+      ) {
+        return localStorage.getItem('theme');
+      }
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
+    })();
 
-  theme === 'light'
-    ? document.documentElement.classList.remove('dark')
-    : document.documentElement.classList.add('dark');
-  window.localStorage.setItem('theme', theme);
-</script>
+    theme === 'light'
+      ? document.documentElement.classList.remove('dark')
+      : document.documentElement.classList.add('dark');
+    window.localStorage.setItem('theme', theme);
+  </script>
+</head>
 
 <meta charset='UTF-8' />
 <meta name='viewport' content='width=device-width' />
