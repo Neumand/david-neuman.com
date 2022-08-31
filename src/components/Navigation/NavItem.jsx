@@ -1,5 +1,3 @@
-import '../../styles/globals.css';
-
 export default function NavItem({ children, href = null, popOut }) {
   if (!href) {
     return <span className='cursor-pointer hover:font-bold'>{children}</span>;
