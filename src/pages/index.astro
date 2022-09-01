@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Header from '@components/Header.astro';
+import { Image } from '@astrojs/image/components'
 import type { BlogFrontmatter } from './blog.astro';
 import Subscribe from '@components/Newsletter/Subscribe.astro';
 import ContentCard from '@components/ContentCard.astro';
@@ -38,10 +39,13 @@ const recentPosts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
         <p class='text-sm font-header font-medium mt-8 md:text-lg'></p>
       </div>
     </Header>
-    <img
+    <Image
       class='rounded-full inline-block h-36 w-36 md:h-64 md:w-64'
       src='https://avatars.githubusercontent.com/u/42482170?v=4'
       alt='An avatar of David Neuman'
+      format={'avif'}
+      width={256}
+      height={256}
     />
   </section>
 
