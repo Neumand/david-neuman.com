@@ -31,7 +31,7 @@ As was the case last year, here are the four questions that I'll answer:
 
 ### I'm going to be a father!
 
-![An ultrasound of my baby](/images/ultrasound.jpg)
+![An ultrasound of my baby](/assets/ultrasound.jpg)
 The day that I found out that my fiancée and I were expecting was one of the best days of my life, let alone this year. We had decided in the summer to postpone wedding plans and start a family together. For us, having a child was the next logical step in our relationship. We both love each other dearly. While it will be amazing to celebrate our relationship with an eventual celebration, a child will bring us both so much joy and love.
 
 ### I went to therapy
@@ -44,7 +44,7 @@ Therapy is still a taboo subject for many. I believe that everyone should go to 
 
 ### I started a newsletter
 
-![Dave's Dives Newsletter Archive](/images/daves-dives.png)
+![Dave's Dives Newsletter Archive](/assets/daves-dives.png)
 
 In [last year's annual retrospective](/2020-annual-retrospective/), I stated that I would start a newsletter in the upcoming year. And I did! It's one of the recent endeavors that I'm most proud of. Starting a newsletter ticks off two of the goals that I had set out for myself this year:
 
@@ -53,7 +53,7 @@ In [last year's annual retrospective](/2020-annual-retrospective/), I stated tha
 
 ### I made significant progress on my new website
 
-![My new website](/images/new-website.png)
+![My new website](/assets/new-website.png)
 I haven't shipped the new version of my website just yet. There are a couple of remaining tasks that I need to check off. But I'm almost there! I'm still proud of the work that I put into building the entire frontend from scratch instead of using a theme. I _am_ a developer after all, right?
 
 The final obstacle is figuring out how to change the domain name of my Ghost website to something _other_ than david-neuman.com. I'm planning to use this domain for my new site and fetch the content from the Ghost CMS. I should be able to get this done in the first half of this year. If I don't get it done before the baby comes, there's a strong chance that it won't get done for a while!
@@ -86,7 +86,7 @@ This year, I do plan on putting more effort into my friendships. But more import
 
 ### I continued to grapple with my relationship with gaming
 
-![An animated PlayStation controller](/images/undraw-gaming.png)
+![An animated PlayStation controller](/assets/undraw-gaming.png)
 Gaming represents comfort for me. It's a hobby that I'd like to think I'm good at. As such, it often requires what feels like little mental effort for a large hit of dopamine. Playing games with friends is a great way to stay in touch, especially when social isolation is the new norm. But the appeal and allure of gaming often gets in the way of my other goals. And that's my problem.
 
 You could argue that I've been quite productive this year. I wrote fairly consistently on my blog, started a newsletter, mostly rebuilt my website and accomplished many of my goals. But gaming has often contributed to my absent-mindedness, where my brain checks out for an extended period of time. It's times like those that I need to be wary about and monitor.

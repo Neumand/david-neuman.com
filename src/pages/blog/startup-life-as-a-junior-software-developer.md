@@ -21,7 +21,7 @@ Since I recently took a new opportunity, I figured that it would be a good time 
 
 ## You'll quickly contribute to features and have an impact on the product you're working on
 
-![](/images/fogg-success-1.png)
+![](/assets/fogg-success-1.png)
 
 <figcaption>Illustration by <a href="https://icons8.com">Ouch.pics</a></figcaption>
 
@@ -33,7 +33,7 @@ It can be stressful working on full features as a new developer. But you learn a
 
 ## You may write less tests
 
-![](/images/unit-testing-meme.png)
+![](/assets/unit-testing-meme.png)
 
 <figcaption>Source: <a href="https://www.reddit.com/r/ProgrammerHumor/comments/9ktyur/another_unit_testing_meme">Reddit</a></figcaption>
 
@@ -68,7 +68,7 @@ At a larger company, there's a greater chance you'll focus on one specific part 
 
 ## You'll need to figure out a lot on your own
 
-![Man with his head down at his desk in front of a computer](/images/exhausted-man.png)
+![Man with his head down at his desk in front of a computer](/assets/exhausted-man.png)
 
 A smaller team generally has less available resources to help you ramp up as a junior developer. What does that mean, exactly? Well, it likely means that you'll need to dive into the codebase without anyone to help you navigate your way around it.
 

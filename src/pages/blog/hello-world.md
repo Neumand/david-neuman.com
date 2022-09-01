@@ -32,7 +32,7 @@ So, what am I still afraid of? Mostly receiving feedback and writing unoriginal 
 
 Here's what you would have seen if you visited my site prior to today:
 
-![](/images/ghost-private.png)
+![](/assets/ghost-private.png)
 
 <figcaption>Sorry, no visitors allowed!</figcaption>
 
@@ -55,7 +55,7 @@ Will anything I write here be truly original? Probably not. But there's no way t
 For several years I wrote most of the music for my old band. I was theoretically writing "original" songs, but to say that these songs were truly original would be a blatant lie. My songs were so heavily inspired by other artists that the pre-production name of a track was often a play on
 words of that artist's name.
 
-![](/images/ghost/2020/01/pablo-friendship.png)
+![](/assets/ghost/2020/01/pablo-friendship.png)
 
 <figcaption>Illustration by <a href="https://icons8.com">Ouch.pics></a></figcaption>
 
@@ -73,4 +73,4 @@ I'd also like to thank Shawn Wang, Jonathan Borichevskiy, Steph Smith, Gergely O
 
 And thank you, the reader, for taking the time to read through my first post.
 
-![](/images/happy.png)
+![](/assets/happy.png)

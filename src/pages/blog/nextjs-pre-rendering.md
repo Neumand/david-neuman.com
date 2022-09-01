@@ -18,10 +18,10 @@ At [Stingray](https://www.stingray.com/) our websites are written in [Next.js](h
 This is where Next.js comes in. Next.js pre-renders content by generating HTML for each page in advance. Afterwards, the JavaScript code runs and makes the app fully interactive in a process called **hydration**. So instead of users seeing a blank page until all of the JavaScript has run, they will be able to view the page's content almost instantaneously and then be able to interact with more dynamic features once the hydration process has finished.
 
 The below images from the official Next.js documentation help explain these concepts and process.
-![](/images/no-pre-rendering.png)
+![](/assets/no-pre-rendering.png)
 <figcaption>Sourced from the official <a href="https://nextjs.org/learn/basics/data-fetching/pre-rendering">Next.js documentation</a></figcaption>
 
-![](/images/pre-rendering.png)
+![](/assets/pre-rendering.png)
 <figcaption>Sourced from the official <a href="https://nextjs.org/learn/basics/data-fetching/pre-rendering">Next.js documentation</a></figcaption>
 
 You can also choose _how_ to pre-render your content. This decision primarily affects _when_ the HTML is generated for each page.
@@ -30,10 +30,10 @@ You can also choose _how_ to pre-render your content. This decision primarily af
 
 Next.js provides the option to generate pages statically through a process commonly known as **static site generation **(SSG) or through **server-side rendering** (SSR).
 
-![](/images/static-generation.png)
+![](/assets/static-generation.png)
 <figcaption>Static generation</figcaption>
 
-![](/images/ssr.png)
+![](/assets/ssr.png)
 <figcaption>Server-side rendering</figcaption>
 
 Pages generated through SSG are prepared at build time, meaning that every possible view of a site is generated ahead of a user making a request to that page.

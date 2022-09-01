@@ -40,21 +40,21 @@ Keeping last year's goals in mind, let's dive in.
 
 At the beginning of the year, I worked in a completely different industry. For the longest time I was unhappy and felt unfulfilled in my career. Now, I'm employed as a software developer working on applications to improve our client's operations. I couldn't be happier. I'll get around to writing a detailed blog post on how I managed to transition in such a short period of time, and what I learned.
 
-![](/images/square-lab.png)
+![](/assets/square-lab.png)
 
 <figcaption>The team at Square Lab | <b>Credit</b>: Roshanag Rahmani</figcaption>
 
 ### I developed a writing habit.
 
 I started writing 200 words every day for several months. The practice forced me to stop and think about _what_ to write about in the first place. I learned that it's difficult because [writing is thinking](https://blog.stephsmith.io/learning-to-write-with-confidence/), and thinking is _hard_. I wrote every day to prepare myself for launching this very blog, and I believe that it's a testament to the hard work I put in over the past year.
-![](/images/200-words-a-day.png)My 200 Words a Day profile when my writing was most consistent
+![](/assets/200-words-a-day.png)My 200 Words a Day profile when my writing was most consistent
 I went from writing in my journal sporadically to writing consistently each and every day. That's a win in my book.
 
 ### I built something with code that I am proud of.
 
 My final project for my coding bootcamp is a web app called [Clearmind](https://github.com/Neumand/clearmind). Given our time constraints, I think my colleague and I did a great job. I'd like to think that it was impressive enough to help land several interviews right after bootcamp was over. The codebase may be messy, but the project paved the way for my new career.
 
-![](/images/lighthouse-demo.png)
+![](/assets/lighthouse-demo.png)
 
 <figcaption>Demo Day @ Lighthouse Labs | <b>Credit</b>: Alain Wong</figcaption>
 
@@ -100,7 +100,7 @@ From what went well this year, you can probably tell that I focused mostly on my
 
 I've been playing video games since my uncle handed me a SNES when I was a little kid. I'd be lying if I told you my passion for gaming would someday dwindle.
 
-![](/images/gaming-luna.png)
+![](/assets/gaming-luna.png)
 
 <figcaption>Luna watching me play</figcaption>
 

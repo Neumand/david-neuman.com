@@ -73,7 +73,7 @@ With Server Components, all imports of Client Components will be considered as p
 
 ### Server Components can be refetched while preserving the client state inside of their tree.
 
-![React component tree](/images/react-component-tree.png)
+![React component tree](/assets/react-component-tree.png)
 Server Components can pass Client Components as props to other Client Components. What's cool is that any computed values within that component are already rendered, so you're essentially passing the component rendered JSX.
 
 React is smart enough to understand that when we fetch data in a Server Component that we don't need re-render child Client Components. What this means is that **client-side state is always preserved**. This is fascinating and will lead to interesting use cases, the first of which the team showcases as a search feature.

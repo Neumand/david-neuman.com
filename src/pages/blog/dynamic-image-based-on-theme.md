@@ -11,7 +11,7 @@ draft: true
 
 On the About page of my blog, I have an image that changes based on the active theme.
 
-![](/images/lightouse-light-dark.gif)
+![](/assets/lightouse-light-dark.gif)
 
 Pretty cool, right? The current implementation looks something like this:
 

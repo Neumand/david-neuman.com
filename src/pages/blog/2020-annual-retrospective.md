@@ -32,7 +32,7 @@ Despite the fact that most of 2020 was shrouded in the cloud of COVID-19, there 
 
 ### I got engaged.
 
-![Engagement ring](/images/engagement.jpg)
+![Engagement ring](/assets/engagement.jpg)
 
 <figcaption>Photo from <a href="https://unsplash.com/">Unsplash</a>, not the actual ring I gave her 😅</figcaption>
 
@@ -48,7 +48,7 @@ Launching my own website was an early win for me in 2020. I couldn't have publis
 
 ### I started mentoring.
 
-![Me eating pizza with Lighthouse Labs' CEO Jeremy Shaki](/images/lighthouse-pizza.jpg)
+![Me eating pizza with Lighthouse Labs' CEO Jeremy Shaki](/assets/lighthouse-pizza.jpg)
 
 <figcaption>Chatting with Lighthouse Labs CEO Jeremy Shaki at one of their events in early 2020.</figcaption>
 
@@ -68,7 +68,7 @@ It was my first time starting work 100% remotely. The experience is not without 
 
 ### I took more time to reflect on my days.
 
-![Open journal with "Notes" writen and a pen on the page](/images/notebook-pen.jpg)
+![Open journal with "Notes" writen and a pen on the page](/assets/notebook-pen.jpg)
 
 Journaling is a rewarding and fulfilling experience if done in a way that feels right to you. Notice how I didn't say _correct_; in my opinion, there's no right or wrong way to do it. Some days you might feel like writing about how you're feeling. Other times you might write about what you're grateful for, or a specific experience.
 
@@ -76,7 +76,7 @@ This past year I journaled just about every other day, give or take, which isn't
 
 ### I read more books.
 
-![](/images/ghost/2021/01/joao-tzanno-E3AQ09IW6oA-unsplash--1-.jpg)
+![](/assets/ghost/2021/01/joao-tzanno-E3AQ09IW6oA-unsplash--1-.jpg)
 It may have only been three more than last year, but it's the consistency and improvement that are important. This year it was a good mix of fiction and non-fiction. Here's the list of books I read in 2020:
 
 | **Book**                                                                                                                                                                                                                                                           | **Author**        |
