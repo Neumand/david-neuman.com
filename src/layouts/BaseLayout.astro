@@ -1,8 +1,7 @@
 ---
 import { SEO } from 'astro-seo';
 import DefaultSEO from '../../seo.config';
-import Navigation from '@components/Navigation/Navigation';
-import Navigation2 from '@components/Navigation/Navigation2.astro';
+import Navigation from '@components/Navigation/Navigation.astro';
 import SocialIcon from '@components/Social/SocialIcon.astro';
 import Twitter from '@components/Social/Twitter.astro';
 import LinkedIn from '@components/Social/LinkedIn.astro';
@@ -43,7 +42,6 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
     }
 
     const theme = localStorage.theme;
-    console.log(theme);
     if (theme) {
       toggleTheme(theme);
     } else {
@@ -65,8 +63,7 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
 <div
   class='flex flex-col min-h-screen bg-white transition-all transform ease-linear dark:bg-gray-900 dark:text-gray-100'
 >
-  <!-- <Navigation client:load /> -->
-  <Navigation2 />
+  <Navigation />
 
   <slot />
   <footer

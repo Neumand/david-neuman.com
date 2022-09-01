@@ -1,6 +1,7 @@
 ---
 import { navItems } from 'src/constants';
-import NavItem2 from './NavItem2.astro';
+import ThemeToggle from './ThemeToggle.jsx';
+import NavItem from './NavItem.astro';
 ---
 
 <script>
@@ -52,17 +53,17 @@ import NavItem2 from './NavItem2.astro';
     class='flex items-center justify-between w-full p-8 bg-white shadow-md transition-colors transform ease-linear dark:bg-gray-900'
   >
     <div class='flex space-x-2'>
-      <NavItem2 href='/'>
-        <span class='text-xl font-bold md:text-3xl'> David Neuman</span>
-      </NavItem2>
+      <NavItem href='/'>
+        <span class='text-xl font-bold md:text-3xl'>David Neuman</span>
+      </NavItem>
     </div>
     <div class='flex space-x-4'>
       <div class='hidden space-x-4 items-center md:flex'>
         {
           navItems.map(({ name, href, popOut }) => (
-            <NavItem2 href={href} popOut={popOut}>
+            <NavItem href={href} popOut={popOut}>
               {name}
-            </NavItem2>
+            </NavItem>
           ))
         }
       </div>
@@ -85,27 +86,9 @@ import NavItem2 from './NavItem2.astro';
             d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'></path>
         </svg>
       </button>
-      <button
-        class='py-2 px-2 rounded transition-colors ease-in-out bg-gray-100 hover:bg-gray-200 dark:bg-cool-gray-900 dark:hover:bg-cool-gray-800'
-        aria-label='Toggle Dark Mode'
-        id='theme-toggle'
-      >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          stroke-width='1.5'
-          stroke='currentColor'
-          class='w-6 h-6'
-        >
-          <path
-            id='theme-icon-path'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            d='M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z'
-          ></path>
-        </svg>
-      </button>
+      <div>
+        <ThemeToggle client:load />
+      </div>
     </div>
   </div>
 
@@ -115,9 +98,9 @@ import NavItem2 from './NavItem2.astro';
   >
     {
       navItems.map(({ name, href, popOut }) => (
-        <NavItem2 href={href} popOut={popOut}>
+        <NavItem href={href} popOut={popOut}>
           {name}
-        </NavItem2>
+        </NavItem>
       ))
     }
   </div>
