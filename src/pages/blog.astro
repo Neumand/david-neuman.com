@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Header from '@components/Header.astro';
+import Posts from '@components/Posts.astro';
+
+export interface BlogFrontmatter {
+  title: string;
+  slug: string;
+  datePublished: string;
+  dateUpdated?: string;
+  tags: string[];
+  excerpt: string;
+  featureImage: string;
+  url: string;
+  file: string;
+  draft?: boolean;
+}
+
+const posts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
+  .sort(
+    (p1, p2) =>
+      new Date(p2.frontmatter.datePublished) -
+      new Date(p1.frontmatter.datePublished),
+  )
+  .filter((post) => !post.frontmatter.draft);
+---
+
+<BaseLayout title='Blog - <David Neuman />'>
+  <Header textAlign='center'>
+    <h1>Blog</h1>
+  </Header>
+  <Posts posts={posts} />
+</BaseLayout>

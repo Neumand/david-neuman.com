@@ -1,0 +1,23 @@
+---
+import Pill from './Pill/Pill.astro';
+import { toKebabCase } from '@util/kebab-case';
+
+interface Props {
+  tags?: string[];
+}
+
+const { tags = [] } = Astro.props as Props;
+---
+
+<div class='flex mt-2 space-x-2'>
+  {
+    tags.map((tag, idx) => {
+      const slug = toKebabCase(tag);
+      return (
+        <Pill key={idx}>
+          <a href={`/tags/${slug}`}>{`${tag}`}</a>
+        </Pill>
+      );
+    })
+  }
+</div>

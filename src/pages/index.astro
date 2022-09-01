@@ -1,0 +1,83 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Header from '@components/Header.astro';
+import { Image } from '@astrojs/image/components'
+import type { BlogFrontmatter } from './blog.astro';
+import Subscribe from '@components/Newsletter/Subscribe.astro';
+import ContentCard from '@components/ContentCard.astro';
+import Tags from '@components/Tags.astro';
+import { formatDate } from '@util/formatter';
+import ReadingTime from '@components/ReadingTime.astro';
+
+const recentPosts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
+  .sort(
+    (p1, p2) =>
+      new Date(p2.frontmatter.datePublished) -
+      new Date(p1.frontmatter.datePublished),
+  )
+  .filter((post) => !post.frontmatter.draft)
+  .slice(0, 4);
+---
+
+<BaseLayout>
+  <section
+    class='hero p-12 flex flex-col-reverse justify-center items-center mb-8 w-full md:flex-row md:space-x-24'
+  >
+    <Header textAlign='left'>
+      <div class='max-w-xl'>
+        <h1 class="text-center dark:bg-black-transparent md:text-left md:dark:bg-transparent">David Neuman</h1>
+        <p class='text-sm font-medium mt-8 md:text-lg'>
+          Hey there! 👋 I'm Dave. I write code, music and words on a screen.
+          Currently building the future of luxury travel at <a
+            class='link'
+            target='_blank'
+            href='https://lifehousehotels.com/'
+            >Life House
+          </a>
+          .
+        </p>
+        <p class='text-sm font-header font-medium mt-8 md:text-lg'></p>
+      </div>
+    </Header>
+    <Image
+      class='rounded-full inline-block h-36 w-36 md:h-64 md:w-64'
+      src='https://avatars.githubusercontent.com/u/42482170?v=4'
+      alt='An avatar of David Neuman'
+      format={'avif'}
+      width={256}
+      height={256}
+    />
+  </section>
+
+  <div
+    class='flex flex-col justify-center items-center p-5 max-w-4xl m-auto md:mt-8 space-y-8'
+  >
+    <h2>Latest Posts</h2>
+    {
+      recentPosts.map(({ frontmatter, rawContent }) => (
+        <div class='w-full'>
+          <ContentCard>
+            <a href={`/blog/${frontmatter.slug}`}>
+              <h3 class='font-sans'>{frontmatter.title}</h3>
+              <div class='flex space-x-2 items-start'>
+                <p class='text-sm mb-2 text-gray-700 dark:text-gray-500'>
+                  {formatDate(frontmatter.datePublished)}
+                </p>
+                <ReadingTime html={rawContent()} />
+              </div>
+              <p class='text-gray-700 dark:text-gray-500'>
+                {frontmatter.excerpt}
+              </p>
+            </a>
+            <Tags tags={frontmatter.tags} />
+          </ContentCard>
+        </div>
+      ))
+    }
+    <a href='/blog' class='flex items-center link py-0.5 px-1 space-x-2'>
+      Read more
+    </a>
+
+    <Subscribe />
+  </div>
+</BaseLayout>

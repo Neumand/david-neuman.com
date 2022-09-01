@@ -1,0 +1,40 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { Image } from '@astrojs/image/components';
+import Subscribe from '@components/Newsletter/Subscribe.astro';
+import type { BlogFrontmatter } from '@pages/blog.astro';
+
+interface Props {
+  frontmatter: BlogFrontmatter; // TODO: Create type for book notes.
+}
+
+const { frontmatter } = Astro.props as Props;
+---
+
+<BaseLayout title={`${frontmatter.title} - <David Neuman />`}>
+  <article
+    class='flex flex-col justify-center max-w-2xl mx-auto w-full mt-8 px-8 md:px-0'
+  >
+    <h1
+      class='text-3xl font-bold mb-2 text-center md:text-5xl md:leading-tight'
+    >
+      {frontmatter.title}
+    </h1>
+
+    <Image
+      src={frontmatter.featureImage}
+      alt='Feature image'
+      class='self-center rounded-md shadow-md mb-[1.2em]'
+      width={250}
+      height={400}
+    />
+    <main
+      class='prose md:prose-lg lg:prose-xl dark:prose-dark md:dark:prose-dark lg:dark:prose-dark'
+    >
+      <!-- Markdown content is inserted here. -->
+      <slot />
+    </main>
+    <div class='flex justify-center md:block mb-8'></div>
+    <Subscribe />
+  </article>
+</BaseLayout>

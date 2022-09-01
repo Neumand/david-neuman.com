@@ -1,0 +1,22 @@
+---
+interface Props {
+  href?: string;
+  popOut?: boolean;
+}
+
+const { href = null, popOut = false } = Astro.props as Props;
+---
+
+{
+  !href ? (
+    <span class='cursor-pointer hover:font-bold'>
+      <slot />
+    </span>
+  ) : (
+    <div>
+      <a class='nav-item' href={href} target={popOut ? '_blank' : '_self'}>
+        <slot />
+      </a>
+    </div>
+  )
+}

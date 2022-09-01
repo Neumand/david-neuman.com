@@ -1,0 +1,15 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '@components/Header.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={`${frontmatter.title} - <David Neuman />`}>
+  <Header textAlign='center'>
+    <h1>{frontmatter.title}</h1>
+  </Header>
+  <main class='flex flex-col justify-center items-center max-w-2xl mx-auto p-8'>
+    <slot />
+  </main>
+</BaseLayout>
