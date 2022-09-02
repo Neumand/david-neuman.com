@@ -15,7 +15,7 @@ const books = await getBooks();
     <div class='grid gap-4 mb-8 mx-auto md:grid-cols-2 md:gap-8 xl:grid-cols-3'>
       {
         books.map(({ title, author, imageUrl, rating, summary, genre }) => (
-          <div class='flex p-4 max-h-72 max-w-xl bg-gray-50 border-2 rounded-lg shadow-sm transition-all transform ease-in-out md:hover:scale-105 md:hover:shadow-xl md:active:scale-105 md:active:shadow-xl dark:bg-cool-gray-900 dark:border-cool-gray-700'>
+          <div class='flex p-4 max-h-72 max-w-xl bg-gray-50 border-2 rounded-lg shadow-sm transition-transform transform ease-in-out md:hover:scale-105 md:hover:shadow-xl md:active:scale-105 md:active:shadow-xl dark:bg-cool-gray-900 dark:border-cool-gray-700'>
             <img
               src={imageUrl}
               alt={`Book cover for ${title} by ${author}`}

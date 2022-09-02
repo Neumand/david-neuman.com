@@ -23,7 +23,7 @@ const { posts } = Astro.props as Props;
 >
   {
     posts.map(({ frontmatter, rawContent }) => (
-      <div class='mx-auto w-full overflow-hidden rounded-lg m-8 transition-all transform ease-in-out xl:max-h-xl md:hover:shadow-blue md:hover:scale-105 dark:hover:bg-gray-800 md:dark:hover:shadow-none'>
+      <div class='mx-auto w-full overflow-hidden rounded-lg m-8 transition-transform transform ease-in-out xl:max-h-xl md:hover:shadow-blue md:hover:scale-105 dark:hover:bg-gray-800 md:dark:hover:shadow-none'>
         <a href={`/blog/${frontmatter.slug}`}>
           <Image
             class='cursor-pointer w-full'
