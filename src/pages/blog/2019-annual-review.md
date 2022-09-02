@@ -64,12 +64,12 @@ I tried to be present and make the most out of the time I spent with my friends 
 
 <figure class="md:-mx-64">
 <div class='px-5 max-w-4xl mx-auto sm:grid sm:grid-cols-2 xl:grid-cols-3 md:gap-2 xl:gap-6 xl:max-w-6xl'>
-  <img class="w-full" src="/images/barbados.png">
-  <img class="w-full" src="/images/tremblant.png">
-  <img class="w-full" src="/images/xmas-dinner.png">
-  <img class="w-full" src="/images/ottawa-canal.png">
-  <img class="w-full" src="/images/lake-placid.jpg">
-  <img class="w-full" src="/images/courtney-wedding.jpg">
+  <img class="w-full" src="/assets/barbados.png">
+  <img class="w-full" src="/assets/tremblant.png">
+  <img class="w-full" src="/assets/xmas-dinner.png">
+  <img class="w-full" src="/assets/ottawa-canal.png">
+  <img class="w-full" src="/assets/lake-placid.jpg">
+  <img class="w-full" src="/assets/courtney-wedding.jpg">
 </div>
 </figure>
 <figcaption>2019 was a good year</figcaption>
