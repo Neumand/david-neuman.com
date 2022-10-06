@@ -9,7 +9,9 @@ const { frontmatter } = Astro.props;
   <Header textAlign='center'>
     <h1>{frontmatter.title}</h1>
   </Header>
-  <main class='flex flex-col justify-center items-center max-w-2xl mx-auto p-8'>
+  <main
+    class='flex flex-col justify-center items-center max-w-2xl mx-auto p-8 prose dark:prose-dark'
+  >
     <slot />
   </main>
 </BaseLayout>
