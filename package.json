@@ -24,7 +24,6 @@
   "dependencies": {
     "@fontsource/inter": "^4.5.12",
     "@fontsource/poppins": "^4.5.9",
-    "@notionhq/client": "1.0.4",
     "astro-seo": "^0.6.0",
     "date-fns": "^2.29.1"
   }

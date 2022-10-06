@@ -7,7 +7,6 @@ My personal website built with [Astro](https://astro.build). A home for my blog,
 - [Astro](https://astro.build)
 - [Vercel](https://vercel.com/)
 - [Tailwind](http://tailwindcss.com/)
-- [Notion API](http://developers.notion.com/)
 
 ## Good Theft
 
