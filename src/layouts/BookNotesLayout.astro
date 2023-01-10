@@ -1,7 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { Image } from '@astrojs/image/components';
-import Subscribe from '@components/Newsletter/Subscribe.astro';
 import type { BlogFrontmatter } from '@pages/blog.astro';
 
 interface Props {
@@ -35,6 +34,5 @@ const { frontmatter } = Astro.props as Props;
       <slot />
     </main>
     <div class='flex justify-center md:block mb-8'></div>
-    <Subscribe />
   </article>
 </BaseLayout>

@@ -3,7 +3,6 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Header from '@components/Header.astro';
 import { Image } from '@astrojs/image/components'
 import type { BlogFrontmatter } from './blog.astro';
-import Subscribe from '@components/Newsletter/Subscribe.astro';
 import ContentCard from '@components/ContentCard.astro';
 import Tags from '@components/Tags.astro';
 import { formatDate } from '@util/formatter';
@@ -77,7 +76,5 @@ const recentPosts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
     <a href='/blog' class='flex items-center link py-0.5 px-1 space-x-2'>
       Read more
     </a>
-
-    <Subscribe />
   </div>
 </BaseLayout>

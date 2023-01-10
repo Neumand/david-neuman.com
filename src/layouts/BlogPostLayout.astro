@@ -3,7 +3,6 @@ import { formatDate } from '@util/formatter';
 import BaseLayout from './BaseLayout.astro';
 import { Image } from '@astrojs/image/components';
 import Tags from '@components/Tags.astro';
-import Subscribe from '@components/Newsletter/Subscribe.astro';
 import type { BlogFrontmatter } from '@pages/blog.astro';
 import ReadingTime from '@components/ReadingTime.astro';
 
@@ -57,6 +56,5 @@ const hmtl = rawContent();
     <div class='flex justify-center md:block mb-8'>
       <Tags tags={frontmatter.tags} />
     </div>
-    <Subscribe />
   </article>
 </BaseLayout>
