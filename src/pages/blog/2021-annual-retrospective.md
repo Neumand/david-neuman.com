@@ -46,7 +46,7 @@ Therapy is still a taboo subject for many. I believe that everyone should go to 
 
 ![Dave's Dives Newsletter Archive](/assets/daves-dives.png)
 
-In [last year's annual retrospective](/2020-annual-retrospective/), I stated that I would start a newsletter in the upcoming year. And I did! It's one of the recent endeavors that I'm most proud of. Starting a newsletter ticks off two of the goals that I had set out for myself this year:
+In [last year's annual retrospective](/blog/2020-annual-retrospective), I stated that I would start a newsletter in the upcoming year. And I did! It's one of the recent endeavors that I'm most proud of. Starting a newsletter ticks off two of the goals that I had set out for myself this year:
 
 1. **Improve my information content diet**. Each edition of the newsletter has links to content that I'm enjoying, as well as a deep dive on a specific topic. This process gets me reading, listening and watching interesting content that I'd think others would enjoy consuming as well. The very nature of the newsletter has helped improve my information content diet.
 2. **Make a practice of shipping creative work**. Shipping words on a screen definitely fits the bill of creative work. Crafting the newsletter takes time, and the vast majority of my current subscribers are friends and family. But I love writing each edition. I'd keep doing it with _no_ subscribers. It would be great to grow the newsletter over time, but I do it principally for myself.
