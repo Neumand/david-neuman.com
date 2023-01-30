@@ -1,10 +1,5 @@
 ---
-import ReadingTime from '@components/ReadingTime.astro';
-import BaseLayout from '@layouts/BaseLayout.astro';
-import { Image } from '@astrojs/image/components';
-import { formatDate } from '@util/formatter';
 import { CollectionEntry, getCollection } from 'astro:content';
-import Tags from '@components/Tags.astro';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');

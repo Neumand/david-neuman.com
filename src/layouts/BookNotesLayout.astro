@@ -1,10 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { Image } from '@astrojs/image/components';
-import type { BlogFrontmatter } from '@pages/blog.astro';
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  frontmatter: BlogFrontmatter; // TODO: Create type for book notes.
+  frontmatter: CollectionEntry<'books'>['data']; // TODO: Create type for book notes.
 }
 
 const { frontmatter } = Astro.props as Props;
@@ -27,9 +27,8 @@ const { frontmatter } = Astro.props as Props;
       width={250}
       height={400}
     />
-    <main
-      class='prose dark:prose-dark'
-    >
+    <main class='prose dark:prose-dark'>
+      <h2 class='text-center text-3xl md:text-4xl'>{frontmatter.rating}</h2>
       <!-- Markdown content is inserted here. -->
       <slot />
     </main>

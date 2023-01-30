@@ -218,19 +218,26 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">
 },
 },
-"book-notes": {
+"books": {
 "four-thousand-weeks.md": {
   id: "four-thousand-weeks.md",
   slug: "four-thousand-weeks",
   body: string,
-  collection: "book-notes",
+  collection: "books",
   data: any
 },
 "template.md": {
   id: "template.md",
   slug: "book-review-template",
   body: string,
-  collection: "book-notes",
+  collection: "books",
+  data: any
+},
+"the-powder-mage-trilogy.md": {
+  id: "the-powder-mage-trilogy.md",
+  slug: "the-powder-mage-trilogy",
+  body: string,
+  collection: "books",
   data: any
 },
 },
