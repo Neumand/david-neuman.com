@@ -1,10 +1,11 @@
-interface Book {
+export interface Book {
   title: string;
   author: string;
   imageUrl: string;
   genre: string;
   summary?: string;
   slug?: string;
+  hasReview?: boolean;
 }
 
 enum Genres {
@@ -16,6 +17,16 @@ enum Genres {
 }
 
 const books: Book[] = [
+  {
+    title: 'The Powder Mage Trilogy',
+    author: 'Brian McClellan',
+    genre: Genres.FANTASY_SCI_FI,
+    imageUrl: 'https://m.media-amazon.com/images/I/515anQpgFCL._SY346_.jpg',
+    slug: 'the-powder-mage-trilogy',
+    hasReview: true,
+    summary:
+      'An awesome, fast-paced fantasy series with a unique and interesting magic system.',
+  },
   {
     title: 'Range',
     author: 'David Epstein',

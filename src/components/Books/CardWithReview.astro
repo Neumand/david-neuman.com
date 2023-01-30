@@ -1,0 +1,30 @@
+---
+import type { Book } from 'src/data/books';
+
+const { book } = Astro.props as { book: Book };
+---
+
+<a
+  href={`books/${book.slug}`}
+  class='flex p-4 max-h-72 max-w-xl bg-gray-50 border-2 rounded-lg shadow-sm transition-transform transform ease-in-out md:hover:scale-105 md:hover:shadow-xl md:active:scale-105 md:active:shadow-xl dark:bg-cool-gray-900 dark:border-cool-gray-700'
+>
+  <img
+    src={book.imageUrl}
+    alt={`Book cover for ${book.title} by ${book.author}`}
+    class='w-30 max-h-52 md:w-44 md:max-h-64 rounded-md shadow-md'
+  />
+  <div
+    class='flex flex-col max-w-[150px] m-auto text-center space-y-2 md:max-w-[200px]'
+  >
+    <h3 class='text-base text-blue-900 md:text-xl font-bold dark:text-blue-500'>{book.title}</h3>
+    <div class='text-sm'>{book.author}</div>
+    <p class='text-center text-xxs text-gray-700 md:text-xs dark:text-gray-400'>
+      {book.summary}
+    </p>
+    <div
+      class='text-xs mt-auto font-semibold uppercase text-blue-900 dark:text-blue-500'
+    >
+      {book.genre}
+    </div>
+  </div>
+</a>

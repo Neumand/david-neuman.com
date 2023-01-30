@@ -3,15 +3,16 @@ import { formatDate } from '@util/formatter';
 import BaseLayout from './BaseLayout.astro';
 import { Image } from '@astrojs/image/components';
 import Tags from '@components/Tags.astro';
-import type { BlogFrontmatter } from '@pages/blog.astro';
 import ReadingTime from '@components/ReadingTime.astro';
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  frontmatter: BlogFrontmatter;
+  frontmatter: CollectionEntry<'blog'>['data'];
   rawContent: () => string;
 }
 
 const { frontmatter, rawContent } = Astro.props as Props;
+
 const hmtl = rawContent();
 ---
 
@@ -47,9 +48,7 @@ const hmtl = rawContent();
       width={2200}
       height={1080}
     />
-    <main
-      class='prose dark:prose-dark'
-    >
+    <main class='prose dark:prose-dark'>
       <!-- Markdown content is inserted here. -->
       <slot />
     </main>

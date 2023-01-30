@@ -17,6 +17,11 @@ module.exports = {
       fontFamily: {
         header: "'Poppins', sans-serif",
       },
+      fontSize: {
+        'xxs': ['0.5rem', {
+          lineHeight: '0.75rem'
+        }]
+      },
       colors: themeColors,
       boxShadow: {
         blue: '0px 9px 30px 0px rgba(227, 242, 253, 0.7)',

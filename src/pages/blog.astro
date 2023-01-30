@@ -2,27 +2,16 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Header from '@components/Header.astro';
 import Posts from '@components/Posts.astro';
+import { getCollection } from 'astro:content';
 
-export interface BlogFrontmatter {
-  title: string;
-  slug: string;
-  datePublished: string;
-  dateUpdated?: string;
-  tags: string[];
-  excerpt: string;
-  featureImage: string;
-  url: string;
-  file: string;
-  draft?: boolean;
-}
-
-const posts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
+// TODO: Figure out why filtering doesn't work.
+const allPosts = await getCollection('blog');
+const posts = allPosts
+  .filter((post) => !post.data.draft)
   .sort(
     (p1, p2) =>
-      new Date(p2.frontmatter.datePublished) -
-      new Date(p1.frontmatter.datePublished),
-  )
-  .filter((post) => !post.frontmatter.draft);
+      new Date(p2.data.datePublished) - new Date(p1.data.datePublished),
+  );
 ---
 
 <BaseLayout title='Blog - <David Neuman />'>
