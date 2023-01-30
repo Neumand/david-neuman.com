@@ -1,4 +1,4 @@
-# [david-neuman.com](https://david-neuman.vercel.app) (WIP @ temp domain)
+# [david-neuman.com](https://david-neuman.com)
 
 My personal website built with [Astro](https://astro.build). A home for my blog, newsletter, books and anything else I want to share publicly.
 
