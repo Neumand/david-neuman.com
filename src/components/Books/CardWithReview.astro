@@ -16,7 +16,7 @@ const { book } = Astro.props as { book: Book };
   <div
     class='flex flex-col max-w-[150px] m-auto text-center space-y-2 md:max-w-[200px]'
   >
-    <h3 class='text-base text-blue-900 md:text-xl font-bold'>{book.title}</h3>
+    <h3 class='text-base text-blue-900 md:text-xl font-bold dark:text-blue-500'>{book.title}</h3>
     <div class='text-sm'>{book.author}</div>
     <p class='text-center text-xxs text-gray-700 md:text-xs dark:text-gray-400'>
       {book.summary}

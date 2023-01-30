@@ -18,6 +18,16 @@ enum Genres {
 
 const books: Book[] = [
   {
+    title: 'The Powder Mage Trilogy',
+    author: 'Brian McClellan',
+    genre: Genres.FANTASY_SCI_FI,
+    imageUrl: 'https://m.media-amazon.com/images/I/515anQpgFCL._SY346_.jpg',
+    slug: 'the-powder-mage-trilogy',
+    hasReview: true,
+    summary:
+      'An awesome, fast-paced fantasy series with a unique and interesting magic system.',
+  },
+  {
     title: 'Range',
     author: 'David Epstein',
     genre: Genres.PERSONAL_DEVELOPMENT,
@@ -76,16 +86,6 @@ const books: Book[] = [
     author: 'Patrick Rothfuss',
     genre: Genres.FANTASY_SCI_FI,
     imageUrl: 'https://m.media-amazon.com/images/I/51FTWmg+WQL._SY346_.jpg',
-  },
-  {
-    title: 'The Powder Mage Trilogy',
-    author: 'Brian McClellan',
-    genre: Genres.FANTASY_SCI_FI,
-    imageUrl: 'https://m.media-amazon.com/images/I/515anQpgFCL._SY346_.jpg',
-    slug: 'the-powder-mage-trilogy',
-    hasReview: true,
-    summary:
-      'An awesome, fast-paced fantasy series with a unique and interesting magic system.',
   },
 ];
 
