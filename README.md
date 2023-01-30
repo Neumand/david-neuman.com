@@ -1,5 +1,8 @@
 # [david-neuman.com](https://david-neuman.com)
 
+![image](https://user-images.githubusercontent.com/42482170/215568142-91574231-d098-4c92-bcdc-09d456a4e5b5.png)
+
+
 My personal website built with [Astro](https://astro.build). A home for my blog, newsletter, books and anything else I want to share publicly.
 
 ## Built Using
