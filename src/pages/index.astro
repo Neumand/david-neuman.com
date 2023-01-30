@@ -1,20 +1,21 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Header from '@components/Header.astro';
-import { Image } from '@astrojs/image/components'
-import type { BlogFrontmatter } from './blog.astro';
+import { Image } from '@astrojs/image/components';
 import ContentCard from '@components/ContentCard.astro';
 import Tags from '@components/Tags.astro';
 import { formatDate } from '@util/formatter';
 import ReadingTime from '@components/ReadingTime.astro';
+import { getCollection } from 'astro:content';
 
-const recentPosts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
+const allPosts = await getCollection('blog');
+
+const recentPosts = allPosts
   .sort(
     (p1, p2) =>
-      new Date(p2.frontmatter.datePublished) -
-      new Date(p1.frontmatter.datePublished),
+      new Date(p2.data.datePublished) - new Date(p1.data.datePublished),
   )
-  .filter((post) => !post.frontmatter.draft)
+  .filter((post) => !post.data.draft)
   .slice(0, 4);
 ---
 
@@ -24,7 +25,11 @@ const recentPosts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
   >
     <Header textAlign='left'>
       <div class='max-w-xl'>
-        <h1 class="text-center dark:bg-black-transparent md:text-left md:dark:bg-transparent">David Neuman</h1>
+        <h1
+          class='text-center dark:bg-black-transparent md:text-left md:dark:bg-transparent'
+        >
+          David Neuman
+        </h1>
         <p class='text-sm font-medium mt-8 md:text-lg'>
           Hey there! 👋 I'm Dave. I write code, music and words on a screen.
           Currently building the future of luxury travel at <a
@@ -53,22 +58,20 @@ const recentPosts = (await Astro.glob<BlogFrontmatter>('../pages/blog/*.md'))
   >
     <h2>Latest Posts</h2>
     {
-      recentPosts.map(({ frontmatter, rawContent }) => (
+      recentPosts.map(({ data, body, slug }) => (
         <div class='w-full'>
           <ContentCard>
-            <a href={`/blog/${frontmatter.slug}`}>
-              <h3 class='font-sans'>{frontmatter.title}</h3>
+            <a href={`/blog/${slug}`}>
+              <h3 class='font-sans'>{data.title}</h3>
               <div class='flex space-x-2 items-start'>
                 <p class='text-sm mb-2 text-gray-700 dark:text-gray-500'>
-                  {formatDate(frontmatter.datePublished)}
+                  {formatDate(data.datePublished)}
                 </p>
-                <ReadingTime html={rawContent()} />
+                <ReadingTime html={body} />
               </div>
-              <p class='text-gray-700 dark:text-gray-500'>
-                {frontmatter.excerpt}
-              </p>
+              <p class='text-gray-700 dark:text-gray-500'>{data.excerpt}</p>
             </a>
-            <Tags tags={frontmatter.tags} />
+            <Tags tags={data.tags} />
           </ContentCard>
         </div>
       ))

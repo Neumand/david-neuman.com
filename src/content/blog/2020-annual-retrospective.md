@@ -4,6 +4,8 @@ title: 2020 Annual Retrospective
 slug: 2020-annual-retrospective
 datePublished: 2021-02-02T12:05:18.000Z
 dateUpdated: 2021-02-02T12:05:18.000Z
+tags:
+  - Personal Development
 excerpt: My 2020 year in review.
 featureImage: https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDF8fHJldmlld3xlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000
 ---

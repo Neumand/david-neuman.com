@@ -11,5 +11,7 @@ export const formatReadingTime = (minutes: number) => {
   return `${timeToRead} minute read`;
 };
 
-export const formatDate = (isoDateString: string) =>
-  format(parseISO(isoDateString), 'MMMM d, yyyy');
+export const formatDate = (isoDate: Date | string) => {
+  const date = isoDate instanceof Date ? isoDate : parseISO(isoDate);
+  return format(date, 'MMMM d, yyyy');
+};

@@ -2,14 +2,14 @@
 import Header from '@components/Header.astro';
 import Posts from '@components/Posts.astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import type { BlogFrontmatter } from '@pages/blog.astro';
 import { toKebabCase } from '@util/kebab-case';
+import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob<BlogFrontmatter>('../../pages/blog/*.md');
+  const allPosts = await getCollection('blog');
   const allTags = allPosts
-    .flatMap((post) => post.frontmatter.tags)
-    .filter((tag) => !!tag);
+    .flatMap((post) => post.data.tags)
+    .filter((tag) => tag !== undefined);
   const availableTags = Array.from(new Set(allTags));
   return availableTags.map((tag) => ({
     params: { slug: toKebabCase(tag) },
@@ -18,12 +18,10 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-const { tag } = Astro.props;
+const { tag } = Astro.props as { tag: string };
 
-const posts = await Astro.glob<BlogFrontmatter>('../../pages/blog/*.md');
-const postsForTag = posts.filter((post) =>
-  post.frontmatter.tags?.includes(tag),
-);
+const posts = await getCollection('blog');
+const postsForTag = posts.filter((post) => post.data.tags?.includes(tag));
 ---
 
 <BaseLayout title={`${tag} - <David Neuman />`}>
