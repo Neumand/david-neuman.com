@@ -17,7 +17,7 @@ const books = getBooks();
     <div class='grid gap-4 mb-8 mx-auto md:grid-cols-2 md:gap-8 xl:grid-cols-3'>
       {
         books.map((book) => {
-          return book.hasReview ? (
+          return book.slug ? (
             <CardWithReview book={book} />
           ) : (
             <CardWithoutReview book={book} />

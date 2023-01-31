@@ -5,7 +5,6 @@ export interface Book {
   genre: string;
   summary?: string;
   slug?: string;
-  hasReview?: boolean;
 }
 
 enum Genres {
@@ -23,9 +22,18 @@ const books: Book[] = [
     genre: Genres.FANTASY_SCI_FI,
     imageUrl: 'https://m.media-amazon.com/images/I/515anQpgFCL._SY346_.jpg',
     slug: 'the-powder-mage-trilogy',
-    hasReview: true,
     summary:
       'An awesome, fast-paced fantasy series with a unique and interesting magic system.',
+  },
+  {
+    title: 'The Licanius Trilogy',
+    author: 'James Islington',
+    genre: Genres.FANTASY_SCI_FI,
+    imageUrl:
+      'https://images-na.ssl-images-amazon.com/images/I/51oul60C3fL.jpg',
+    slug: 'the-licanius-trilogy',
+    summary:
+      'A complex narrative packed into one of my favourite fantasy trilogies of all time.',
   },
   {
     title: 'Range',
@@ -47,13 +55,6 @@ const books: Book[] = [
     genre: Genres.PERSONAL_DEVELOPMENT,
     imageUrl:
       'https://images-na.ssl-images-amazon.com/images/I/713mzPe9SwS.jpg',
-  },
-  {
-    title: 'The Shadow of What Was Lost',
-    author: 'James Islington',
-    genre: Genres.FANTASY_SCI_FI,
-    imageUrl:
-      'https://images-na.ssl-images-amazon.com/images/I/51oul60C3fL.jpg',
   },
   {
     title: 'The Psychology of Money',
