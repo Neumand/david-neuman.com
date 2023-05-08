@@ -4,7 +4,7 @@ title: The Meaning of Fatherhood
 slug: the-meaning-of-fatherhood
 datePublished: 2022-07-02
 excerpt: A small reflection on what it means to be a father.
-featureImage: /images/newborn.jpeg
+featureImage: /assets/newborn.jpeg
 tags: []
 draft: false
 ---

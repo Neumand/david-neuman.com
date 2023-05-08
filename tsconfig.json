@@ -1,28 +1,15 @@
 {
   "compilerOptions": {
+    "types": ["@astrojs/image/client"],
     "baseUrl": ".",
     "paths": {
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ],
-      "@pages/*": [
-        "src/pages/*"
-      ],
-      "@lib/*": [
-        "src/lib/*"
-      ],
-      "@util/*": [
-        "src/util/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@images/*": [
-        "src/images/*"
-      ]
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@lib/*": ["src/lib/*"],
+      "@util/*": ["src/util/*"],
+      "@styles/*": ["src/styles/*"],
+      "@images/*": ["src/images/*"]
     },
     "target": "ESNext",
     "module": "ESNext",

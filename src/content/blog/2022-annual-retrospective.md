@@ -5,7 +5,7 @@ slug: 2022-annual-retrospective
 datePublished: 2023-01-31
 excerpt: Reflecting on a transformative year.
 tags: [Personal Development]
-featureImage: /images/computer-chair.png
+featureImage: /assets/computer-chair.png
 ---
 
 I look forward to writing my annual review each year. It's an opportunity for me to reflect on how I spent my time and energy. Did I focus my attention where I intended? Where did I succeed and where did I fall short?

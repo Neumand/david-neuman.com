@@ -7,7 +7,7 @@ dateUpdated: 2021-01-17T22:36:22.000Z
 tags:
   - Software Development
 excerpt: A brief overview of how Next.js renders the content for each page of a website or app.
-featureImage: /images/next-js.png
+featureImage: /assets/next-js.png
 ---
 
 At [Stingray](https://www.stingray.com/) our websites are written in [Next.js](https://nextjs.org/), a popular framework built with React. React is the premier library for building single-page applications (SPAs), where content is rendered on the client-side. However, there are a couple of problems when it comes to building SPAs:
