@@ -19,7 +19,6 @@
     @apply font-header text-xl font-bold md:text-2xl;
   }
 
-
   body::-webkit-scrollbar {
     @apply w-4;
   }
@@ -37,10 +36,6 @@
 
   svg {
     @apply fill-current h-5;
-  }
-
-  ::selection {
-    @apply bg-blue-50 dark:bg-blue-800;
   }
 
   @font-face {
