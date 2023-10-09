@@ -8,6 +8,7 @@ import LinkedIn from '@components/Social/LinkedIn.astro';
 import GitHub from '@components/Social/GitHub.astro';
 import HackerNews from '@components/Social/HackerNews.astro';
 import Mail from '@components/Social/Mail.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 import '../styles/globals.css';
 import '@fontsource/inter/400.css';
@@ -63,6 +64,7 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
     name='generator'
     content={Astro.generator}
   />
+  <ViewTransitions />
 </head>
 
 <SEO title={title} description={description} />
