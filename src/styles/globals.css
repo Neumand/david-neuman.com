@@ -57,7 +57,7 @@
 }
 
 .dark .hero {
-  background-image: url(/src/images/space-background.png);
+  @apply bg-cool-gray-900;
 }
 
 .input {
