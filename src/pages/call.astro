@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Header from '@components/Header.astro';
+---
+
+<BaseLayout title='Book a 1:1 - <David Neuman />'>
+  <Header textAlign='center'>
+    <h1>Schedule a 1:1 Call</h1>
+  </Header>
+  <!-- Calendly inline widget begin -->
+  <div
+    class='calendly-inline-widget'
+    data-url='https://calendly.com/david-m-neuman'
+    style='min-width:320px;height:700px;'
+  >
+  </div>
+  <script
+    type='text/javascript'
+    src='https://assets.calendly.com/assets/external/widget.js'
+    async
+  ></script>
+  <!-- Calendly inline widget end -->
+</BaseLayout>;
