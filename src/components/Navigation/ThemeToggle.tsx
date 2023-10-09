@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme'));
+  const [theme, setTheme] = useState(localStorage?.getItem('theme') ?? 'light');
 
   const handleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
