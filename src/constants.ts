@@ -6,6 +6,7 @@ export const navItems = [
     href: 'https://wayfinder-weekly.beehiiv.com',
     popOut: true,
   },
+  { name: 'Products', href: '/products', popOut: false },
   { name: 'Books', href: '/books', popOut: false },
   { name: 'Book a Call', href: '/call', popOut: false },
 ];

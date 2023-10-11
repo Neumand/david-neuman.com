@@ -22,6 +22,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@astrojs/node": "^6.0.3",
     "@fontsource/inter": "^4.5.12",
     "@fontsource/poppins": "^4.5.9",
     "astro-seo": "^0.6.0",
