@@ -8,5 +8,9 @@ export const navItems = [
   },
   { name: 'Products', href: '/products', popOut: false },
   { name: 'Books', href: '/books', popOut: false },
-  { name: 'Book a Call', href: '/call', popOut: false },
+  {
+    name: 'Book a Call',
+    href: 'https://calendly.com/david-m-neuman',
+    popOut: true,
+  },
 ];
