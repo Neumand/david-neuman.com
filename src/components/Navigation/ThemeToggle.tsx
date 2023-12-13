@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState(localStorage?.getItem('theme') ?? 'light');
@@ -29,7 +29,7 @@ export default function ThemeToggle() {
         viewBox='0 0 24 24'
         stroke-width='1.5'
         stroke='currentColor'
-        class='w-5 h-5 fill-transparent dark:fill-current'
+        className='w-5 h-5 fill-transparent dark:fill-current'
       >
         <path
           stroke-linecap='round'

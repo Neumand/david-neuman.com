@@ -11,16 +11,21 @@ module.exports = {
       mono: ['"Dank Mono"', ...fontFamily.mono],
     },
     extend: {
+      backgroundImage: (theme) => ({
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-linear': 'linear-gradient(180deg, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
+      }),
       backgroundColor: {
-         'black-transparent': 'rgba(0, 0, 0, 0.5)'
-      },
-      fontFamily: {
-        header: "'Poppins', sans-serif",
+        'black-transparent': 'rgba(0, 0, 0, 0.5)',
       },
       fontSize: {
-        'xxs': ['0.5rem', {
-          lineHeight: '0.75rem'
-        }]
+        xxs: [
+          '0.5rem',
+          {
+            lineHeight: '0.75rem',
+          },
+        ],
       },
       colors: themeColors,
       boxShadow: {

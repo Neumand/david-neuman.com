@@ -1,6 +1,6 @@
 ---
-import Header from '@components/Header.astro';
-import BaseLayout from '@layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const about = await Astro.glob('../markdown/about.md');
 const aboutHtml = await about[0].compiledContent();
@@ -14,11 +14,7 @@ const aboutHtml = await about[0].compiledContent();
     class='flex flex-col justify-center items-center max-w-2xl mx-auto p-8 space-y-8'
   >
     <img class='dynamic-image' />
-    <main
-      class='prose dark:prose-dark'
-      set:html={aboutHtml}
-    >
-    </main>
+    <main class='prose dark:prose-dark' set:html={aboutHtml}></main>
   </div>
 </BaseLayout>
 

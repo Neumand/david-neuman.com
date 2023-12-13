@@ -1,20 +1,17 @@
 ---
 import { SEO } from 'astro-seo';
 import DefaultSEO from '../../seo.config';
-import Navigation from '@components/Navigation/Navigation.astro';
-import SocialIcon from '@components/Social/SocialIcon.astro';
-import Twitter from '@components/Social/Twitter.astro';
-import LinkedIn from '@components/Social/LinkedIn.astro';
-import GitHub from '@components/Social/GitHub.astro';
-import HackerNews from '@components/Social/HackerNews.astro';
-import Mail from '@components/Social/Mail.astro';
+import Navigation from '@/components/Navigation/Navigation.astro';
+import SocialIcon from '@/components/Social/SocialIcon.astro';
+import Twitter from '@/components/Social/Twitter.astro';
+import LinkedIn from '@/components/Social/LinkedIn.astro';
+import GitHub from '@/components/Social/GitHub.astro';
+import HackerNews from '@/components/Social/HackerNews.astro';
+import Mail from '@/components/Social/Mail.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 import '../styles/globals.css';
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/700.css';
+import '@fontsource/inter';
 
 export interface Props {
   title?: string;

@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import Header from '@components/Header.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
 import { getBooks } from 'src/data/books';
-import CardWithoutReview from '@components/Books/CardWithoutReview.astro';
-import CardWithReview from '@components/Books/CardWithReview.astro';
+import CardWithoutReview from '@/components/Books/CardWithoutReview.astro';
+import CardWithReview from '@/components/Books/CardWithReview.astro';
 
 const books = getBooks();
 ---

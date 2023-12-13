@@ -1,12 +1,14 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import Header from '@components/Header.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
 import { Image } from 'astro:assets';
-import ContentCard from '@components/ContentCard.astro';
-import Tags from '@components/Tags.astro';
-import { formatDate } from '@util/formatter';
-import ReadingTime from '@components/ReadingTime.astro';
+import ContentCard from '@/components/ContentCard.astro';
+import Tags from '@/components/Tags.astro';
+import { formatDate } from '@/util/formatter';
+import ReadingTime from '@/components/ReadingTime.astro';
 import { getCollection } from 'astro:content';
+import Hero from '@/components/Hero.astro';
+import Particles from 'astro-particles';
 
 const allPosts = await getCollection('blog');
 
@@ -21,9 +23,10 @@ const recentPosts = allPosts
 
 <BaseLayout>
   <section
-    class='hero p-12 flex flex-col-reverse justify-center items-center mb-8 w-full md:flex-row md:space-x-24'
+    class='bg-gradient-to-r from-cool-gray-100 to-slate-200 p-12 flex flex-col-reverse justify-center items-center mb-8 w-full md:flex-row md:space-x-24 dark:bg-gradient-to-r dark:from-cool-gray-800 dark:to-slate-900'
   >
-    <Header textAlign='left'>
+    <Hero />
+    <!-- <Header textAlign='left'>
       <div class='max-w-xl'>
         <h1
           class='text-center dark:bg-black-transparent md:text-left md:dark:bg-transparent'
@@ -42,15 +45,7 @@ const recentPosts = allPosts
         </p>
         <p class='text-sm font-header font-medium mt-8 md:text-lg'></p>
       </div>
-    </Header>
-    <Image
-      class='rounded-full inline-block h-36 w-36 md:h-64 md:w-64'
-      src='https://avatars.githubusercontent.com/u/42482170?v=4'
-      alt='An avatar of David Neuman'
-      format={'webp'}
-      width={256}
-      height={256}
-    />
+    </Header> -->
   </section>
 
   <div

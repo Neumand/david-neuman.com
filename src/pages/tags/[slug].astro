@@ -1,8 +1,8 @@
 ---
-import Header from '@components/Header.astro';
-import Posts from '@components/Posts.astro';
-import BaseLayout from '@layouts/BaseLayout.astro';
-import { toKebabCase } from '@util/kebab-case';
+import Header from '@/components/Header.astro';
+import Posts from '@/components/Posts.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { toKebabCase } from '@/util/kebab-case';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {

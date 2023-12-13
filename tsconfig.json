@@ -3,13 +3,7 @@
     "types": ["@astrojs/image/client"],
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "@lib/*": ["src/lib/*"],
-      "@util/*": ["src/util/*"],
-      "@styles/*": ["src/styles/*"],
-      "@images/*": ["src/images/*"]
+      "@/*": ["src/*"]
     },
     "target": "ESNext",
     "module": "ESNext",
@@ -20,6 +14,6 @@
     "strict": true,
     "importsNotUsedAsValues": "error",
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "jsxImportSource": "react"
   }
 }
