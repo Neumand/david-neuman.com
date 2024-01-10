@@ -12,15 +12,15 @@ module.exports = {
     },
     extend: {
       backgroundColor: {
-         'black-transparent': 'rgba(0, 0, 0, 0.5)'
-      },
-      fontFamily: {
-        header: "'Poppins', sans-serif",
+        'black-transparent': 'rgba(0, 0, 0, 0.5)',
       },
       fontSize: {
-        'xxs': ['0.5rem', {
-          lineHeight: '0.75rem'
-        }]
+        xxs: [
+          '0.5rem',
+          {
+            lineHeight: '0.75rem',
+          },
+        ],
       },
       colors: themeColors,
       boxShadow: {

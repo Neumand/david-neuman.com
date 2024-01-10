@@ -8,15 +8,15 @@
   }
 
   body h1 {
-    @apply font-header text-4xl font-bold md:text-6xl;
+    @apply font-sans text-4xl font-bold md:text-6xl;
   }
 
   body h2 {
-    @apply font-header text-2xl font-bold md:text-4xl;
+    @apply font-sans text-2xl font-bold md:text-4xl;
   }
 
   body h3 {
-    @apply font-header text-xl font-bold md:text-2xl;
+    @apply font-sans text-xl font-bold md:text-2xl;
   }
 
   body::-webkit-scrollbar {
