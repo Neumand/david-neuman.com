@@ -4,7 +4,6 @@ import Header from '@components/Header.astro';
 import Posts from '@components/Posts.astro';
 import { getCollection } from 'astro:content';
 
-// TODO: Figure out why filtering doesn't work.
 const allPosts = await getCollection('blog');
 const posts = allPosts
   .filter((post) => !post.data.draft)
