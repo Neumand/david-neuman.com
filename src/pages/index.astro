@@ -13,7 +13,7 @@ const allPosts = await getCollection('blog');
 const recentPosts = allPosts
   .sort(
     (p1, p2) =>
-      new Date(p2.data.datePublished) - new Date(p1.data.datePublished),
+      p2.data.datePublished.getTime() - p1.data.datePublished.getTime(),
   )
   .filter((post) => !post.data.draft)
   .slice(0, 4);
