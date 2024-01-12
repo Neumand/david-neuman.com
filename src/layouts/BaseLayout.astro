@@ -12,6 +12,8 @@ import { ViewTransitions } from 'astro:transitions';
 
 import '../styles/globals.css';
 import '@fontsource/geist-sans';
+import { FloatingNav } from '@components/Navigation/FloatingNavbar';
+import { navItems } from 'src/constants';
 
 export interface Props {
   title?: string;
@@ -70,6 +72,7 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
   class='flex flex-col min-h-screen bg-white dark:bg-gray-900 dark:text-gray-100 selection:bg-blue-50 dark:selection:bg-blue-900'
 >
   <Navigation />
+  <FloatingNav client:load navItems={navItems} />
 
   <slot />
   <footer
