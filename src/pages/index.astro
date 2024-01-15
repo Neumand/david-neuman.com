@@ -1,53 +1,13 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Header from '@components/Header.astro';
-import { Image } from 'astro:assets';
-import ContentCard from '@components/ContentCard.astro';
-import Tags from '@components/Tags.astro';
-import { formatDate } from '@util/formatter';
 import ReadingTime from '@components/ReadingTime.astro';
 import { getCollection } from 'astro:content';
 import { Hero } from '@components/Hero';
-
-const allPosts = await getCollection('blog');
-
-const recentPosts = allPosts
-  .sort(
-    (p1, p2) =>
-      p2.data.datePublished.getTime() - p1.data.datePublished.getTime(),
-  )
-  .filter((post) => !post.data.draft)
-  .slice(0, 4);
+import RecentPosts from '@components/RecentPosts.astro';
 ---
 
 <BaseLayout>
   <Hero client:load />
-
-  <div
-    class='flex flex-col justify-center items-center p-5 max-w-4xl m-auto md:mt-8 space-y-8'
-  >
-    <h2>Latest Posts</h2>
-    {
-      recentPosts.map(({ data, body, slug }) => (
-        <div class='w-full'>
-          <ContentCard>
-            <a href={`/blog/${slug}`}>
-              <h3 class='font-sans'>{data.title}</h3>
-              <div class='flex space-x-2 items-start'>
-                <p class='text-sm mb-2 text-gray-700 dark:text-gray-500'>
-                  {formatDate(data.datePublished)}
-                </p>
-                <ReadingTime html={body} />
-              </div>
-              <p class='text-gray-700 dark:text-gray-500'>{data.excerpt}</p>
-            </a>
-            <Tags tags={data.tags} />
-          </ContentCard>
-        </div>
-      ))
-    }
-    <a href='/blog' class='flex items-center link py-0.5 px-1 space-x-2'>
-      Read more
-    </a>
-  </div>
+  <RecentPosts />
 </BaseLayout>
