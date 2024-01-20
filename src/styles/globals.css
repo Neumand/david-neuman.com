@@ -1,109 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
 @layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+ 
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+ 
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+ 
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+ 
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+ 
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
   body {
-    @apply text-cool-gray-900 min-h-screen dark:text-cool-gray-200;
+    @apply bg-background text-foreground;
   }
-
-  body h1 {
-    @apply font-sans text-4xl font-bold md:text-6xl;
-  }
-
-  body h2 {
-    @apply font-sans text-2xl font-bold md:text-4xl;
-  }
-
-  body h3 {
-    @apply font-sans text-xl font-bold md:text-2xl;
-  }
-
-  body::-webkit-scrollbar {
-    @apply w-4;
-  }
-  body::-webkit-scrollbar-track {
-    @apply shadow-md bg-gray-200 dark:bg-gray-800;
-  }
-
-  body::-webkit-scrollbar-thumb {
-    @apply bg-gray-500 rounded-full dark:bg-cool-gray-800;
-  }
-
-  ol {
-    counter-reset: list-item;
-  }
-
-  svg {
-    @apply fill-current h-5;
-  }
-
-  @font-face {
-    font-family: 'Dank Mono';
-    font-weight: 400;
-    src: url('/fonts/dank-mono-regular') format('otf');
-  }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.hero {
-  @apply bg-gray-200;
-  background-image: none;
-}
-
-.dark .hero {
-  @apply bg-cool-gray-900;
-}
-
-.input {
-  @apply p-2 border border-blue-100 outline-none rounded-sm dark:bg-cool-gray-900 dark:border-gray-900;
-}
-
-.sticky-nav {
-  position: sticky;
-  z-index: 10;
-  top: 0;
-  transition: background-color 0.1 ease-in-out;
-}
-
-.nav-item {
-  @apply relative z-10 px-0.5;
-}
-
-.nav-item::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: -0.25em;
-  right: -0.25em;
-  background-color: rgba(227, 242, 253);
-  transform-origin: center right;
-  transform: scaleX(0);
-  transition: transform 0.2s ease-in-out;
-  @apply dark:bg-blue-900;
-}
-
-.nav-item:hover::before {
-  transform: scaleX(1);
-  transform-origin: center left;
-}
-
-.link {
-  @apply bg-blue-50 bg-opacity-30 text-blue-900 dark:bg-cool-gray-900 dark:text-blue-500;
-}
-
-.prose a strong {
-  @apply text-blue-800 dark:text-blue-500;
-}
-
-.prose code[class*='language-'],
-.prose pre[class*='language-'] {
-  @apply text-xs md:text-base;
 }
