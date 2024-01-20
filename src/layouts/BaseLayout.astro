@@ -14,6 +14,7 @@ import '../styles/globals.css';
 import '@fontsource/geist-sans';
 import { FloatingNav } from '@components/Navigation/FloatingNavbar';
 import { navItems } from 'src/constants';
+import { cn } from '@lib/utils';
 
 export interface Props {
   title?: string;
@@ -22,9 +23,40 @@ export interface Props {
 
 const { title = DefaultSEO.title, description = DefaultSEO.description } =
   Astro.props as Props;
+
+// Used to highlight the current page in the navigation bar.
+const pathName = `/${Astro.request.url.split('/')[3]}`;
 ---
 
 <head>
+  <script>
+    document.addEventListener('keydown', (e) => {
+      switch (e.key) {
+        case '1':
+          window.location.href = '/';
+          break;
+        case '2':
+          window.location.href = '/blog';
+          break;
+        case '3':
+          window.location.href = '/about';
+          break;
+        case '4':
+          window.location.href = '/newsletter';
+          break;
+        case '5':
+          window.location.href = '/books';
+          break;
+        case '6':
+          window.location.href = '/resources';
+          break;
+
+        default:
+          break;
+      }
+    });
+  </script>
+
   <script is:inline>
     function toggleTheme(theme) {
       const themeIconPath = document.querySelector('#theme-icon-path');
@@ -68,7 +100,44 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
 
 <SEO title={title} description={description} />
 
-<div
+<div class='flex min-h-screen'>
+  <div class='fixed h-full bg-zinc-100 w-72 p-4'>
+    <!-- TODO: Add logo here -->
+    <div class='font-bold uppercase mb-4'>David Neuman</div>
+    <div class='flex flex-col space-y-2'>
+      {
+        navItems.map(({ href, name, popOut, Icon }, idx) => (
+          <a
+            target={popOut ? '_blank' : '_self'}
+            class='text-gray-900 dark:text-gray-100'
+            href={href}
+          >
+            <div
+              class={cn(
+                'cursor-pointer p-2 rounded hover:bg-zinc-200/80 hover:shadow',
+                pathName === href && 'bg-white shadow',
+              )}
+            >
+              <div class='flex justify-between'>
+                <div class='flex gap-2 items-center'>
+                  <Icon className='w-4 h-4' />
+                  <span>{name}</span>
+                </div>
+                <span class='flex items-center justify-center text-xs h-4 w-4 p-2.5 text-zinc-400 bg-zinc-300/30'>
+                  {idx + 1}
+                </span>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <div class='ml-72 flex flex-col flex-1 justify-center'>
+    <slot />
+  </div>
+
+  <!-- <div
   class='flex flex-col min-h-screen bg-white dark:bg-zinc-950 dark:text-gray-100 selection:bg-zinc-950 selection:text-white dark:selection:bg-slate-800'
 >
   <Navigation />
@@ -99,4 +168,5 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
       </SocialIcon>
     </div>
   </footer>
+</div> -->
 </div>

@@ -22,13 +22,13 @@ export const Hero = () => {
       >
         <p>
           I'm a product-minded engineer learning{' '}
-          {/* <span className='border border-slate-950 dark:border-gray-700 border-solid px-2 py-2 relative'> */}
-          <span>design.</span>
-          {/* <div className='absolute top-[-4px] -left-[4px] p-0 bg-zinc-700 dark:bg-zinc-50 w-2 aspect-square rounded-full ' />
+          <span className='border border-slate-950 dark:border-gray-700 border-solid px-2 py-2 relative'>
+            <span>design.</span>
+            <div className='absolute top-[-4px] -left-[4px] p-0 bg-zinc-700 dark:bg-zinc-50 w-2 aspect-square rounded-full ' />
             <div className='absolute bottom-[-4px] -left-[4px] p-0 bg-zinc-700 dark:bg-zinc-50 w-2 aspect-square rounded-full ' />
             <div className='absolute top-[-4px] -right-[4px] p-0 bg-zinc-700 dark:bg-zinc-50 w-2 aspect-square rounded-full ' />
-            <div className='absolute bottom-[-4px] -right-[4px] p-0 bg-zinc-700 dark:bg-zinc-50 w-2 aspect-square rounded-full ' /> */}
-          {/* </span> */}
+            <div className='absolute bottom-[-4px] -right-[4px] p-0 bg-zinc-700 dark:bg-zinc-50 w-2 aspect-square rounded-full ' />
+          </span>
         </p>
         <p>Building for the web and sharing what I learn along the way.</p>
       </motion.div>
