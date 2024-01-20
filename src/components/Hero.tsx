@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <div className='flex flex-col p-8 gap-10 h-[25rem] w-full dark:bg-cool-gray-900 bg-gray-200/75  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative items-center justify-center'>
+    <div className='flex flex-col p-8 gap-10 h-[25rem] w-full dark:bg-zinc-900 bg-gray-200/75  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative items-center justify-center'>
       {/* Radial gradient for the container to give a faded look */}
       <div className='absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-950 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]'></div>
       <motion.h1
