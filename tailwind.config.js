@@ -1,10 +1,11 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
-const {
-  default: flattenColorPalette,
-} = require('tailwindcss/lib/util/flattenColorPalette');
-const svgToDataUri = require('mini-svg-data-uri');
+import { fontFamily } from 'tailwindcss/defaultTheme';
+import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette';
+import svgToDataUri from 'mini-svg-data-uri';
+import tailwindcssAnimate from 'tailwindcss-animate';
+import tailwindcssTypography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: ['class'],
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   prefix: '',
@@ -78,8 +79,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwindcss-animate'),
-    require('@tailwindcss/typography'),
+    tailwindcssAnimate,
+    tailwindcssTypography,
     function ({ matchUtilities, theme }) {
       matchUtilities(
         {
