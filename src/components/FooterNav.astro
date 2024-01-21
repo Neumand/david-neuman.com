@@ -1,0 +1,20 @@
+---
+import { cn } from '@/lib/utils';
+import { navItems } from 'src/constants';
+import ThemeToggle from './ThemeToggle';
+// Used to highlight the current page in the navigation bar.
+const pathName = `/${Astro.request.url.split('/')[3]}`;
+---
+
+<div
+  class='sm:hidden flex sticky bottom-0 gap-6 justify-center items-center w-screen h-16 bg-zinc-100 text-zinc-600 overflow-x-scroll dark:text-zinc-400 dark:bg-zinc-800'
+>
+  {
+    navItems.map(({ href, name, popOut, Icon }, idx) => (
+      <a target={popOut ? '_blank' : '_self'} href={href}>
+        <Icon className='w-6 h-6' />
+      </a>
+    ))
+  }
+  <ThemeToggle client:only='react' />
+</div>
