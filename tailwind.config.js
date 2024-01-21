@@ -57,6 +57,78 @@ export default {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.900'),
+            th: {
+              color: theme('colors.gray.900'),
+            },
+            a: {
+              'text-decoration': 'none',
+              color: theme('colors.blue.800'),
+              'background-color': 'rgba(227, 242, 253, 0.3)',
+            },
+            code: {
+              'background-color': theme('colors.gray.100'),
+              'border-radius': '3px',
+              padding: '3px',
+              'font-weight': 600,
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
+            },
+            'figure figcaption': {
+              color: theme('colors.gray.700'),
+              'text-align': 'center',
+            },
+            figcaption: {
+              color: theme('colors.gray.700'),
+              'text-align': 'center',
+            },
+          },
+        },
+        dark: {
+          css: {
+            color: theme('colors.zinc.400'),
+            th: {
+              color: theme('colors.zinc.400'),
+            },
+            a: {
+              color: theme('colors.blue.500'),
+              'background-color': theme('colors.cool-gray.900'),
+            },
+            'h1,h2,h3,h4': {
+              color: theme('colors.zinc.200'),
+            },
+            strong: {
+              color: theme('colors.zinc.200'),
+            },
+            blockquote: {
+              color: theme('colors.zinc.200'),
+            },
+            code: {
+              color: theme('colors.zinc.200'),
+              'background-color': '#0d1117',
+            },
+            pre: {
+              code: {
+                'background-color': 'inherit',
+                color: 'inherit',
+              },
+            },
+            'figure figcaption': {
+              color: theme('colors.zinc.500'),
+            },
+            figcaption: {
+              color: theme('colors.zinc.500'),
+            },
+          },
+        },
+      }),
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -77,6 +149,9 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
+  },
+  variants: {
+    typography: ['dark'],
   },
   plugins: [
     tailwindcssAnimate,
