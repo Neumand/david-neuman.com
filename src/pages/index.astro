@@ -8,6 +8,6 @@ import RecentPosts from '@components/RecentPosts.astro';
 ---
 
 <BaseLayout>
-  <Hero client:load />
+  <Hero client:only='react' />
   <RecentPosts />
 </BaseLayout>
