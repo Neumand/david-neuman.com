@@ -17,8 +17,8 @@ export type NavItem = {
 
 export const navItems: NavItem[] = [
   { name: 'Home', href: '/', popOut: false, Icon: HomeIcon },
-  { name: 'Writing', href: '/blog', popOut: false, Icon: PencilIcon },
   { name: 'About', href: '/about', popOut: false, Icon: UserIcon },
+  { name: 'Writing', href: '/blog', popOut: false, Icon: PencilIcon },
   {
     name: 'Newsletter',
     href: 'https://www.bit-by-bit.co/',
