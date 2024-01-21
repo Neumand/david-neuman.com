@@ -31,29 +31,25 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
 
 <head>
   <script>
-    document.addEventListener('keydown', (e) => {
-      switch (e.key) {
-        case '1':
-          window.location.href = '/';
-          break;
-        case '2':
-          window.location.href = '/blog';
-          break;
-        case '3':
-          window.location.href = '/about';
-          break;
-        case '4':
-          window.location.href = '/newsletter';
-          break;
-        case '5':
-          window.location.href = '/books';
-          break;
-        case '6':
-          window.location.href = '/resources';
-          break;
+    import { navigate } from 'astro:transitions/client';
+    import { NavItem, navItems } from 'src/constants';
 
-        default:
-          break;
+    const keyRoutes = navItems.reduce((acc, item, idx) => {
+      acc.set(idx + 1, item);
+      return acc;
+    }, new Map<number, NavItem>());
+
+    document.addEventListener('keydown', (e) => {
+      // Prevents interfering with browser shortcuts.
+      if (e.metaKey || e.ctrlKey) {
+        return;
+      }
+
+      const navItem = keyRoutes.get(Number(e.key));
+      if (navItem) {
+        navItem.popOut
+          ? window.open(navItem.href, '_blank')
+          : navigate(navItem.href);
       }
     });
   </script>
@@ -104,9 +100,11 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
 <div
   class='flex min-h-screen dark:bg-zinc-950 dark:text-gray-100 selection:bg-zinc-950 selection:text-white dark:selection:bg-zinc-800'
 >
-  <div class='fixed h-full bg-zinc-100 w-72 p-4 dark:bg-zinc-900/75'>
-    <!-- TODO: Add logo here -->
+  <div
+    class='fixed h-full text-zinc-700 bg-zinc-100 w-72 p-4 dark:bg-zinc-900/75'
+  >
     <div class='flex justify-between items-center font-bold uppercase mb-4'>
+      <!-- TODO: Add logo here -->
       <span>David Neuman</span>
       <ThemeToggle client:only='react' />
     </div>
@@ -125,7 +123,7 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
                   <Icon className='w-4 h-4' />
                   <span>{name}</span>
                 </div>
-                <span class='flex items-center justify-center text-xs h-4 w-4 p-2.5 text-zinc-400 bg-zinc-300/30'>
+                <span class='flex items-center justify-center text-xs h-4 w-4 p-2.5 text-zinc-400 bg-zinc-300/30 dark:bg-zinc-700'>
                   {idx + 1}
                 </span>
               </div>
