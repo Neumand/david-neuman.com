@@ -1,0 +1,42 @@
+---
+import { formatDate } from '@util/formatter';
+import { getCollection } from 'astro:content';
+import ContentCard from './ContentCard.astro';
+import ReadingTime from './ReadingTime.astro';
+import Tags from './Tags.astro';
+
+const allPosts = await getCollection('blog');
+
+const recentPosts = allPosts
+  .sort(
+    (p1, p2) =>
+      p2.data.datePublished.getTime() - p1.data.datePublished.getTime(),
+  )
+  .filter((post) => !post.data.draft)
+  .slice(0, 4);
+---
+
+<div
+  class='flex flex-col justify-center items-start p-5 max-w-4xl m-auto md:mt-8 space-y-8'
+>
+  <h2 class='text-left font-bold'>Writing</h2>
+  {
+    recentPosts.map(({ data, body, slug }) => (
+      <div class='w-full'>
+        <ContentCard>
+          <a href={`/blog/${slug}`}>
+            <h3 class='font-sans'>{data.title}</h3>
+            <div class='flex space-x-2 items-start'>
+              <p class='text-sm mb-2 text-gray-700 dark:text-gray-500'>
+                {formatDate(data.datePublished)}
+              </p>
+              <ReadingTime html={body} />
+            </div>
+            <p class='text-gray-700 dark:text-gray-500'>{data.excerpt}</p>
+          </a>
+          <Tags tags={data.tags} />
+        </ContentCard>
+      </div>
+    ))
+  }
+</div>
