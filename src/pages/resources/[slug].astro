@@ -6,7 +6,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
   const collections = await getCollections();
-  return collections.map((c) => ({
+  return collections?.map((c) => ({
     params: { slug: c.slug },
     props: { id: c._id, title: c.title },
   }));
@@ -17,13 +17,15 @@ const { slug } = Astro.params;
 const raindrops = await getRaindrops(id);
 ---
 
-<BaseLayout title={`${slug} - <David Neuman />`}>
+<BaseLayout title={`${title} - <David Neuman />`}>
   <div class='flex flex-col py-8'>
     <div class='flex flex-col gap-8'>
       <Header>
         <h1 class='text-left'>{title}</h1>
       </Header>
-      <div class='mt-8 grid md:grid-cols-2 gap-4 place-items-center'>
+      <div
+        class='mt-8 grid md:grid-cols-2 gap-4 place-items-center md:max-w-2xl'
+      >
         {
           raindrops.map((rd) => (
             <ResourceItem
