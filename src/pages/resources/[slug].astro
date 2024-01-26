@@ -6,7 +6,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
   const collections = await getCollections();
-  return collections?.map((c) => ({
+  return collections.map((c) => ({
     params: { slug: c.slug },
     props: { id: c._id, title: c.title },
   }));
