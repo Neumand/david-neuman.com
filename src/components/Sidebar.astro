@@ -43,6 +43,5 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
 
   <div class='border border-b border-zinc-200 my-4 dark:border-zinc-700'></div>
 
-  <!-- TODO: Add social icons -->
-  <ContactDialog client:only='react' />
+  <ContactDialog openWithSlash client:only='react' />
 </div>

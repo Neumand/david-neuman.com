@@ -18,16 +18,23 @@ import {
   MessageCircle,
   Twitter,
 } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
-export const ContactDialog = () => {
+interface ContactDialogProps {
+  openWithSlash?: boolean;
+}
+
+export const ContactDialog: FC<ContactDialogProps> = ({
+  openWithSlash = false,
+}) => {
   const [open, setOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    const isMobile = window.matchMedia('(max-width: 640px)').matches;
-    console.log({ isMobile });
-
     function openContactDialog(e: KeyboardEvent) {
+      if (!openWithSlash) {
+        return;
+      }
+
       // Prevents interfering with browser shortcuts.
       if (e.metaKey || e.ctrlKey) {
         return;
