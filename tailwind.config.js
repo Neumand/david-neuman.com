@@ -67,7 +67,7 @@ export default {
             a: {
               'text-decoration': 'none',
               color: theme('colors.blue.800'),
-              'background-color': 'rgba(227, 242, 253, 0.3)',
+              'background-color': theme('colors.zinc.100'),
             },
             code: {
               'background-color': theme('colors.gray.100'),
@@ -99,7 +99,7 @@ export default {
             },
             a: {
               color: theme('colors.blue.500'),
-              'background-color': theme('colors.cool-gray.900'),
+              'background-color': theme('colors.zinc.800'),
             },
             'h1,h2,h3,h4': {
               color: theme('colors.zinc.200'),

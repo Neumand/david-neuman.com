@@ -6,7 +6,7 @@ const { book } = Astro.props as { book: Book };
 
 <a
   href={`books/${book.slug}`}
-  class='flex p-4 max-h-72 max-w-xl bg-gray-50 border-2 rounded-lg shadow-sm transition-transform transform ease-in-out md:hover:scale-105 md:hover:shadow-xl md:active:scale-105 md:active:shadow-xl dark:bg-zinc-900 dark:border-cool-gray-700'
+  class='flex p-4 max-h-72 max-w-xl bg-gray-50 border-2 rounded-lg shadow-sm transition-transform transform ease-in-out md:hover:scale-105 md:hover:shadow-xl md:active:scale-105 md:active:shadow-xl dark:bg-zinc-900 dark:border-zinc-700'
 >
   <img
     src={book.imageUrl}
