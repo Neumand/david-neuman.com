@@ -1,12 +1,30 @@
-export const navItems = [
-  { name: 'Blog', href: '/blog', popOut: false },
-  { name: 'Newsletter', href: 'https://davidneuman.substack.com/', popOut: true },
-  { name: 'Books', href: '/books', popOut: false },
-  { name: 'Now', href: '/now', popOut: false },
-  { name: 'About', href: '/about', popOut: false },
+import {
+  BookAIcon,
+  BookmarkIcon,
+  HomeIcon,
+  LucideIcon,
+  NewspaperIcon,
+  PencilIcon,
+  UserIcon,
+} from 'lucide-react';
+
+export type NavItem = {
+  name: string;
+  href: string;
+  popOut: boolean;
+  Icon: LucideIcon;
+};
+
+export const navItems: NavItem[] = [
+  { name: 'Home', href: '/', popOut: false, Icon: HomeIcon },
+  { name: 'About', href: '/about', popOut: false, Icon: UserIcon },
+  { name: 'Writing', href: '/blog', popOut: false, Icon: PencilIcon },
   {
-    name: 'Brain Food',
-    href: 'https://brain-food.vercel.app/',
+    name: 'Newsletter',
+    href: 'https://www.bit-by-bit.co/',
     popOut: true,
+    Icon: NewspaperIcon,
   },
+  { name: 'Books', href: '/books', popOut: false, Icon: BookAIcon },
+  { name: 'Resources', href: '/resources', popOut: false, Icon: BookmarkIcon },
 ];
