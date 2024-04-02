@@ -4,19 +4,18 @@ import Header from '@components/Header.astro';
 import Posts from '@components/Posts.astro';
 import { getCollection } from 'astro:content';
 
-// TODO: Figure out why filtering doesn't work.
 const allPosts = await getCollection('blog');
 const posts = allPosts
   .filter((post) => !post.data.draft)
   .sort(
     (p1, p2) =>
-      new Date(p2.data.datePublished) - new Date(p1.data.datePublished),
+      p2.data.datePublished.getTime() - p1.data.datePublished.getTime(),
   );
 ---
 
-<BaseLayout title='Blog - <David Neuman />'>
+<BaseLayout title='Writing - <David Neuman />'>
   <Header textAlign='center'>
-    <h1>Blog</h1>
+    <h1>Writing</h1>
   </Header>
   <Posts posts={posts} />
 </BaseLayout>

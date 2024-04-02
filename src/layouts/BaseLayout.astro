@@ -1,20 +1,12 @@
 ---
 import { SEO } from 'astro-seo';
 import DefaultSEO from '../../seo.config';
-import Navigation from '@components/Navigation/Navigation.astro';
-import SocialIcon from '@components/Social/SocialIcon.astro';
-import Twitter from '@components/Social/Twitter.astro';
-import LinkedIn from '@components/Social/LinkedIn.astro';
-import GitHub from '@components/Social/GitHub.astro';
-import HackerNews from '@components/Social/HackerNews.astro';
-import Mail from '@components/Social/Mail.astro';
 import { ViewTransitions } from 'astro:transitions';
 
+import '@fontsource/geist-sans';
+import Sidebar from '@components/Sidebar.astro';
+import FooterNav from '@components/FooterNav.astro';
 import '../styles/globals.css';
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/700.css';
 
 export interface Props {
   title?: string;
@@ -26,6 +18,30 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
 ---
 
 <head>
+  <script>
+    import { navigate } from 'astro:transitions/client';
+    import { NavItem, navItems } from 'src/constants';
+
+    const keyRoutes = navItems.reduce((acc, item, idx) => {
+      acc.set(idx + 1, item);
+      return acc;
+    }, new Map<number, NavItem>());
+
+    document.addEventListener('keydown', (e) => {
+      // Prevents interfering with browser shortcuts.
+      if (e.metaKey || e.ctrlKey) {
+        return;
+      }
+
+      const navItem = keyRoutes.get(Number(e.key));
+      if (navItem) {
+        navItem.popOut
+          ? window.open(navItem.href, '_blank')
+          : navigate(navItem.href);
+      }
+    });
+  </script>
+
   <script is:inline>
     function toggleTheme(theme) {
       const themeIconPath = document.querySelector('#theme-icon-path');
@@ -57,6 +73,7 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
       toggleTheme(prefersDark ? 'dark' : 'light');
     }
   </script>
+
   <meta charset='UTF-8' /><meta
     name='viewport'
     content='width=device-width'
@@ -70,33 +87,11 @@ const { title = DefaultSEO.title, description = DefaultSEO.description } =
 <SEO title={title} description={description} />
 
 <div
-  class='flex flex-col min-h-screen bg-white dark:bg-gray-900 dark:text-gray-100 selection:bg-blue-50 dark:selection:bg-blue-900'
+  class='flex flex-col sm:flex-row min-h-screen dark:bg-zinc-950 dark:text-gray-100 selection:bg-zinc-950 selection:text-white dark:selection:bg-zinc-800'
 >
-  <Navigation />
-
-  <slot />
-  <footer
-    class='flex flex-col-reverse flex-grow items-center p-8 md:flex-row md:justify-between md:items-end'
-  >
-    <span class='text-sm md:text-base'
-      >{`David Neuman © ${new Date().getFullYear()}`}
-    </span>
-    <div class='flex justify-center space-x-2'>
-      <SocialIcon url='https://github.com/Neumand'>
-        <GitHub />
-      </SocialIcon>
-      <SocialIcon url='https://twitter.com/DavidMNeuman'>
-        <Twitter />
-      </SocialIcon>
-      <SocialIcon url='https://linkedin.com/in/Neumand'>
-        <LinkedIn />
-      </SocialIcon>
-      <SocialIcon url='https://news.ycombinator.com/user?id=dneuman'>
-        <HackerNews />
-      </SocialIcon>
-      <SocialIcon url='mailto:david.m.neuman@gmail.com'>
-        <Mail />
-      </SocialIcon>
-    </div>
-  </footer>
+  <Sidebar />
+  <div class='sm:ml-72 flex flex-col flex-1 items-center'>
+    <slot />
+  </div>
+  <FooterNav />
 </div>

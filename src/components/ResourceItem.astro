@@ -1,0 +1,43 @@
+---
+import Image from 'astro/components/Image.astro';
+import { ExternalLinkIcon } from 'lucide-react';
+
+interface Props {
+  title: string;
+  linkUrl: string;
+  imageUrl?: string;
+}
+
+const { imageUrl, linkUrl, title } = Astro.props as Props;
+const isExternalLink = linkUrl.includes('http');
+---
+
+<a
+  href={linkUrl}
+  class='relative flex flex-col justify-center cursor-pointer w-full h-28 rounded p-4 border border-solid border-zinc-200 dark:border-zinc-800 hover:bg-zinc-200/80 hover:shadow dark:hover:bg-zinc-800/80'
+  target={isExternalLink ? '_blank' : '_self'}
+>
+  <div class='flex gap-2'>
+    {
+      imageUrl && (
+        <Image
+          class='rounded-full inline-block h-5 w-5 mr-2'
+          src={imageUrl}
+          format={'webp'}
+          width={20}
+          height={20}
+          alt={title}
+        />
+      )
+    }
+    <div>{title}</div>
+  </div>
+
+  {
+    isExternalLink && (
+      <div class='absolute top-2 right-2'>
+        <ExternalLinkIcon className='w-4 h-4 text-zinc-700 dark:text-zinc-400' />
+      </div>
+    )
+  }
+</a>
