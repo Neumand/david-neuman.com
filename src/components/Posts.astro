@@ -1,10 +1,9 @@
 ---
-import { Image } from 'astro:assets';
-import { formatDate } from '@util/formatter';
 import Tags from '@components/Tags.astro';
-import ReadingTime from './ReadingTime.astro';
+import { formatDate } from '@util/formatter';
 import type { CollectionEntry } from 'astro:content';
 import ContentCard from './ContentCard.astro';
+import ReadingTime from './ReadingTime.astro';
 
 interface Props {
   posts: CollectionEntry<'blog'>[];
@@ -20,12 +19,12 @@ const { posts } = Astro.props as Props;
         <a href={`/blog/${slug}`}>
           <h3 class='font-sans'>{data.title}</h3>
           <div class='flex space-x-2 items-start'>
-            <p class='text-sm mb-2 text-gray-700 dark:text-gray-500'>
+            <p class='text-sm mb-2 text-gray-700 dark:text-zinc-300'>
               {formatDate(data.datePublished)}
             </p>
             <ReadingTime html={body} />
           </div>
-          <p class='text-gray-700 dark:text-gray-500'>{data.excerpt}</p>
+          <p class='text-gray-700 dark:text-zinc-300'>{data.excerpt}</p>
         </a>
         <Tags tags={data.tags} />
       </ContentCard>

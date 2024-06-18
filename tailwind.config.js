@@ -1,8 +1,8 @@
-import { fontFamily } from 'tailwindcss/defaultTheme';
-import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette';
+import tailwindcssTypography from '@tailwindcss/typography';
 import svgToDataUri from 'mini-svg-data-uri';
 import tailwindcssAnimate from 'tailwindcss-animate';
-import tailwindcssTypography from '@tailwindcss/typography';
+import { fontFamily } from 'tailwindcss/defaultTheme';
+import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,7 +11,7 @@ export default {
   prefix: '',
   theme: {
     fontFamily: {
-      sans: ['Geist Sans', ...fontFamily.sans],
+      sans: ['Inter', ...fontFamily.sans],
       mono: ['"Dank Mono"', ...fontFamily.mono],
     },
     container: {
@@ -93,9 +93,9 @@ export default {
         },
         dark: {
           css: {
-            color: theme('colors.zinc.400'),
+            color: theme('colors.zinc.300'),
             th: {
-              color: theme('colors.zinc.400'),
+              color: theme('colors.zinc.300'),
             },
             a: {
               color: theme('colors.blue.500'),

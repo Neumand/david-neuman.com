@@ -7,7 +7,7 @@ const { html } = Astro.props;
 
 <div class='flex space-x-1 items-center'>
   <Clock />
-  <span class='text-sm text-gray-700 dark:text-gray-500'>
+  <span class='text-sm text-gray-700 dark:text-zinc-300'>
     {formatReadingTime(calculateReadingTime(html))}
   </span>
 </div>

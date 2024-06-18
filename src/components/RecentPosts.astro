@@ -27,12 +27,12 @@ const recentPosts = allPosts
           <a href={`/blog/${slug}`}>
             <h3 class='font-sans'>{data.title}</h3>
             <div class='flex space-x-2 items-start'>
-              <p class='text-sm mb-2 text-gray-700 dark:text-gray-500'>
+              <p class='text-sm mb-2 text-gray-700 dark:text-zinc-400'>
                 {formatDate(data.datePublished)}
               </p>
               <ReadingTime html={body} />
             </div>
-            <p class='text-gray-700 dark:text-gray-500'>{data.excerpt}</p>
+            <p class='text-gray-700 dark:text-zinc-400'>{data.excerpt}</p>
           </a>
           <Tags tags={data.tags} />
         </ContentCard>
