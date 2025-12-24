@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: Practice Over Product
 slug: practice-over-product
 datePublished: 2021-11-11T14:29:07.000Z

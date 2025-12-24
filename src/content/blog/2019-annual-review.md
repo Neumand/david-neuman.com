@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 2019 Annual Retrospective
 slug: 2019-annual-review
 datePublished: 2020-01-25T15:05:41.000Z

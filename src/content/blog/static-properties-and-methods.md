@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 'OOP Fundamentals: Static Properties and Methods'
 slug: static-properties-and-methods
 datePublished: 2021-03-24T13:13:36.000Z

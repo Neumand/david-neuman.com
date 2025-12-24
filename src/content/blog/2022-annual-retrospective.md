@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 2022 Annual Retrospective
 slug: 2022-annual-retrospective
 datePublished: 2023-01-31

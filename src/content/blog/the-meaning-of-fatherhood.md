@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: The Meaning of Fatherhood
 slug: the-meaning-of-fatherhood
 datePublished: 2022-07-02

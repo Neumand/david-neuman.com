@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: The Four-Step Framework for Effective Learning
 slug: the-four-step-framework-for-effective-learning
 datePublished: 2021-10-24T18:53:03.000Z

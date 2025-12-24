@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: Eye Screen, You Screen
 slug: blue-light-blues
 datePublished: 2020-10-31T17:07:00.000Z

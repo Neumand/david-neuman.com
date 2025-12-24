@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 2021 Annual Retrospective
 slug: 2021-annual-retrospective
 datePublished: 2022-01-29T20:48:53.000Z

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: Startup Life as a Junior Software Developer
 slug: startup-life-as-a-junior-software-developer
 datePublished: 2020-03-20T12:00:00.000Z

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: Composition in React
 slug: composition-in-react
 datePublished: 2021-03-07T15:56:08.000Z

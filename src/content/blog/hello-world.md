@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 'Hello, World: A Welcome Message and My Fears of Launching a Blog'
 slug: hello-world
 datePublished: 2020-01-03T23:30:00.000Z

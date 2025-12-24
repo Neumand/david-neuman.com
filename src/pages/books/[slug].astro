@@ -1,5 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
+import BookNotesLayout from '../../layouts/BookNotesLayout.astro';
 
 export async function getStaticPaths() {
   const allBooks = await getCollection('books');
@@ -17,4 +18,6 @@ const { book } = Astro.props as { book: CollectionEntry<'books'> };
 const { Content } = await book.render();
 ---
 
-<Content />
+<BookNotesLayout frontmatter={book.data}>
+  <Content />
+</BookNotesLayout>

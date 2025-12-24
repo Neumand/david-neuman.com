@@ -1,7 +1,5 @@
 ---
-layout: ../../layouts/BookNotesLayout.astro
 title: Four Thousand Weeks - Time Management for Mortals
-slug: four-thousand-weeks
 tags:
   - Book Notes
 datePublished: 2022-08-22

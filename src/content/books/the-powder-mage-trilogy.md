@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BookNotesLayout.astro
 title: The Powder Mage Trilogy
 datePublished: 2023-01-30
 tags:
