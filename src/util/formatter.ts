@@ -1,8 +1,8 @@
 import { format, parseISO } from 'date-fns';
 
-export const calculateReadingTime = (html: string) => {
+export const calculateReadingTime = (html?: string | null) => {
   const wordsPerMin = 225;
-  const words = html.trim().split(/\s+/).length;
+  const words = (html ?? '').trim().split(/\s+/).filter(Boolean).length;
   return Math.ceil(words / wordsPerMin);
 };
 
