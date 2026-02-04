@@ -60,17 +60,20 @@ export default {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.900'),
+            color: 'hsl(var(--ink-strong))',
             th: {
-              color: theme('colors.gray.900'),
+              color: 'hsl(var(--ink-strong))',
             },
             a: {
               'text-decoration': 'none',
-              color: theme('colors.blue.800'),
-              'background-color': theme('colors.zinc.100'),
+              color: 'hsl(var(--sea-mid))',
+              'background-color': 'hsl(var(--shell-dark))',
+              'border-radius': '8px',
+              padding: '0.15rem 0.45rem',
+              'box-shadow': 'inset 0 1px 0 hsl(0 0% 100% / 0.6)',
             },
             code: {
-              'background-color': theme('colors.gray.100'),
+              'background-color': 'hsl(var(--shell-dark))',
               'border-radius': '3px',
               padding: '3px',
               'font-weight': 600,
@@ -93,26 +96,26 @@ export default {
         },
         dark: {
           css: {
-            color: theme('colors.zinc.300'),
+            color: 'hsl(var(--foreground))',
             th: {
-              color: theme('colors.zinc.300'),
+              color: 'hsl(var(--foreground))',
             },
             a: {
-              color: theme('colors.blue.500'),
-              'background-color': theme('colors.zinc.800'),
+              color: 'hsl(var(--sky))',
+              'background-color': 'hsl(var(--shell-dark))',
             },
             'h1,h2,h3,h4': {
-              color: theme('colors.zinc.200'),
+              color: 'hsl(var(--foreground))',
             },
             strong: {
-              color: theme('colors.zinc.200'),
+              color: 'hsl(var(--foreground))',
             },
             blockquote: {
-              color: theme('colors.zinc.200'),
+              color: 'hsl(var(--foreground))',
             },
             code: {
-              color: theme('colors.zinc.200'),
-              'background-color': '#0d1117',
+              color: 'hsl(var(--foreground))',
+              'background-color': 'hsl(var(--shell-dark))',
             },
             pre: {
               code: {
