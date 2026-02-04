@@ -34,7 +34,7 @@ export async function getCollections(): Promise<Collection[]> {
       },
     });
     const collections = await response.json();
-    return collections.items;
+    return collections.items || [];
   } catch (error) {
     console.error(error);
     return [];

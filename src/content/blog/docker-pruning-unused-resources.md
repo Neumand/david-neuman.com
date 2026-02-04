@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 'Docker: Pruning Unused Resources'
 slug: docker-pruning-unused-resources
 datePublished: 2020-10-13T13:08:45.000Z

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BookNotesLayout.astro
 title: The Licanius Trilogy
 datePublished: 2023-01-30
 tags:

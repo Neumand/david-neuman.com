@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 'React Server Components: A Primer'
 slug: react-server-components
 datePublished: 2021-01-17T22:35:57.000Z

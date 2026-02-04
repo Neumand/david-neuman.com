@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: Software Tools That Keep Me Productive
 slug: software-tools-that-keep-me-productive
 datePublished: 2022-01-22T15:42:36.000Z

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 'Talk Notes: Defining the Web3 Stack (Nader Dabit)'
 slug: talk-summary-defining-the-web3-stack
 datePublished: 2021-10-26T19:21:48.000Z

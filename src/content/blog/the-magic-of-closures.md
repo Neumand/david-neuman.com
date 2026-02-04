@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: The Magic of JavaScript Closures
 slug: the-magic-of-closures
 datePublished: 2021-08-16T14:51:19.000Z

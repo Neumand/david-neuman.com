@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: New Title!
 slug: new-title
 datePublished: 2023-01-01

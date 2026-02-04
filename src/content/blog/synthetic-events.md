@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 'Synthetic Events: Handling State Updates Outside of React'
 slug: synthetic-events
 datePublished: 2021-04-09T15:34:14.000Z

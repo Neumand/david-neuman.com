@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 2020 Annual Retrospective
 slug: 2020-annual-retrospective
 datePublished: 2021-02-02T12:05:18.000Z

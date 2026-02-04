@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: >
   The Stoic Path: What I Learned from William B. Irvine
 slug: the-stoic-path

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: Pre-Rendering in Next.js
 slug: nextjs-pre-rendering
 datePublished: 2020-09-30T23:29:43.000Z

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: 'Talking to Yourself Out Loud: How Your Own Words Shape How You Think'
 slug: talking-out-loud
 datePublished: 2020-01-11T21:24:53.000Z
