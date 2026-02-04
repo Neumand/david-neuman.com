@@ -7,12 +7,14 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
 ---
 
 <div
-  class='sm:hidden flex sticky bottom-0 gap-6 justify-center items-center w-screen h-16 bg-zinc-100 text-zinc-600 overflow-x-scroll dark:text-zinc-400 dark:bg-zinc-800'
+  class='sm:hidden flex sticky bottom-0 gap-6 justify-center items-center w-screen h-16 overflow-x-scroll skeuo-dock text-[hsl(var(--ink-soft))]'
 >
   {
     navItems.map(({ href, name, popOut, Icon }, idx) => (
       <a target={popOut ? '_blank' : '_self'} href={href}>
-        <Icon className='w-6 h-6' />
+        <div class='p-2 skeuo-keycap'>
+          <Icon className='w-6 h-6' />
+        </div>
       </a>
     ))
   }

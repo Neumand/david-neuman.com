@@ -65,13 +65,13 @@ export const ContactDialog: FC<ContactDialogProps> = ({
     return (
       <Dialog open={open} onOpenChange={(open) => setOpen(open)}>
         <DialogTrigger asChild>
-          <div className='cursor-pointer p-2 rounded hover:bg-zinc-200/80 hover:shadow dark:hover:bg-zinc-800/80'>
+          <div className='cursor-pointer p-2 skeuo-nav-item'>
             <div className='flex justify-between'>
               <div className='flex gap-2 items-center'>
                 <MessageCircle className='p-0 w-6 h-6 sm:w-4 sm:h-4' />
                 <span className='hidden sm:block'>Contact</span>
               </div>
-              <span className='hidden sm:flex md:items-center md:justify-center text-xs h-4 w-4 p-2.5 text-zinc-400 bg-zinc-300/30 dark:bg-zinc-700'>
+              <span className='hidden sm:flex md:items-center md:justify-center text-xs h-4 w-4 p-2.5 skeuo-keycap'>
                 /
               </span>
             </div>
@@ -147,13 +147,13 @@ export const ContactDialog: FC<ContactDialogProps> = ({
   return (
     <Drawer open={open} onOpenChange={(open) => setOpen(open)}>
       <DrawerTrigger asChild>
-        <div className='cursor-pointer p-2 rounded hover:bg-zinc-200/80 hover:shadow dark:hover:bg-zinc-800/80'>
+        <div className='cursor-pointer p-2 skeuo-nav-item'>
           <div className='flex justify-between'>
             <div className='flex gap-2 items-center'>
               <MessageCircle className='p-0 w-6 h-6 sm:w-4 sm:h-4' />
               <span className='hidden sm:block'>Contact</span>
             </div>
-            <span className='hidden sm:flex md:items-center md:justify-center text-xs h-4 w-4 p-2.5 text-zinc-400 bg-zinc-300/30 dark:bg-zinc-700'>
+            <span className='hidden sm:flex md:items-center md:justify-center text-xs h-4 w-4 p-2.5 skeuo-keycap'>
               /
             </span>
           </div>

@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config "../../tailwind.config.js";
+@import 'tailwindcss';
 
 @layer base {
   h1 {
@@ -30,65 +29,89 @@
   :root {
     font-size: 16px;
 
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 38 55% 96%;
+    --foreground: 221 38% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 36 46% 94%;
+    --card-foreground: 221 38% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 38 55% 97%;
+    --popover-foreground: 221 38% 15%;
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 220 42% 26%;
+    --primary-foreground: 38 55% 96%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 31 46% 91%;
+    --secondary-foreground: 221 38% 18%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 32 32% 90%;
+    --muted-foreground: 220 20% 38%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 18 78% 63%;
+    --accent-foreground: 30 50% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 6 78% 55%;
+    --destructive-foreground: 30 50% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --border: 30 25% 82%;
+    --input: 30 25% 82%;
+    --ring: 214 34% 45%;
+
+    --ink-strong: 220 40% 12%;
+    --ink-soft: 222 22% 34%;
+    --sea-deep: 214 48% 26%;
+    --sea-mid: 220 48% 48%;
+    --sky: 205 58% 66%;
+    --ember: 14 72% 60%;
+    --ember-soft: 24 74% 68%;
+    --gold: 43 98% 74%;
+    --shell: 38 55% 96%;
+    --shell-dark: 34 32% 90%;
+    --paper: 40 45% 98%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 225 36% 10%;
+    --foreground: 38 40% 95%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 224 36% 14%;
+    --card-foreground: 38 40% 95%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 224 36% 12%;
+    --popover-foreground: 38 40% 95%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 210 54% 62%;
+    --primary-foreground: 225 36% 12%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 223 32% 20%;
+    --secondary-foreground: 38 40% 95%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 224 32% 18%;
+    --muted-foreground: 210 15% 66%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 18 74% 58%;
+    --accent-foreground: 34 40% 96%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 6 68% 45%;
+    --destructive-foreground: 34 40% 96%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 224 24% 26%;
+    --input: 224 24% 26%;
+    --ring: 210 54% 62%;
+
+    --ink-strong: 38 40% 95%;
+    --ink-soft: 210 15% 72%;
+    --sea-deep: 214 44% 40%;
+    --sea-mid: 210 56% 64%;
+    --sky: 202 62% 68%;
+    --ember: 18 74% 58%;
+    --ember-soft: 24 72% 64%;
+    --gold: 43 88% 64%;
+    --shell: 225 36% 10%;
+    --shell-dark: 224 36% 14%;
+    --paper: 224 34% 16%;
   }
 }
 
@@ -98,5 +121,225 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    background-image: radial-gradient(
+        circle at top right,
+        hsl(var(--gold) / 0.35),
+        transparent 55%
+      ),
+      radial-gradient(
+        circle at top left,
+        hsl(var(--sky) / 0.35),
+        transparent 45%
+      ),
+      linear-gradient(180deg, hsl(var(--shell)), hsl(var(--shell-dark)));
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Fraunces', 'Times New Roman', serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer components {
+  .page-shell {
+    min-height: 100vh;
+    background-image: radial-gradient(
+        circle at 20% 10%,
+        hsl(var(--gold) / 0.25),
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 0%,
+        hsl(var(--sky) / 0.25),
+        transparent 45%
+      );
+  }
+
+  .skeuo-panel {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--paper)) 0%,
+      hsl(var(--card)) 100%
+    );
+    border: 1px solid hsl(var(--border));
+    box-shadow:
+      0 20px 40px -28px hsl(var(--sea-deep) / 0.7),
+      0 8px 18px -12px hsl(var(--sea-deep) / 0.4),
+      inset 0 1px 0 hsl(0 0% 100% / 0.6),
+      inset 0 -10px 14px hsl(var(--sea-deep) / 0.08);
+  }
+
+  .skeuo-card {
+    border-radius: 18px;
+    background: linear-gradient(
+      180deg,
+      hsl(var(--paper)) 0%,
+      hsl(var(--card)) 100%
+    );
+    border: 1px solid hsl(var(--border));
+    box-shadow:
+      0 18px 26px -20px hsl(var(--sea-deep) / 0.45),
+      inset 0 1px 0 hsl(0 0% 100% / 0.65);
+  }
+
+  .skeuo-hero {
+    border-radius: 28px;
+    background-image: linear-gradient(
+        180deg,
+        hsl(var(--paper)),
+        hsl(var(--card))
+      ),
+      radial-gradient(
+        circle at top,
+        hsl(var(--sky) / 0.35),
+        transparent 65%
+      );
+    border: 1px solid hsl(var(--border));
+    box-shadow:
+      0 30px 50px -40px hsl(var(--sea-deep) / 0.6),
+      inset 0 1px 0 hsl(0 0% 100% / 0.6),
+      inset 0 -18px 22px hsl(var(--sea-deep) / 0.08);
+  }
+
+  .skeuo-nav-item {
+    border-radius: 14px;
+    background: linear-gradient(
+      180deg,
+      hsl(var(--paper)) 0%,
+      hsl(var(--card)) 100%
+    );
+    border: 1px solid hsl(var(--border));
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.75),
+      inset 0 -6px 10px hsl(var(--sea-deep) / 0.08),
+      0 8px 16px -12px hsl(var(--sea-deep) / 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .skeuo-nav-item:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.85),
+      inset 0 -6px 10px hsl(var(--sea-deep) / 0.08),
+      0 12px 18px -12px hsl(var(--sea-deep) / 0.55);
+  }
+
+  .skeuo-nav-active {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--gold) / 0.65),
+      hsl(var(--ember-soft) / 0.6)
+    );
+    border-color: hsl(var(--ember) / 0.7);
+    color: hsl(var(--ink-strong));
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.8),
+      inset 0 -8px 12px hsl(var(--ember) / 0.3),
+      0 16px 18px -14px hsl(var(--ember) / 0.6);
+  }
+
+  .skeuo-keycap {
+    border-radius: 8px;
+    border: 1px solid hsl(var(--border));
+    background: linear-gradient(
+      180deg,
+      hsl(var(--paper)),
+      hsl(var(--shell-dark))
+    );
+    color: hsl(var(--ink-soft));
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.7),
+      inset 0 -3px 6px hsl(var(--sea-deep) / 0.2);
+  }
+
+  .skeuo-dock {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--paper)),
+      hsl(var(--card))
+    );
+    border-top: 1px solid hsl(var(--border));
+    box-shadow:
+      0 -12px 18px -12px hsl(var(--sea-deep) / 0.6),
+      inset 0 1px 0 hsl(0 0% 100% / 0.6);
+  }
+
+  .skeuo-button {
+    border: 1px solid hsl(var(--button-border));
+    background: linear-gradient(
+      180deg,
+      hsl(var(--button-top)),
+      hsl(var(--button-bottom))
+    );
+    color: hsl(var(--button-text));
+    box-shadow:
+      0 10px 16px -12px hsl(var(--sea-deep) / 0.6),
+      inset 0 1px 0 hsl(0 0% 100% / 0.7),
+      inset 0 -6px 10px hsl(var(--sea-deep) / 0.18);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .skeuo-button:hover {
+    transform: translateY(-1px);
+  }
+
+  .skeuo-button:active {
+    transform: translateY(1px);
+    box-shadow:
+      inset 0 2px 6px hsl(var(--sea-deep) / 0.25);
+  }
+
+  .skeuo-button-primary {
+    --button-top: var(--ember-soft);
+    --button-bottom: var(--ember);
+    --button-border: var(--ember);
+    --button-text: 30 50% 98%;
+  }
+
+  .skeuo-button-secondary {
+    --button-top: var(--paper);
+    --button-bottom: var(--shell-dark);
+    --button-border: var(--border);
+    --button-text: var(--foreground);
+  }
+
+  .skeuo-button-outline {
+    --button-top: var(--paper);
+    --button-bottom: var(--shell-dark);
+    --button-border: var(--border);
+    --button-text: var(--foreground);
+  }
+
+  .skeuo-button-ghost {
+    --button-top: var(--paper);
+    --button-bottom: var(--paper);
+    --button-border: transparent;
+    --button-text: var(--foreground);
+    box-shadow: none;
+  }
+
+  .skeuo-button-danger {
+    --button-top: 6 78% 60%;
+    --button-bottom: 6 68% 50%;
+    --button-border: 6 68% 45%;
+    --button-text: 30 50% 98%;
+  }
+
+  .skeuo-pill {
+    border-radius: 999px;
+    border: 1px solid hsl(var(--border));
+    background: linear-gradient(
+      180deg,
+      hsl(var(--paper)),
+      hsl(var(--shell-dark))
+    );
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.75),
+      inset 0 -4px 8px hsl(var(--sea-deep) / 0.15);
   }
 }

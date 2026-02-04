@@ -9,11 +9,12 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
 ---
 
 <div
-  class='hidden sm:block fixed h-full text-zinc-700 bg-zinc-100 w-72 p-4 dark:bg-zinc-900/75 dark:text-zinc-200'
+  class='hidden sm:block fixed h-full w-72 p-4 text-[hsl(var(--ink-soft))] skeuo-panel'
 >
-  <div class='flex justify-between items-center font-bold uppercase mb-4'>
-    <!-- TODO: Add logo here -->
-    <span>David Neuman</span>
+  <div class='flex justify-between items-center mb-4'>
+    <span class='font-semibold uppercase tracking-[0.2em] text-xs text-[hsl(var(--ink-soft))]'>
+      David Neuman
+    </span>
     <ThemeToggle client:only='react' />
   </div>
   <div class='flex flex-col space-y-2'>
@@ -22,8 +23,8 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
         <a target={popOut ? '_blank' : '_self'} href={href}>
           <div
             class={cn(
-              'cursor-pointer p-2 rounded hover:bg-zinc-200/80 hover:shadow dark:hover:bg-zinc-800/80',
-              pathName === href && 'bg-white shadow dark:bg-zinc-800/75',
+              'cursor-pointer p-2 skeuo-nav-item',
+              pathName === href && 'skeuo-nav-active',
             )}
           >
             <div class='flex justify-between'>
@@ -31,7 +32,7 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
                 <Icon className='w-4 h-4' />
                 <span>{name}</span>
               </div>
-              <span class='flex items-center justify-center text-xs h-4 w-4 p-2.5 text-zinc-400 bg-zinc-300/30 dark:bg-zinc-700'>
+              <span class='flex items-center justify-center text-xs h-4 w-4 p-2.5 skeuo-keycap'>
                 {idx + 1}
               </span>
             </div>
@@ -41,7 +42,7 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
     }
   </div>
 
-  <div class='border border-b border-zinc-200 my-4 dark:border-zinc-700'></div>
+  <div class='border border-b border-[hsl(var(--border))] my-4'></div>
 
   <ContactDialog openWithSlash client:only='react' />
 </div>
