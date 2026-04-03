@@ -1,9 +1,7 @@
 ---
 import Tags from '@components/Tags.astro';
-import { formatDate } from '@util/formatter';
+import { formatDate, calculateReadingTime, formatReadingTime } from '@util/formatter';
 import type { CollectionEntry } from 'astro:content';
-import ContentCard from './ContentCard.astro';
-import ReadingTime from './ReadingTime.astro';
 
 interface Props {
   posts: CollectionEntry<'blog'>[];
@@ -12,22 +10,28 @@ interface Props {
 const { posts } = Astro.props as Props;
 ---
 
-<div class='mt-8 flex flex-col gap-4 px-5 max-w-xl mx-auto md:max-w-4xl'>
-  {
-    posts.map(({ data, body, slug }) => (
-      <ContentCard>
-        <a href={`/blog/${slug}`}>
-          <h3 class='font-sans'>{data.title}</h3>
-          <div class='flex space-x-2 items-start'>
-            <p class='text-sm mb-2 text-gray-700 dark:text-zinc-300'>
-              {formatDate(data.datePublished)}
+<div class='w-full max-w-3xl mx-auto px-8 md:px-12 pb-16 mt-8'>
+  <div class='flex flex-col divide-y divide-zinc-100 dark:divide-zinc-800/60'>
+    {
+      posts.map(({ data, body, slug }) => (
+        <a
+          href={`/blog/${slug}`}
+          class='group block py-6 pl-0 border-l-2 border-transparent hover:border-brand hover:pl-4 transition-all duration-200'
+        >
+          <div class='flex flex-col gap-1.5'>
+            <h3 class='text-base font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-zinc-700 dark:group-hover:text-zinc-200 transition-colors leading-snug'>
+              {data.title}
+            </h3>
+            <p class='text-xs font-mono text-zinc-400 dark:text-zinc-500'>
+              {formatDate(data.datePublished)} · {formatReadingTime(calculateReadingTime(body))}
             </p>
-            <ReadingTime html={body} />
+            <p class='text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-2'>
+              {data.excerpt}
+            </p>
+            <Tags tags={data.tags} />
           </div>
-          <p class='text-gray-700 dark:text-zinc-300'>{data.excerpt}</p>
         </a>
-        <Tags tags={data.tags} />
-      </ContentCard>
-    ))
-  }
+      ))
+    }
+  </div>
 </div>
