@@ -2,30 +2,6 @@
 @import 'tailwindcss';
 
 @layer base {
-  h1 {
-    @apply text-6xl font-bold;
-  }
-
-  h2 {
-    @apply text-5xl font-bold;
-  }
-
-  h3 {
-    @apply text-4xl font-bold;
-  }
-
-  h4 {
-    @apply text-3xl font-bold;
-  }
-
-  h5 {
-    @apply text-2xl font-bold;
-  }
-
-  h6 {
-    @apply text-xl font-bold;
-  }
-
   :root {
     font-size: 16px;
 
@@ -58,36 +34,44 @@
     --ring: 240 10% 3.9%;
 
     --radius: 0.5rem;
+
+    /* Brand accent — warm amber */
+    --brand: 35 95% 50%;
+    --brand-foreground: 0 0% 100%;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 0 0% 5%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 3.9%;
+    --card: 0 0% 5%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 3.9%;
+    --popover: 0 0% 5%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 240 3.7% 13%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 3.7% 15.9%;
+    --muted: 240 3.7% 13%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 3.7% 15.9%;
+    --accent: 240 3.7% 13%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
     --ring: 240 4.9% 83.9%;
+
+    /* Brand accent — slightly brighter in dark mode */
+    --brand: 35 95% 58%;
+    --brand-foreground: 0 0% 5%;
   }
 }
 

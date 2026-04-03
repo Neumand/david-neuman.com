@@ -9,39 +9,38 @@ const pathName = `/${Astro.request.url.split('/')[3]}`;
 ---
 
 <div
-  class='hidden sm:block fixed h-full text-zinc-700 bg-zinc-100 w-72 p-4 dark:bg-zinc-900/75 dark:text-zinc-200'
+  class='hidden sm:flex flex-col fixed h-full w-64 border-r border-zinc-200 dark:border-zinc-800 bg-background p-5 text-zinc-700 dark:text-zinc-300'
 >
-  <div class='flex justify-between items-center font-bold uppercase mb-4'>
-    <!-- TODO: Add logo here -->
-    <span>David Neuman</span>
+  <div class='flex justify-between items-center mb-6'>
+    <span class='text-xs font-mono font-bold uppercase tracking-widest text-zinc-500 dark:text-zinc-400'>David Neuman</span>
     <ThemeToggle client:only='react' />
   </div>
-  <div class='flex flex-col space-y-2'>
+  <nav class='flex flex-col space-y-0.5'>
     {
       navItems.map(({ href, name, popOut, Icon }, idx) => (
         <a target={popOut ? '_blank' : '_self'} href={href}>
           <div
             class={cn(
-              'cursor-pointer p-2 rounded hover:bg-zinc-200/80 hover:shadow dark:hover:bg-zinc-800/80',
-              pathName === href && 'bg-white shadow dark:bg-zinc-800/75',
+              'group cursor-pointer px-3 py-2 rounded-md flex justify-between items-center transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800/60',
+              pathName === href
+                ? 'border-l-2 border-brand bg-zinc-50 dark:bg-zinc-800/40 text-zinc-900 dark:text-zinc-100'
+                : 'border-l-2 border-transparent',
             )}
           >
-            <div class='flex justify-between'>
-              <div class='flex gap-2 items-center'>
-                <Icon className='w-4 h-4' />
-                <span>{name}</span>
-              </div>
-              <span class='flex items-center justify-center text-xs h-4 w-4 p-2.5 text-zinc-400 bg-zinc-300/30 dark:bg-zinc-700'>
-                {idx + 1}
-              </span>
+            <div class='flex gap-2.5 items-center'>
+              <Icon className='w-3.5 h-3.5 text-zinc-400 dark:text-zinc-500' />
+              <span class='text-sm'>{name}</span>
             </div>
+            <span class='font-mono text-[10px] text-zinc-400 dark:text-zinc-600'>
+              {idx + 1}
+            </span>
           </div>
         </a>
       ))
     }
-  </div>
+  </nav>
 
-  <div class='border border-b border-zinc-200 my-4 dark:border-zinc-700'></div>
+  <div class='border-t border-zinc-200 dark:border-zinc-800 my-4'></div>
 
   <ContactDialog openWithSlash client:only='react' />
 </div>
