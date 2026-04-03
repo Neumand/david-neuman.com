@@ -28,6 +28,10 @@ export default {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        brand: {
+          DEFAULT: 'hsl(var(--brand))',
+          foreground: 'hsl(var(--brand-foreground))',
+        },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -60,20 +64,37 @@ export default {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.900'),
+            color: theme('colors.zinc.800'),
+            fontSize: '1.0625rem',
+            lineHeight: '1.85',
+            maxWidth: '68ch',
             th: {
-              color: theme('colors.gray.900'),
+              color: theme('colors.zinc.800'),
+            },
+            'h1, h2, h3, h4, h5, h6': {
+              color: theme('colors.zinc.900'),
+              fontWeight: '700',
+              letterSpacing: '-0.02em',
             },
             a: {
-              'text-decoration': 'none',
-              color: theme('colors.blue.800'),
-              'background-color': theme('colors.zinc.100'),
+              'text-decoration': 'underline',
+              'text-decoration-color': theme('colors.amber.400'),
+              'text-underline-offset': '3px',
+              color: theme('colors.amber.700'),
+              'background-color': 'transparent',
+              'font-weight': '500',
+              transition: 'color 0.15s ease',
+            },
+            'a:hover': {
+              color: theme('colors.amber.600'),
             },
             code: {
-              'background-color': theme('colors.gray.100'),
-              'border-radius': '3px',
-              padding: '3px',
-              'font-weight': 600,
+              'background-color': theme('colors.zinc.100'),
+              'border-radius': '4px',
+              padding: '2px 5px',
+              'font-weight': '500',
+              'font-size': '0.875em',
+              border: `1px solid ${theme('colors.zinc.200')}`,
             },
             'code::before': {
               content: '""',
@@ -81,44 +102,70 @@ export default {
             'code::after': {
               content: '""',
             },
+            pre: {
+              'background-color': theme('colors.zinc.950'),
+              border: `1px solid ${theme('colors.zinc.800')}`,
+              'border-radius': '8px',
+            },
+            'pre code': {
+              'background-color': 'transparent',
+              border: 'none',
+              padding: '0',
+            },
+            blockquote: {
+              'border-left-color': theme('colors.amber.400'),
+              color: theme('colors.zinc.600'),
+              'font-style': 'normal',
+            },
             'figure figcaption': {
-              color: theme('colors.gray.700'),
+              color: theme('colors.zinc.500'),
               'text-align': 'center',
+              'font-size': '0.8125rem',
             },
             figcaption: {
-              color: theme('colors.gray.700'),
+              color: theme('colors.zinc.500'),
               'text-align': 'center',
+              'font-size': '0.8125rem',
             },
           },
         },
         dark: {
           css: {
             color: theme('colors.zinc.300'),
+            'h1, h2, h3, h4, h5, h6': {
+              color: theme('colors.zinc.100'),
+            },
             th: {
               color: theme('colors.zinc.300'),
             },
             a: {
-              color: theme('colors.blue.500'),
-              'background-color': theme('colors.zinc.800'),
+              color: theme('colors.amber.400'),
+              'text-decoration-color': theme('colors.amber.600'),
+              'background-color': 'transparent',
             },
-            'h1,h2,h3,h4': {
-              color: theme('colors.zinc.200'),
+            'a:hover': {
+              color: theme('colors.amber.300'),
             },
             strong: {
               color: theme('colors.zinc.200'),
             },
             blockquote: {
-              color: theme('colors.zinc.200'),
+              color: theme('colors.zinc.400'),
+              'border-left-color': theme('colors.amber.500'),
             },
             code: {
               color: theme('colors.zinc.200'),
-              'background-color': '#0d1117',
+              'background-color': theme('colors.zinc.900'),
+              border: `1px solid ${theme('colors.zinc.700')}`,
             },
             pre: {
-              code: {
-                'background-color': 'inherit',
-                color: 'inherit',
-              },
+              'background-color': '#0d1117',
+              border: `1px solid ${theme('colors.zinc.800')}`,
+            },
+            'pre code': {
+              'background-color': 'transparent',
+              border: 'none',
+              color: 'inherit',
             },
             'figure figcaption': {
               color: theme('colors.zinc.500'),

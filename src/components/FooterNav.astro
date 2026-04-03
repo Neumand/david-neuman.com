@@ -6,16 +6,53 @@ import { ContactDialog } from './Contact/ContactDialog';
 const pathName = `/${Astro.request.url.split('/')[3]}`;
 ---
 
-<div
-  class='sm:hidden flex sticky bottom-0 gap-6 justify-center items-center w-screen h-16 bg-zinc-100 text-zinc-600 overflow-x-scroll dark:text-zinc-400 dark:bg-zinc-800'
+<nav
+  id='mobile-nav'
+  class='sm:hidden fixed bottom-0 left-0 right-0 z-50 flex justify-around items-center w-full h-14 px-2 bg-background/90 backdrop-blur-md border-t border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 transition-transform duration-300'
 >
   {
-    navItems.map(({ href, name, popOut, Icon }, idx) => (
-      <a target={popOut ? '_blank' : '_self'} href={href}>
-        <Icon className='w-6 h-6' />
+    navItems.map(({ href, name, popOut, Icon }) => (
+      <a
+        target={popOut ? '_blank' : '_self'}
+        href={href}
+        class={`flex flex-col items-center gap-0.5 p-2 rounded-md transition-colors ${
+          pathName === href
+            ? 'text-zinc-900 dark:text-zinc-100'
+            : 'hover:text-zinc-700 dark:hover:text-zinc-300'
+        }`}
+        aria-label={name}
+      >
+        <Icon className='w-5 h-5' />
       </a>
     ))
   }
   <ContactDialog client:only='react' />
   <ThemeToggle client:only='react' />
-</div>
+</nav>
+
+<!-- Spacer so content doesn't sit behind the fixed nav -->
+<div class='sm:hidden h-14'></div>
+
+<script>
+  const nav = document.getElementById('mobile-nav');
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 60) {
+          // Scrolling down — hide
+          nav?.classList.add('translate-y-full');
+        } else {
+          // Scrolling up — show
+          nav?.classList.remove('translate-y-full');
+        }
+        lastScrollY = currentScrollY;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+</script>

@@ -6,6 +6,6 @@ interface Props {
 const { textAlign } = Astro.props as Props;
 ---
 
-<header class={`text-${textAlign} mt-4 md:mt-8`}>
+<header class={`text-${textAlign} mt-8 md:mt-12 px-8 md:px-12 max-w-3xl w-full mx-auto`}>
   <slot />
 </header>
